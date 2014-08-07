@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style type="text/css">
+            * {
+                line-height: normal !important;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                margin: 0;
+                padding: 0;
+                font-family: 'GretaTextPro-Regular' !important;
+                font-size: 16px !important;
+                color: #777777;
+            }
+        em, i {
+            font-family: 'GretaTextPro-Italic' !important;
+            font-weight: normal !important;
+            font-style: italic;
+        }
+        .content {
+            margin-bottom: 35px;
+        }
+        .text-gradient {
+            width: 370px;
+            height: 60px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-image: url(gradient.png);
+            background-size: 370px 60px;
+        }
+        p {
+            margin: 0 0 20px 0;
+        }
+        .full-image {
+            display: block;
+            width: 200px;
+            padding-bottom: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <img class="full-image" src="%@">
+        <div class="content">%@</div>
+    </body>
+</html>

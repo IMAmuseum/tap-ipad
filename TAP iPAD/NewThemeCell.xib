@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2" customClass="NewThemeCell">
+            <rect key="frame" x="0.0" y="0.0" width="575" height="588"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="575" height="588"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18" userLabel="Video View">
+                        <rect key="frame" x="0.0" y="0.0" width="575" height="450"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="9">
+                        <rect key="frame" x="0.0" y="0.0" width="575" height="450"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="115">
+                        <rect key="frame" x="0.0" y="0.0" width="575" height="450"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="toggleVideoState:" destination="2" eventType="touchUpInside" id="262"/>
+                        </connections>
+                    </button>
+                    <webView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                        <rect key="frame" x="0.0" y="488" width="575" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <dataDetectorType key="dataDetectorTypes"/>
+                    </webView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="266" userLabel="Image Zoom View">
+                        <rect key="frame" x="0.0" y="0.0" width="575" height="450"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="3" firstAttribute="top" secondItem="18" secondAttribute="bottom" constant="38" id="0Dz-dl-bU4"/>
+                <constraint firstItem="18" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="5Ki-fO-QBS"/>
+                <constraint firstItem="18" firstAttribute="trailing" secondItem="115" secondAttribute="trailing" id="71e-j7-KyN"/>
+                <constraint firstItem="18" firstAttribute="trailing" secondItem="9" secondAttribute="trailing" id="A4O-fb-SjW"/>
+                <constraint firstAttribute="bottom" secondItem="18" secondAttribute="bottom" constant="138" id="ImJ-ml-6d7"/>
+                <constraint firstItem="18" firstAttribute="bottom" secondItem="115" secondAttribute="bottom" id="LR8-IL-Y4T"/>
+                <constraint firstItem="18" firstAttribute="bottom" secondItem="9" secondAttribute="bottom" id="PNV-ZP-EMU"/>
+                <constraint firstItem="18" firstAttribute="top" secondItem="9" secondAttribute="top" id="QJN-4u-sV3"/>
+                <constraint firstItem="18" firstAttribute="bottom" secondItem="266" secondAttribute="bottom" id="T1O-H3-dvh"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="Tz1-wX-vQF"/>
+                <constraint firstItem="18" firstAttribute="top" secondItem="266" secondAttribute="top" id="Vva-40-7qi"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="266" secondAttribute="leading" id="cEj-ER-usD"/>
+                <constraint firstItem="18" firstAttribute="top" secondItem="2" secondAttribute="top" id="gHH-wh-XaY"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="115" secondAttribute="leading" id="gPZ-lX-CrK"/>
+                <constraint firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="j5Z-uH-IMW"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="jya-cj-cgY"/>
+                <constraint firstItem="18" firstAttribute="trailing" secondItem="266" secondAttribute="trailing" id="lrt-ez-Oqd"/>
+                <constraint firstItem="18" firstAttribute="top" secondItem="115" secondAttribute="top" id="ovN-oL-HdU"/>
+                <constraint firstAttribute="trailing" secondItem="18" secondAttribute="trailing" id="uFg-mU-FH2"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="9" secondAttribute="leading" id="yQo-Sf-pxC"/>
+            </constraints>
+            <size key="customSize" width="500" height="518"/>
+            <connections>
+                <outlet property="caption" destination="3" id="106"/>
+                <outlet property="image" destination="9" id="108"/>
+                <outlet property="imageZoomView" destination="266" id="267"/>
+                <outlet property="playButton" destination="115" id="261"/>
+                <outlet property="videoView" destination="18" id="107"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

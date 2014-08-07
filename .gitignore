@@ -1,0 +1,3 @@
+# Ignore any bundles
+Tap iPAD/Bundles/*
+!Tap iPAD/Bundles/README.md

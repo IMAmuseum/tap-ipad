@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Default</key>
+	<dict>
+		<key>bodyFont</key>
+		<string>HelveticaNeue</string>
+		<key>bodyFontSize</key>
+		<integer>14</integer>
+		<key>bodyFontColor</key>
+		<string>ffffff</string>
+		<key>bodyFontItalic</key>
+		<string>Helvetica-Oblique</string>
+		<key>bodyFontItalicSize</key>
+		<integer>14</integer>
+		<key>bodyFontItalicColor</key>
+		<string>ffffff</string>
+		<key>serifBodyFont</key>
+		<string>Georgia</string>
+		<key>serifBodyFontSize</key>
+		<integer>14</integer>
+		<key>serifBodyFontColor</key>
+		<string>ffffff</string>
+		<key>headingFont</key>
+		<string>HelveticaNeue</string>
+		<key>headingFontSize</key>
+		<integer>20</integer>
+		<key>headingFontColor</key>
+		<string>ffffff</string>
+	</dict>
+</dict>
+</plist>
