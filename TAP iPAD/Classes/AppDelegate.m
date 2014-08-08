@@ -14,7 +14,7 @@
 #import "TAPHomeViewController.h"
 #import "TimelineStopViewController.h"
 #import "ThemesStopViewController.h"
-#import "InterviewsStopViewController.h"
+#import "TAPInterviewsStopViewController.h"
 #import "TAPEventsProgramsViewController.h"
 #import "TAPBaseViewController.h"
 

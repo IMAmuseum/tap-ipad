@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "InterviewsStopViewController.h"
+#import "TAPInterviewsStopViewController.h"
 #import "InterviewIntroductionCell.h"
 #import "InterviewQuestionCell.h"
 #import "AppDelegate.h"
@@ -28,7 +28,7 @@
 #define SECTION_TAG_OFFSET 1000
 #define SECTION_MENU_SPACING 20
 
-@interface InterviewsStopViewController () {
+@interface TAPInterviewsStopViewController () {
     NSInteger _currentIndex;
     NSInteger _currentSection;
 }
@@ -49,7 +49,7 @@
 - (void)toggleArrowIndicator;
 @end
 
-@implementation InterviewsStopViewController
+@implementation TAPInterviewsStopViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
