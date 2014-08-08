@@ -115,7 +115,13 @@
         NSString *imageUri = [[[theImage getSourcesByPart:@"1150x1100"] objectAtIndex:0] uri];
         htmlString = [NSMutableString stringWithFormat:htmlContainer, imageUri, (NSString *)self.stop.desc];
     } else {
-        htmlString = [NSMutableString stringWithFormat:htmlContainer, (NSString *)self.stop.desc];
+        UIFont *bodyFont = [self.theme fontForKey:@"bodyFont"];
+        UIFont *bodyFontItalic = [self.theme fontForKey:@"bodyFontItalic"];
+        htmlString = [NSMutableString stringWithFormat:htmlContainer,
+                      [bodyFont fontName],
+                      bodyFont.pointSize,
+                      [bodyFontItalic fontName],
+                      (NSString *)self.stop.desc];
     }
     
     NSString *path = [[NSBundle mainBundle] bundlePath];
@@ -193,7 +199,13 @@
         TAPContent *caption = [[imageAsset getContentsByPart:@"caption"] objectAtIndex:0];
         NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"Caption" ofType:@"html"];
         NSString *htmlContainer = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
-        NSString *htmlString = [[NSString alloc] initWithFormat:htmlContainer, (NSString *)caption.data];
+        UIFont *bodyFont = [self.theme fontForKey:@"bodyFont"];
+        UIFont *bodyFontItalic = [self.theme fontForKey:@"bodyFontItalic"];
+        NSString *htmlString = [[NSString alloc] initWithFormat:htmlContainer,
+                                [bodyFont fontName],
+                                bodyFont.pointSize,
+                                [bodyFontItalic fontName],
+                                (NSString *)caption.data];
         NSString *path = [[NSBundle mainBundle] bundlePath];
         NSURL *baseURL = [NSURL fileURLWithPath:path];
         [cell.caption setOpaque:NO];

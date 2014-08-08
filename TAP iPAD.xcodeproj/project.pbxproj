@@ -198,7 +198,7 @@
 		178AAF0816E6A1670061E735 /* TAPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPMenuViewController.h; path = Classes/TAPMenuViewController.h; sourceTree = "<group>"; };
 		178AAF0916E6A1670061E735 /* TAPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPMenuViewController.m; path = Classes/TAPMenuViewController.m; sourceTree = "<group>"; };
 		178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPMenuViewController.xib; path = Classes/TAPMenuViewController.xib; sourceTree = "<group>"; };
-		17A0806216E5236200366341 /* Face To Face.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face To Face.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A0806216E5236200366341 /* TAP iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TAP iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A0806516E5236200366341 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		17A0806716E5236200366341 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		17A0806916E5236200366341 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -440,7 +440,7 @@
 		17A0806316E5236200366341 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17A0806216E5236200366341 /* Face To Face.app */,
+				17A0806216E5236200366341 /* TAP iPad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -879,7 +879,7 @@
 			);
 			name = "TAP iPAD";
 			productName = "TAP iPAD";
-			productReference = 17A0806216E5236200366341 /* Face To Face.app */;
+			productReference = 17A0806216E5236200366341 /* TAP iPad.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1162,7 +1162,7 @@
 					"$(PROJECT_DIR)/TAP\\ iPAD/Libraries/GoogleAnalytics",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "Face To Face";
+				PRODUCT_NAME = "TAP iPad";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -1185,7 +1185,7 @@
 					"$(PROJECT_DIR)/TAP\\ iPAD/Libraries/GoogleAnalytics",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "Face To Face";
+				PRODUCT_NAME = "TAP iPad";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;

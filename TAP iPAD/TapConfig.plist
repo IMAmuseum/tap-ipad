@@ -16,7 +16,7 @@
 			<key>title</key>
 			<string>Terminology</string>
 			<key>view</key>
-			<string>ThemeStopViewController</string>
+			<string>TAPThemeStopViewController</string>
 			<key>keycode</key>
 			<string>100</string>
 			<key>trackedViewName</key>
@@ -26,7 +26,7 @@
 			<key>title</key>
 			<string>Artists</string>
 			<key>view</key>
-			<string>ThemesStopViewController</string>
+			<string>TAPThemesStopViewController</string>
 			<key>keycode</key>
 			<string>200</string>
 			<key>trackedViewName</key>
@@ -46,7 +46,7 @@
 			<key>title</key>
 			<string>Critical Reception</string>
 			<key>view</key>
-			<string>ThemeStopViewController</string>
+			<string>TAPThemeStopViewController</string>
 			<key>keycode</key>
 			<string>300</string>
 			<key>trackedViewName</key>
@@ -56,7 +56,7 @@
 			<key>title</key>
 			<string>Context</string>
 			<key>view</key>
-			<string>ThemesStopViewController</string>
+			<string>TAPThemesStopViewController</string>
 			<key>keycode</key>
 			<string>400</string>
 			<key>trackedViewName</key>
@@ -76,7 +76,7 @@
 			<key>title</key>
 			<string>Close Up</string>
 			<key>view</key>
-			<string>ThemesStopViewController</string>
+			<string>TAPThemesStopViewController</string>
 			<key>keycode</key>
 			<string>500</string>
 			<key>trackedViewName</key>
