@@ -42,7 +42,12 @@
     
     // Work out line width
     NSString *text = self.titleLabel.text;
-    CGSize sz = [text sizeWithFont:self.titleLabel.font forWidth:rect.size.width lineBreakMode:NSLineBreakByWordWrapping];
+
+    CGRect rt = [text boundingRectWithSize:rect.size
+                                   options:NSStringDrawingTruncatesLastVisibleLine
+                                attributes:@{NSFontAttributeName:self.titleLabel.font}
+                                   context:nil];
+    CGSize sz = rt.size;
     CGFloat width = rect.size.width;
     CGFloat offset = (rect.size.width - sz.width) / 2;
     if (offset > 0 && offset < rect.size.width) {

@@ -4,6 +4,12 @@
 <dict>
 	<key>Default</key>
 	<dict>
+		<key>splashColor</key>
+		<string>c03e19</string>
+		<key>accentColor</key>
+		<string>373737</string>
+		<key>navigationFontColor</key>
+		<string>373737</string>
 		<key>bodyFont</key>
 		<string>HelveticaNeue</string>
 		<key>bodyFontSize</key>

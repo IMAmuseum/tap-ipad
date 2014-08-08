@@ -487,13 +487,13 @@
 		17A0808816E523DE00366341 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				17A0807616E5236200366341 /* AppDelegate.h */,
-				17A0807716E5236200366341 /* AppDelegate.m */,
 				652C1C2616FFF34B00646100 /* Categories */,
-				17A0808916E523E400366341 /* View Controllers */,
 				17AD6BA016FCDC5600D7D755 /* Custom Views */,
 				17AD6BA116FCDC9900D7D755 /* Tap */,
+				17A0808916E523E400366341 /* View Controllers */,
 				17A0808A16E5240900366341 /* Views */,
+				17A0807616E5236200366341 /* AppDelegate.h */,
+				17A0807716E5236200366341 /* AppDelegate.m */,
 				652C1C2A16FFF43B00646100 /* KioskApplication.h */,
 				652C1C2B16FFF43C00646100 /* KioskApplication.m */,
 			);

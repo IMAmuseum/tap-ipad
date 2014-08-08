@@ -51,7 +51,7 @@
     
     // add active menu indicator
     self.activeMenuIndicator = [[UIView alloc] init];
-    [self.activeMenuIndicator setBackgroundColor:[UIColor colorWithRed:192.0/255.0 green:62.0/255.0 blue:25.0/255.0 alpha:1.0]];
+    [self.activeMenuIndicator setBackgroundColor:[self.theme colorForKey:@"splashColor"]];
     [self.menuContainerView addSubview:self.activeMenuIndicator];
     
     // set the current view controller
@@ -111,14 +111,13 @@
         }
         
 		UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setTitleColor:[UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+        [button setTitleColor:[self.theme colorForKey:@"navigationFontColor"] forState:UIControlStateNormal];
         [button setTag:TAG_OFFSET + index];
         [button.titleLabel setFont:[self.theme fontForKey:@"headingFont"]];
 		[button setTitle:[viewController.title uppercaseString] forState:UIControlStateNormal];
 		[button addTarget:self action:@selector(navigationItemPressed:) forControlEvents:UIControlEventTouchDown];
         [button.titleLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
         CGSize fontSize = [button.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:button.titleLabel.font}];
-        //CGSize fontSize = [button.titleLabel.text sizeWithFont:button.titleLabel.font];
         CGRect buttonFrame = CGRectMake(previousWidth, 10.0f, fontSize.width + 20.0f, 65.0f);
         [button setFrame:buttonFrame];
         

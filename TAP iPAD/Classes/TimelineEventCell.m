@@ -6,9 +6,15 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "TimelineEventCell.h"
+#import "VSTheme.h"
 
 #define MAX_LABEL_WIDTH 225.0f
+
+@interface TimelineEventCell ()
+@property (nonatomic, strong) VSTheme *theme;
+@end
 
 @implementation TimelineEventCell
 
@@ -23,6 +29,9 @@
         // add event title
         self.eventTitle = [[UIImageView alloc] init];
         [self addSubview:self.eventTitle];
+        
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        self.theme = appDelegate.theme;
     }
     return self;
 }
@@ -55,10 +64,10 @@
     // set image layer properties
     [self.eventImage.layer setMasksToBounds:YES];
     [self.eventImage.layer setBorderWidth:2.0f];
-    [self.eventImage.layer setBorderColor:[[UIColor colorWithRed:51/255.0f green:51/255.0f blue:51/255.0f alpha:1] CGColor]];
+    [self.eventImage.layer setBorderColor:[[self.theme colorForKey:@"accentColor"] CGColor]];
     
     // set line color
-    [lineView setBackgroundColor:[UIColor colorWithRed:51/255.0f green:51/255.0f blue:51/255.0f alpha:1.0]];
+    [lineView setBackgroundColor:[self.theme colorForKey:@"accentColor"]];
     
     // add subviews
     [self addSubview:lineView];
