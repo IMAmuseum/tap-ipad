@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ArrowView.h"
 #import "TAPThemesStopViewController.h"
-#import "ThemeStopViewController.h"
+#import "TAPThemeStopViewController.h"
 #import "ThemeCell.h"
 #import "NSDictionary+TAPUtils.h"
 #import "TAPTour.h"
@@ -215,7 +215,7 @@
     }
     
     TAPStop *themeStop = [self.themeStops objectAtIndex:useIndex];
-    ThemeStopViewController *themeStopViewController = [[ThemeStopViewController alloc] initWithStop:themeStop];
+    TAPThemeStopViewController *themeStopViewController = [[TAPThemeStopViewController alloc] initWithStop:themeStop];
     
     // create fade transition
     CATransition *transition = [CATransition animation];

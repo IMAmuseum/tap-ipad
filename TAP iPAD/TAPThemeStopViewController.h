@@ -13,7 +13,7 @@
 
 @class TAPStop;
 
-@interface ThemeStopViewController : TAPBaseViewController <UICollectionViewDataSource, UIWebViewDelegate>
+@interface TAPThemeStopViewController : TAPBaseViewController <UICollectionViewDataSource, UIWebViewDelegate>
 - (id)initWithConfigDictionary:(NSDictionary *)config;
 - (id)initWithStop:(TAPStop *)stop;
 @end

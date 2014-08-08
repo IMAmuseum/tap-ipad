@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "ThemeStopViewController.h"
+#import "TAPThemeStopViewController.h"
 #import "TAPImageStopViewController.h"
 #import "AppDelegate.h"
 #import "UnderlineLabel.h"
@@ -25,7 +25,7 @@
 
 
 
-@interface ThemeStopViewController ()
+@interface TAPThemeStopViewController ()
 @property (nonatomic, strong) AppDelegate *appDelegate;
 @property (nonatomic, strong) TAPStop *stop;
 @property (nonatomic, strong) NSMutableArray *childStops;
@@ -41,7 +41,7 @@
 - (IBAction)back:(id)sender;
 @end
 
-@implementation ThemeStopViewController
+@implementation TAPThemeStopViewController
 
 - (id)initWithConfigDictionary:(NSDictionary *)config {
     self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
