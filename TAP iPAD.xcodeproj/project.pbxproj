@@ -65,8 +65,8 @@
 		17A080E716E5327D00366341 /* TAPEventsProgramsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080E516E5327D00366341 /* TAPEventsProgramsViewController.xib */; };
 		17A080EB16E532AB00366341 /* TimelineStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080E916E532AB00366341 /* TimelineStopViewController.m */; };
 		17A080EC16E532AB00366341 /* TimelineStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080EA16E532AB00366341 /* TimelineStopViewController.xib */; };
-		17A080F016E532C400366341 /* ThemesStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080EE16E532C400366341 /* ThemesStopViewController.m */; };
-		17A080F116E532C400366341 /* ThemesStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080EF16E532C400366341 /* ThemesStopViewController.xib */; };
+		17A080F016E532C400366341 /* TAPThemesStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080EE16E532C400366341 /* TAPThemesStopViewController.m */; };
+		17A080F116E532C400366341 /* TAPThemesStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */; };
 		17A080F516E532E200366341 /* TAPInterviewsStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080F316E532E200366341 /* TAPInterviewsStopViewController.m */; };
 		17A080F616E532E200366341 /* TAPInterviewsStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080F416E532E200366341 /* TAPInterviewsStopViewController.xib */; };
 		17A080FF16E54D1100366341 /* TAPEventsStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080FD16E54D1100366341 /* TAPEventsStopViewController.m */; };
@@ -253,9 +253,9 @@
 		17A080E816E532AB00366341 /* TimelineStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineStopViewController.h; path = Classes/TimelineStopViewController.h; sourceTree = "<group>"; };
 		17A080E916E532AB00366341 /* TimelineStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineStopViewController.m; path = Classes/TimelineStopViewController.m; sourceTree = "<group>"; };
 		17A080EA16E532AB00366341 /* TimelineStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TimelineStopViewController.xib; path = Classes/TimelineStopViewController.xib; sourceTree = "<group>"; };
-		17A080ED16E532C400366341 /* ThemesStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemesStopViewController.h; path = Classes/ThemesStopViewController.h; sourceTree = "<group>"; };
-		17A080EE16E532C400366341 /* ThemesStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemesStopViewController.m; path = Classes/ThemesStopViewController.m; sourceTree = "<group>"; };
-		17A080EF16E532C400366341 /* ThemesStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThemesStopViewController.xib; path = Classes/ThemesStopViewController.xib; sourceTree = "<group>"; };
+		17A080ED16E532C400366341 /* TAPThemesStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPThemesStopViewController.h; path = Classes/TAPThemesStopViewController.h; sourceTree = "<group>"; };
+		17A080EE16E532C400366341 /* TAPThemesStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPThemesStopViewController.m; path = Classes/TAPThemesStopViewController.m; sourceTree = "<group>"; };
+		17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPThemesStopViewController.xib; path = Classes/TAPThemesStopViewController.xib; sourceTree = "<group>"; };
 		17A080F216E532E200366341 /* TAPInterviewsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPInterviewsStopViewController.h; path = Classes/TAPInterviewsStopViewController.h; sourceTree = "<group>"; };
 		17A080F316E532E200366341 /* TAPInterviewsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPInterviewsStopViewController.m; path = Classes/TAPInterviewsStopViewController.m; sourceTree = "<group>"; };
 		17A080F416E532E200366341 /* TAPInterviewsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPInterviewsStopViewController.xib; path = Classes/TAPInterviewsStopViewController.xib; sourceTree = "<group>"; };
@@ -519,8 +519,8 @@
 				178AAF0916E6A1670061E735 /* TAPMenuViewController.m */,
 				628DDA34193E5D3E003C785A /* TAPBaseViewController.h */,
 				628DDA35193E5D3E003C785A /* TAPBaseViewController.m */,
-				17A080ED16E532C400366341 /* ThemesStopViewController.h */,
-				17A080EE16E532C400366341 /* ThemesStopViewController.m */,
+				17A080ED16E532C400366341 /* TAPThemesStopViewController.h */,
+				17A080EE16E532C400366341 /* TAPThemesStopViewController.m */,
 				17A0810116E54DCD00366341 /* ThemeStopViewController.h */,
 				17A0810216E54DCD00366341 /* ThemeStopViewController.m */,
 				17A080E816E532AB00366341 /* TimelineStopViewController.h */,
@@ -549,7 +549,7 @@
 				621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */,
 				178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */,
 				6523CF5116F2EEC500B42ECE /* ThemeCell.xib */,
-				17A080EF16E532C400366341 /* ThemesStopViewController.xib */,
+				17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */,
 				17A0810316E54DCD00366341 /* ThemeStopViewController.xib */,
 				17A080EA16E532AB00366341 /* TimelineStopViewController.xib */,
 			);
@@ -924,7 +924,7 @@
 				17A080E216E5325000366341 /* TAPHomeViewController.xib in Resources */,
 				17A080E716E5327D00366341 /* TAPEventsProgramsViewController.xib in Resources */,
 				17A080EC16E532AB00366341 /* TimelineStopViewController.xib in Resources */,
-				17A080F116E532C400366341 /* ThemesStopViewController.xib in Resources */,
+				17A080F116E532C400366341 /* TAPThemesStopViewController.xib in Resources */,
 				A4F738AD189C35C50091DF1B /* indiana-tap.png in Resources */,
 				17A080F616E532E200366341 /* TAPInterviewsStopViewController.xib in Resources */,
 				62BAE48617F0E8C0005E6E13 /* back.png in Resources */,
@@ -1048,7 +1048,7 @@
 				17A080E116E5325000366341 /* TAPHomeViewController.m in Sources */,
 				17A080E616E5327D00366341 /* TAPEventsProgramsViewController.m in Sources */,
 				17A080EB16E532AB00366341 /* TimelineStopViewController.m in Sources */,
-				17A080F016E532C400366341 /* ThemesStopViewController.m in Sources */,
+				17A080F016E532C400366341 /* TAPThemesStopViewController.m in Sources */,
 				17A080F516E532E200366341 /* TAPInterviewsStopViewController.m in Sources */,
 				17A080FF16E54D1100366341 /* TAPEventsStopViewController.m in Sources */,
 				17A0810416E54DCD00366341 /* ThemeStopViewController.m in Sources */,

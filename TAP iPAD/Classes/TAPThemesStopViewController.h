@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "TAPBaseViewController.h"
 
-@interface ThemesStopViewController : TAPBaseViewController <UICollectionViewDataSource>
+@interface TAPThemesStopViewController : TAPBaseViewController <UICollectionViewDataSource>
 - (id)initWithConfigDictionary:(NSDictionary *)config;
 - (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName itemsPerRow:(NSInteger)itemsPerRow columnWidth:(CGFloat)columnWidth rowHeight:(CGFloat)rowHeight verticalSpacing:(CGFloat)verticalSpacing scrollDirection:(UICollectionViewScrollDirection)scrollDirection;
 @end

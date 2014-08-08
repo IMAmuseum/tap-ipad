@@ -13,7 +13,7 @@
 #import "TAPMenuViewController.h"
 #import "TAPHomeViewController.h"
 #import "TimelineStopViewController.h"
-#import "ThemesStopViewController.h"
+#import "TAPThemesStopViewController.h"
 #import "TAPInterviewsStopViewController.h"
 #import "TAPEventsProgramsViewController.h"
 #import "TAPBaseViewController.h"

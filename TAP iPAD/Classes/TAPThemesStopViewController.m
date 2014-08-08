@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ArrowView.h"
-#import "ThemesStopViewController.h"
+#import "TAPThemesStopViewController.h"
 #import "ThemeStopViewController.h"
 #import "ThemeCell.h"
 #import "NSDictionary+TAPUtils.h"
@@ -21,7 +21,7 @@
 // vendor
 #import "VSTheme.h"
 
-@interface ThemesStopViewController ()
+@interface TAPThemesStopViewController ()
 @property (nonatomic, strong) TAPStop *stop;
 @property (nonatomic, strong) NSMutableArray *themeStops;
 @property (nonatomic, strong) NSMutableArray *themeStopImages;
@@ -42,7 +42,7 @@
 @property (nonatomic, strong) VSTheme *theme;
 @end
 
-@implementation ThemesStopViewController
+@implementation TAPThemesStopViewController
 
 - (id)initWithConfigDictionary:(NSDictionary *)config {
     
