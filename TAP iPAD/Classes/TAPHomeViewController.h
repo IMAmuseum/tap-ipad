@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
 
-@interface HomeViewController : GAITrackedViewController
+@interface TAPHomeViewController : GAITrackedViewController
 
 @end

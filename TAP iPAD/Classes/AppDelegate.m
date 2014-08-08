@@ -11,7 +11,7 @@
 #import "TAPTour.h"
 #import "TourMLParser.h"
 #import "TAPMenuViewController.h"
-#import "HomeViewController.h"
+#import "TAPHomeViewController.h"
 #import "TimelineStopViewController.h"
 #import "ThemesStopViewController.h"
 #import "InterviewsStopViewController.h"
@@ -89,7 +89,7 @@
 //    [[GAI sharedInstance] trackerWithTrackingId:[self.tapConfig objectForKey:@"GATrackerId"]];
     
     // initialize view controllers
-    HomeViewController *homeViewController = [[HomeViewController alloc] init];
+    TAPHomeViewController *homeViewController = [[TAPHomeViewController alloc] init];
     NSArray *navigationItems = [self.tapConfig objectForKey:@"NavigationItems"];
     
     NSMutableArray *navigationItemsViewControllers = [[NSMutableArray alloc] init];

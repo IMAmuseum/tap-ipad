@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "TAPHomeViewController.h"
 
-@interface HomeViewController ()
+@interface TAPHomeViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation TAPHomeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
