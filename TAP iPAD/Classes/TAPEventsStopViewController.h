@@ -12,7 +12,7 @@
 
 @class TAPStop;
 
-@interface EventsStopViewController : GAITrackedViewController <UIScrollViewDelegate, UICollectionViewDataSource>
+@interface TAPEventsStopViewController : GAITrackedViewController <UIScrollViewDelegate, UICollectionViewDataSource>
 
 - (id)initWithEvents:(NSArray *)events withStartingIndex:(NSInteger)index;
 @end

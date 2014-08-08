@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "EventsStopViewController.h"
+#import "TAPEventsStopViewController.h"
 #import "AppDelegate.h"
 #import "EventStopCell.h"
 #import "TAPStop.h"
@@ -21,7 +21,7 @@
 #import "GAIDictionaryBuilder.h"
 #import "VSTheme.h"
 
-@interface EventsStopViewController () {
+@interface TAPEventsStopViewController () {
     int _initialIndex;
 }
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
@@ -31,7 +31,7 @@
 - (IBAction)back:(id)sender;
 @end
 
-@implementation EventsStopViewController
+@implementation TAPEventsStopViewController
 
 - (id)initWithEvents:(NSArray *)events withStartingIndex:(NSInteger)index
 {
