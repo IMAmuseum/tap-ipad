@@ -12,7 +12,7 @@
 #import "TourMLParser.h"
 #import "TAPMenuViewController.h"
 #import "TAPHomeViewController.h"
-#import "TimelineStopViewController.h"
+#import "TAPTimelineStopViewController.h"
 #import "TAPThemesStopViewController.h"
 #import "TAPInterviewsStopViewController.h"
 #import "TAPEventsProgramsViewController.h"

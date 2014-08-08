@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TimelineStopViewController.h"
+#import "TAPTimelineStopViewController.h"
 #import "TAPEventStopDetailViewController.h"
 #import "TimelineView.h"
 #import "TimelineEventCell.h"
@@ -29,7 +29,7 @@
 #define CELL_WIDTH 275.0f
 #define IMAGE_TAG 1000
 
-@interface TimelineStopViewController () {
+@interface TAPTimelineStopViewController () {
     int _startYear;
     int _endYear;
     float _beforeSplitWidth;
@@ -44,7 +44,7 @@
 @property (nonatomic, strong) VSTheme *theme;
 @end
 
-@implementation TimelineStopViewController
+@implementation TAPTimelineStopViewController
 
 - (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName
 {
