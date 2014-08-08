@@ -12,6 +12,6 @@
 
 @class TAPStop;
 
-@interface ImageStopViewController : GAITrackedViewController <UIWebViewDelegate, UIScrollViewDelegate>
+@interface TAPImageStopViewController : GAITrackedViewController <UIWebViewDelegate, UIScrollViewDelegate>
 - (id)initWithStop:(TAPStop *)stop;
 @end

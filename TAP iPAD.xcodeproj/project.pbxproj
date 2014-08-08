@@ -24,8 +24,8 @@
 		17837AD216F39EA100E62BD5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17837AD116F39EA100E62BD5 /* QuartzCore.framework */; };
 		17837B0A16F3D74600E62BD5 /* ImageStopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17837B0916F3D74500E62BD5 /* ImageStopCell.m */; };
 		17837B0C16F3D7B000E62BD5 /* ImageStopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */; };
-		178AAEF616E54E0F0061E735 /* ImageStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178AAEF416E54E0F0061E735 /* ImageStopViewController.m */; };
-		178AAEF716E54E0F0061E735 /* ImageStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 178AAEF516E54E0F0061E735 /* ImageStopViewController.xib */; };
+		178AAEF616E54E0F0061E735 /* TAPImageStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178AAEF416E54E0F0061E735 /* TAPImageStopViewController.m */; };
+		178AAEF716E54E0F0061E735 /* TAPImageStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */; };
 		178AAEFE16E6721D0061E735 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 178AAEFD16E6721D0061E735 /* background@2x.png */; };
 		178AAF0016E672240061E735 /* header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 178AAEFF16E672240061E735 /* header@2x.png */; };
 		178AAF0216E68CC00061E735 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 178AAF0116E68CC00061E735 /* Default-Landscape@2x.png */; };
@@ -189,9 +189,9 @@
 		17837B0816F3D74400E62BD5 /* ImageStopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageStopCell.h; path = Classes/ImageStopCell.h; sourceTree = "<group>"; };
 		17837B0916F3D74500E62BD5 /* ImageStopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageStopCell.m; path = Classes/ImageStopCell.m; sourceTree = "<group>"; };
 		17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageStopCell.xib; path = Classes/ImageStopCell.xib; sourceTree = "<group>"; };
-		178AAEF316E54E0F0061E735 /* ImageStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageStopViewController.h; path = Classes/ImageStopViewController.h; sourceTree = "<group>"; };
-		178AAEF416E54E0F0061E735 /* ImageStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageStopViewController.m; path = Classes/ImageStopViewController.m; sourceTree = "<group>"; };
-		178AAEF516E54E0F0061E735 /* ImageStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageStopViewController.xib; path = Classes/ImageStopViewController.xib; sourceTree = "<group>"; };
+		178AAEF316E54E0F0061E735 /* TAPImageStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPImageStopViewController.h; path = Classes/TAPImageStopViewController.h; sourceTree = "<group>"; };
+		178AAEF416E54E0F0061E735 /* TAPImageStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPImageStopViewController.m; path = Classes/TAPImageStopViewController.m; sourceTree = "<group>"; };
+		178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPImageStopViewController.xib; path = Classes/TAPImageStopViewController.xib; sourceTree = "<group>"; };
 		178AAEFD16E6721D0061E735 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "Resources/Images/background@2x.png"; sourceTree = "<group>"; };
 		178AAEFF16E672240061E735 /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header@2x.png"; path = "Resources/Images/header@2x.png"; sourceTree = "<group>"; };
 		178AAF0116E68CC00061E735 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "Resources/Images/Default-Landscape@2x.png"; sourceTree = "<group>"; };
@@ -511,8 +511,8 @@
 				17A080FD16E54D1100366341 /* TAPEventsStopViewController.m */,
 				17A080DE16E5325000366341 /* TAPHomeViewController.h */,
 				17A080DF16E5325000366341 /* TAPHomeViewController.m */,
-				178AAEF316E54E0F0061E735 /* ImageStopViewController.h */,
-				178AAEF416E54E0F0061E735 /* ImageStopViewController.m */,
+				178AAEF316E54E0F0061E735 /* TAPImageStopViewController.h */,
+				178AAEF416E54E0F0061E735 /* TAPImageStopViewController.m */,
 				17A080F216E532E200366341 /* InterviewsStopViewController.h */,
 				17A080F316E532E200366341 /* InterviewsStopViewController.m */,
 				178AAF0816E6A1670061E735 /* TAPMenuViewController.h */,
@@ -542,7 +542,7 @@
 				17AD6BA216FD487300D7D755 /* EventStopCell.xib */,
 				17A080E016E5325000366341 /* TAPHomeViewController.xib */,
 				17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */,
-				178AAEF516E54E0F0061E735 /* ImageStopViewController.xib */,
+				178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */,
 				17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */,
 				17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */,
 				17A080F416E532E200366341 /* InterviewsStopViewController.xib */,
@@ -931,7 +931,7 @@
 				62F8CB0317FEFC8C004287D5 /* Settings.bundle in Resources */,
 				17A0810016E54D1100366341 /* TAPEventsStopViewController.xib in Resources */,
 				17A0810516E54DCD00366341 /* ThemeStopViewController.xib in Resources */,
-				178AAEF716E54E0F0061E735 /* ImageStopViewController.xib in Resources */,
+				178AAEF716E54E0F0061E735 /* TAPImageStopViewController.xib in Resources */,
 				178AAEFE16E6721D0061E735 /* background@2x.png in Resources */,
 				178AAF0016E672240061E735 /* header@2x.png in Resources */,
 				178AAF0216E68CC00061E735 /* Default-Landscape@2x.png in Resources */,
@@ -1052,7 +1052,7 @@
 				17A080F516E532E200366341 /* InterviewsStopViewController.m in Sources */,
 				17A080FF16E54D1100366341 /* TAPEventsStopViewController.m in Sources */,
 				17A0810416E54DCD00366341 /* ThemeStopViewController.m in Sources */,
-				178AAEF616E54E0F0061E735 /* ImageStopViewController.m in Sources */,
+				178AAEF616E54E0F0061E735 /* TAPImageStopViewController.m in Sources */,
 				178AAF0B16E6A1680061E735 /* TAPMenuViewController.m in Sources */,
 				17E5149A16EE69F600C84A54 /* ArrowView.m in Sources */,
 				628DDA3C193F5DB1003C785A /* NSDictionary+TAPUtils.m in Sources */,

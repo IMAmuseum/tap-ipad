@@ -7,7 +7,7 @@
 //
 
 #import "ThemeStopViewController.h"
-#import "ImageStopViewController.h"
+#import "TAPImageStopViewController.h"
 #import "AppDelegate.h"
 #import "UnderlineLabel.h"
 #import "NewThemeCell.h"

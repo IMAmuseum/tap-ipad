@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "ImageStopViewController.h"
+#import "TAPImageStopViewController.h"
 #import "AppDelegate.h"
 #import "UnderlineLabel.h"
 #import "TAPStop.h"
@@ -23,7 +23,7 @@
 #import "VSTheme.h"
 
 
-@interface ImageStopViewController ()
+@interface TAPImageStopViewController ()
 @property (nonatomic, strong) TAPStop *stop;
 @property (nonatomic, weak) IBOutlet UILabel *imageTitle;
 @property (nonatomic, weak) IBOutlet UIWebView *imageCaption;
@@ -34,7 +34,7 @@
 - (IBAction)back:(id)sender;
 @end
 
-@implementation ImageStopViewController
+@implementation TAPImageStopViewController
 
 - (id)initWithStop:(TAPStop *)stop
 {
