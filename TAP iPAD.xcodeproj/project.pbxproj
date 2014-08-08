@@ -490,7 +490,7 @@
 				17A0807616E5236200366341 /* AppDelegate.h */,
 				17A0807716E5236200366341 /* AppDelegate.m */,
 				652C1C2616FFF34B00646100 /* Categories */,
-				17A0808916E523E400366341 /* Controllers */,
+				17A0808916E523E400366341 /* View Controllers */,
 				17AD6BA016FCDC5600D7D755 /* Custom Views */,
 				17AD6BA116FCDC9900D7D755 /* Tap */,
 				17A0808A16E5240900366341 /* Views */,
@@ -500,33 +500,42 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		17A0808916E523E400366341 /* Controllers */ = {
+		17A0808916E523E400366341 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				17A080E316E5327D00366341 /* TAPEventsProgramsViewController.h */,
 				17A080E416E5327D00366341 /* TAPEventsProgramsViewController.m */,
+				17A080E516E5327D00366341 /* TAPEventsProgramsViewController.xib */,
 				62BAE48917F5F09F005E6E13 /* TAPEventStopDetailViewController.h */,
 				62BAE48A17F5F09F005E6E13 /* TAPEventStopDetailViewController.m */,
+				62BAE48717F5F005005E6E13 /* TAPEventStopDetailViewController.xib */,
 				17A080FC16E54D1100366341 /* TAPEventsStopViewController.h */,
 				17A080FD16E54D1100366341 /* TAPEventsStopViewController.m */,
+				17A080FE16E54D1100366341 /* TAPEventsStopViewController.xib */,
 				17A080DE16E5325000366341 /* TAPHomeViewController.h */,
 				17A080DF16E5325000366341 /* TAPHomeViewController.m */,
 				178AAEF316E54E0F0061E735 /* TAPImageStopViewController.h */,
 				178AAEF416E54E0F0061E735 /* TAPImageStopViewController.m */,
+				178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */,
 				17A080F216E532E200366341 /* TAPInterviewsStopViewController.h */,
 				17A080F316E532E200366341 /* TAPInterviewsStopViewController.m */,
+				17A080F416E532E200366341 /* TAPInterviewsStopViewController.xib */,
 				178AAF0816E6A1670061E735 /* TAPMenuViewController.h */,
 				178AAF0916E6A1670061E735 /* TAPMenuViewController.m */,
+				178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */,
 				628DDA34193E5D3E003C785A /* TAPBaseViewController.h */,
 				628DDA35193E5D3E003C785A /* TAPBaseViewController.m */,
 				17A080ED16E532C400366341 /* TAPThemesStopViewController.h */,
 				17A080EE16E532C400366341 /* TAPThemesStopViewController.m */,
+				17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */,
 				17A0810116E54DCD00366341 /* TAPThemeStopViewController.h */,
 				17A0810216E54DCD00366341 /* TAPThemeStopViewController.m */,
+				17A0810316E54DCD00366341 /* TAPThemeStopViewController.xib */,
 				17A080E816E532AB00366341 /* TAPTimelineStopViewController.h */,
 				17A080E916E532AB00366341 /* TAPTimelineStopViewController.m */,
+				17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */,
 			);
-			name = Controllers;
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		17A0808A16E5240900366341 /* Views */ = {
@@ -536,22 +545,13 @@
 				A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */,
 				A4C3F04C193EC0E700B173B1 /* TAPTiledView.h */,
 				A4C3F04D193EC0E700B173B1 /* TAPTiledView.m */,
-				17A080E516E5327D00366341 /* TAPEventsProgramsViewController.xib */,
-				62BAE48717F5F005005E6E13 /* TAPEventStopDetailViewController.xib */,
-				17A080FE16E54D1100366341 /* TAPEventsStopViewController.xib */,
 				17AD6BA216FD487300D7D755 /* EventStopCell.xib */,
 				17A080E016E5325000366341 /* TAPHomeViewController.xib */,
 				17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */,
-				178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */,
 				17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */,
 				17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */,
-				17A080F416E532E200366341 /* TAPInterviewsStopViewController.xib */,
 				621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */,
-				178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */,
 				6523CF5116F2EEC500B42ECE /* ThemeCell.xib */,
-				17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */,
-				17A0810316E54DCD00366341 /* TAPThemeStopViewController.xib */,
-				17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
