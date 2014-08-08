@@ -503,6 +503,8 @@
 		17A0808916E523E400366341 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				628DDA34193E5D3E003C785A /* TAPBaseViewController.h */,
+				628DDA35193E5D3E003C785A /* TAPBaseViewController.m */,
 				17A080E316E5327D00366341 /* TAPEventsProgramsViewController.h */,
 				17A080E416E5327D00366341 /* TAPEventsProgramsViewController.m */,
 				17A080E516E5327D00366341 /* TAPEventsProgramsViewController.xib */,
@@ -524,8 +526,6 @@
 				178AAF0816E6A1670061E735 /* TAPMenuViewController.h */,
 				178AAF0916E6A1670061E735 /* TAPMenuViewController.m */,
 				178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */,
-				628DDA34193E5D3E003C785A /* TAPBaseViewController.h */,
-				628DDA35193E5D3E003C785A /* TAPBaseViewController.m */,
 				17A080ED16E532C400366341 /* TAPThemesStopViewController.h */,
 				17A080EE16E532C400366341 /* TAPThemesStopViewController.m */,
 				17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */,

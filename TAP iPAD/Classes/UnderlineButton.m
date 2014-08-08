@@ -6,21 +6,23 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
+
 #import "UnderlineButton.h"
+#import "VSTheme.h"
 
 @interface UnderlineButton() {
     BOOL _active;
 }
-
+@property (nonatomic, strong) VSTheme *theme;
 @end
 
 @implementation UnderlineButton
 
-- (id)initWithFrame:(CGRect)frame
+-(id)initWithTheme:(VSTheme *)theme
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-
+    self = [super init];
+    if (self != nil) {
+        self.theme = theme;
     }
     return self;
 }
@@ -32,7 +34,8 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     if (_active) {
-        CGContextSetStrokeColorWithColor(context, [[UIColor colorWithRed:172.0/255.0 green:189.0/255.0 blue:79.0/255.0 alpha:1.0] CGColor]);
+        UIColor *activeColor = (self.theme == nil) ? [UIColor blackColor] : [self.theme colorForKey:@"accentColor"];
+        CGContextSetStrokeColorWithColor(context, [activeColor CGColor]);
     } else {
         CGContextSetStrokeColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3] CGColor]);
     }

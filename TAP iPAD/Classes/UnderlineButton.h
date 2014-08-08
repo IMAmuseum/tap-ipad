@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VSTheme;
 
 @interface UnderlineButton : UIButton
-
+-(id) initWithTheme:(VSTheme *)theme;
 @end

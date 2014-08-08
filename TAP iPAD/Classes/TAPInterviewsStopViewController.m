@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
+#import "AppDelegate.h"
+#import "ArrowView.h"
 #import "TAPInterviewsStopViewController.h"
 #import "InterviewIntroductionCell.h"
 #import "InterviewQuestionCell.h"
-#import "AppDelegate.h"
 #import "TAPTour.h"
 #import "TAPStop.h"
 #import "TAPAsset.h"
 #import "TAPSource.h"
 #import "TAPConnection.h"
-#import "ArrowView.h"
 #import "UnderlineButton.h"
 
 // vendor
@@ -117,7 +117,7 @@
             [attributedSection appendAttributedString:attributedSectionCount];
         }
     
-		UnderlineButton *button = [UnderlineButton buttonWithType:UIButtonTypeCustom];
+		UnderlineButton *button = [[UnderlineButton alloc] initWithTheme:self.theme];
         [button setTag:SECTION_TAG_OFFSET + index];
         [button setAttributedTitle:attributedSection forState:UIControlStateNormal];
 		[button setTitle:section forState:UIControlStateNormal];
