@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "EventStopDetailViewController.h"
+#import "TAPEventStopDetailViewController.h"
 #import "AppDelegate.h"
 #import "TAPStop.h"
 #import "TAPConnection.h"
@@ -21,11 +21,11 @@
 #import "GAIDictionaryBuilder.h"
 #import "VSTheme.h"
 
-@interface EventStopDetailViewController ()
+@interface TAPEventStopDetailViewController ()
 @property (nonatomic, strong) VSTheme *theme;
 @end
 
-@implementation EventStopDetailViewController
+@implementation TAPEventStopDetailViewController
 
 - (id)initWithEventStop:(TAPStop *)eventStop {
     self = [super init];

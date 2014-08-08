@@ -9,22 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/TimelineStopViewController.m"
-            timestampString = "402259535.159928"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-initWithStopTitle:keycode:trackedViewName:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TAP iPAD/ThemeStopViewController.m"
             timestampString = "424029110.639779"
             startingColumnNumber = "9223372036854775807"
@@ -64,22 +48,6 @@
             startingLineNumber = "72"
             endingLineNumber = "72"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/TimelineStopViewController.m"
-            timestampString = "402259535.159928"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-initWithStopTitle:keycode:trackedViewName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -145,7 +113,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
             timestampString = "402004534.547113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -161,14 +129,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/TimelineStopViewController.m"
-            timestampString = "402333903.446796"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
+            timestampString = "402002915.91945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
-            landmarkName = "-eventSelected:"
-            landmarkType = "5">
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "@implementation TAPEventStopDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -177,12 +145,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
-            timestampString = "402002915.91945"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
+            timestampString = "402004395.472922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-initWithEventStop:"
             landmarkType = "5">
          </BreakpointContent>
@@ -193,23 +161,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
-            timestampString = "402004395.472922"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
             timestampString = "402004534.547113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -241,29 +193,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
             timestampString = "402257918.107112"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/TimelineStopViewController.m"
-            timestampString = "402333903.446796"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "-timelineView:cellForIndex:"
+            landmarkName = "-collectionView:numberOfItemsInSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -295,8 +231,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "205"
             endingLineNumber = "205"
-            landmarkName = "-startSession"
-            landmarkType = "5">
+            landmarkName = "@implementation AppDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -305,7 +241,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
             timestampString = "403119660.82487"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -321,14 +257,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
             timestampString = "403119663.537491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkName = "@implementation TAPEventStopDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -337,7 +273,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
             timestampString = "403119666.312994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -353,13 +289,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
             timestampString = "403119749.270788"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "-viewDidLoad"
+            landmarkName = "-initWithEventStop:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -369,7 +305,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/EventStopDetailViewController.m"
+            filePath = "TAP iPAD/Classes/TAPEventStopDetailViewController.m"
             timestampString = "403119760.070625"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TimelineStopViewController.h"
-#import "EventStopDetailViewController.h"
+#import "TAPEventStopDetailViewController.h"
 #import "TimelineView.h"
 #import "TimelineEventCell.h"
 #import "AppDelegate.h"
@@ -291,7 +291,7 @@
     int index = [[gestureRecognizer view] tag] - IMAGE_TAG;
     
     // initialize themes stop controller
-    EventStopDetailViewController *eventStopDetailViewController = [[EventStopDetailViewController alloc] initWithEventStop:[self.events objectAtIndex:index]];
+    TAPEventStopDetailViewController *eventStopDetailViewController = [[TAPEventStopDetailViewController alloc] initWithEventStop:[self.events objectAtIndex:index]];
     
     // create fade transition
     CATransition *transition = [CATransition animation];

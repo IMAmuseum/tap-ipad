@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
 
-@interface EventsProgramsViewController : GAITrackedViewController <UIScrollViewDelegate>
+@interface TAPEventsProgramsViewController : GAITrackedViewController <UIScrollViewDelegate>
 
 @end

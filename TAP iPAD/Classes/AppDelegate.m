@@ -15,7 +15,7 @@
 #import "TimelineStopViewController.h"
 #import "ThemesStopViewController.h"
 #import "InterviewsStopViewController.h"
-#import "EventsProgramsViewController.h"
+#import "TAPEventsProgramsViewController.h"
 #import "TAPBaseViewController.h"
 
 // vendor
