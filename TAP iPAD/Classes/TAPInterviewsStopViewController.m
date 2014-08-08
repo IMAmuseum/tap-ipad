@@ -124,7 +124,7 @@
 		[button addTarget:self action:@selector(sectionNavigationClicked:) forControlEvents:UIControlEventTouchDown];
         [button.titleLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
         
-        CGSize fontSize = [button.titleLabel.text sizeWithFont:button.titleLabel.font];
+        CGSize fontSize = [button.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: button.titleLabel.font}];
         CGRect buttonFrame = CGRectMake(previousWidth, 0, fontSize.width + SECTION_MENU_SPACING, self.header.frame.size.height);
         [button setFrame:buttonFrame];
         
