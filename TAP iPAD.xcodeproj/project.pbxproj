@@ -162,7 +162,7 @@
 		17A0806716E5236200366341 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		17A0806916E5236200366341 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		17A0806B16E5236200366341 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		17A0806F16E5236200366341 /* TAP iPAD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TAP iPAD-Info.plist"; sourceTree = "<group>"; };
+		17A0806F16E5236200366341 /* TAP iPAD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TAP iPAD-Info.plist"; path = "Resources/TAP iPAD-Info.plist"; sourceTree = "<group>"; };
 		17A0807116E5236200366341 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17A0807316E5236200366341 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17A0807516E5236200366341 /* TAP iPAD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TAP iPAD-Prefix.pch"; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 		652C1C2A16FFF43B00646100 /* KioskApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KioskApplication.h; path = Classes/KioskApplication.h; sourceTree = "<group>"; };
 		652C1C2B16FFF43C00646100 /* KioskApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KioskApplication.m; path = Classes/KioskApplication.m; sourceTree = "<group>"; };
 		655B39121703DA4600BC1ED4 /* Caption.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Caption.html; path = Resources/HTML/Caption.html; sourceTree = "<group>"; };
-		65A462AB16E97FB7009BBFD8 /* TapConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TapConfig.plist; sourceTree = "<group>"; };
+		65A462AB16E97FB7009BBFD8 /* TapConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TapConfig.plist; path = Resources/TapConfig.plist; sourceTree = "<group>"; };
 		65A462AE16EBC4EF009BBFD8 /* EventsPrograms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = EventsPrograms.html; path = Resources/HTML/EventsPrograms.html; sourceTree = "<group>"; };
 		65A462B116ED04D8009BBFD8 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 		65F424DE16F80F9F004D05B4 /* TimelineEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineEventCell.h; path = Classes/TimelineEventCell.h; sourceTree = "<group>"; };
