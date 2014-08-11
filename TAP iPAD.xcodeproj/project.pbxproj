@@ -128,8 +128,8 @@
 
 /* Begin PBXFileReference section */
 		1747952216F76E4A0082745C /* Content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Content.html; path = Resources/HTML/Content.html; sourceTree = "<group>"; };
-		1747952616F78C190082745C /* UnderlineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnderlineLabel.h; path = Classes/UnderlineLabel.h; sourceTree = "<group>"; };
-		1747952716F78C190082745C /* UnderlineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnderlineLabel.m; path = Classes/UnderlineLabel.m; sourceTree = "<group>"; };
+		1747952616F78C190082745C /* UnderlineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnderlineLabel.h; path = Classes/Views/UnderlineLabel.h; sourceTree = "<group>"; };
+		1747952716F78C190082745C /* UnderlineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnderlineLabel.m; path = Classes/Views/UnderlineLabel.m; sourceTree = "<group>"; };
 		1747952C16FA3C5D0082745C /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Images/Icons/Icon-Small-50.png"; sourceTree = "<group>"; };
 		1747952D16FA3C5D0082745C /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "Resources/Images/Icons/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
 		1747952E16FA3C5D0082745C /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Images/Icons/Icon-Small.png"; sourceTree = "<group>"; };
@@ -138,25 +138,25 @@
 		1747953116FA3C5D0082745C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Images/Icons/Icon@2x.png"; sourceTree = "<group>"; };
 		1747953216FA3C5D0082745C /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = Resources/Images/Icons/iTunesArtwork.png; sourceTree = "<group>"; };
 		1747953316FA3C5D0082745C /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "Resources/Images/Icons/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InterviewQuestionCell.xib; path = Classes/InterviewQuestionCell.xib; sourceTree = "<group>"; };
-		17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InterviewIntroductionCell.xib; path = Classes/InterviewIntroductionCell.xib; sourceTree = "<group>"; };
-		17837AC716F206AD00E62BD5 /* InterviewIntroductionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewIntroductionCell.h; path = Classes/InterviewIntroductionCell.h; sourceTree = "<group>"; };
-		17837AC816F206AD00E62BD5 /* InterviewIntroductionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewIntroductionCell.m; path = Classes/InterviewIntroductionCell.m; sourceTree = "<group>"; };
-		17837ACC16F2440100E62BD5 /* UnderlineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnderlineButton.h; path = Classes/UnderlineButton.h; sourceTree = "<group>"; };
-		17837ACD16F2440100E62BD5 /* UnderlineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnderlineButton.m; path = Classes/UnderlineButton.m; sourceTree = "<group>"; };
+		17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InterviewQuestionCell.xib; path = Classes/Views/InterviewQuestionCell.xib; sourceTree = "<group>"; };
+		17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InterviewIntroductionCell.xib; path = Classes/Views/InterviewIntroductionCell.xib; sourceTree = "<group>"; };
+		17837AC716F206AD00E62BD5 /* InterviewIntroductionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewIntroductionCell.h; path = Classes/Views/InterviewIntroductionCell.h; sourceTree = "<group>"; };
+		17837AC816F206AD00E62BD5 /* InterviewIntroductionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewIntroductionCell.m; path = Classes/Views/InterviewIntroductionCell.m; sourceTree = "<group>"; };
+		17837ACC16F2440100E62BD5 /* UnderlineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnderlineButton.h; path = Classes/Views/UnderlineButton.h; sourceTree = "<group>"; };
+		17837ACD16F2440100E62BD5 /* UnderlineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnderlineButton.m; path = Classes/Views/UnderlineButton.m; sourceTree = "<group>"; };
 		17837AD116F39EA100E62BD5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		17837B0816F3D74400E62BD5 /* ImageStopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageStopCell.h; path = Classes/ImageStopCell.h; sourceTree = "<group>"; };
-		17837B0916F3D74500E62BD5 /* ImageStopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageStopCell.m; path = Classes/ImageStopCell.m; sourceTree = "<group>"; };
-		17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageStopCell.xib; path = Classes/ImageStopCell.xib; sourceTree = "<group>"; };
-		178AAEF316E54E0F0061E735 /* TAPImageStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPImageStopViewController.h; path = Classes/ViewControllers/TAPImageStopViewController.h; sourceTree = "<group>"; };
-		178AAEF416E54E0F0061E735 /* TAPImageStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPImageStopViewController.m; path = Classes/ViewControllers/TAPImageStopViewController.m; sourceTree = "<group>"; };
-		178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPImageStopViewController.xib; path = Classes/ViewControllers/TAPImageStopViewController.xib; sourceTree = "<group>"; };
+		17837B0816F3D74400E62BD5 /* ImageStopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageStopCell.h; path = Classes/Views/ImageStopCell.h; sourceTree = "<group>"; };
+		17837B0916F3D74500E62BD5 /* ImageStopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageStopCell.m; path = Classes/Views/ImageStopCell.m; sourceTree = "<group>"; };
+		17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageStopCell.xib; path = Classes/Views/ImageStopCell.xib; sourceTree = "<group>"; };
+		178AAEF316E54E0F0061E735 /* TAPImageStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPImageStopViewController.h; path = "Classes/View Controllers/TAPImageStopViewController.h"; sourceTree = "<group>"; };
+		178AAEF416E54E0F0061E735 /* TAPImageStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPImageStopViewController.m; path = "Classes/View Controllers/TAPImageStopViewController.m"; sourceTree = "<group>"; };
+		178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPImageStopViewController.xib; path = "Classes/View Controllers/TAPImageStopViewController.xib"; sourceTree = "<group>"; };
 		178AAEFD16E6721D0061E735 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "Resources/Images/background@2x.png"; sourceTree = "<group>"; };
 		178AAEFF16E672240061E735 /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header@2x.png"; path = "Resources/Images/header@2x.png"; sourceTree = "<group>"; };
 		178AAF0116E68CC00061E735 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "Resources/Images/Default-Landscape@2x.png"; sourceTree = "<group>"; };
-		178AAF0816E6A1670061E735 /* TAPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPMenuViewController.h; path = Classes/ViewControllers/TAPMenuViewController.h; sourceTree = "<group>"; };
-		178AAF0916E6A1670061E735 /* TAPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPMenuViewController.m; path = Classes/ViewControllers/TAPMenuViewController.m; sourceTree = "<group>"; };
-		178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPMenuViewController.xib; path = Classes/ViewControllers/TAPMenuViewController.xib; sourceTree = "<group>"; };
+		178AAF0816E6A1670061E735 /* TAPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPMenuViewController.h; path = "Classes/View Controllers/TAPMenuViewController.h"; sourceTree = "<group>"; };
+		178AAF0916E6A1670061E735 /* TAPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPMenuViewController.m; path = "Classes/View Controllers/TAPMenuViewController.m"; sourceTree = "<group>"; };
+		178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPMenuViewController.xib; path = "Classes/View Controllers/TAPMenuViewController.xib"; sourceTree = "<group>"; };
 		17A0806216E5236200366341 /* TAP iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TAP iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A0806516E5236200366341 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		17A0806716E5236200366341 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -188,8 +188,8 @@
 		17A080B216E525B600366341 /* TAPStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPStop.m; path = Classes/Tap/Models/TAPStop.m; sourceTree = "<group>"; };
 		17A080B316E525B600366341 /* TAPTour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTour.h; path = Classes/Tap/Models/TAPTour.h; sourceTree = "<group>"; };
 		17A080B416E525B600366341 /* TAPTour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTour.m; path = Classes/Tap/Models/TAPTour.m; sourceTree = "<group>"; };
-		17A080BD16E525E400366341 /* NonSelectableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NonSelectableTextView.h; path = Classes/NonSelectableTextView.h; sourceTree = "<group>"; };
-		17A080BE16E525E400366341 /* NonSelectableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NonSelectableTextView.m; path = Classes/NonSelectableTextView.m; sourceTree = "<group>"; };
+		17A080BD16E525E400366341 /* NonSelectableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NonSelectableTextView.h; path = Classes/Views/NonSelectableTextView.h; sourceTree = "<group>"; };
+		17A080BE16E525E400366341 /* NonSelectableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NonSelectableTextView.m; path = Classes/Views/NonSelectableTextView.m; sourceTree = "<group>"; };
 		17A080BF16E525E400366341 /* UINavigationController+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Rotation.h"; path = "Categories/UINavigationController+Rotation.h"; sourceTree = "<group>"; };
 		17A080C016E525E400366341 /* UINavigationController+Rotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Rotation.m"; path = "Categories/UINavigationController+Rotation.m"; sourceTree = "<group>"; };
 		17A080C316E5261200366341 /* BaseStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseStop.h; path = Classes/Tap/Stops/BaseStop.h; sourceTree = "<group>"; };
@@ -203,47 +203,47 @@
 		17A080D516E527CB00366341 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		17A080D716E527DB00366341 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		17A080DB16E52B3300366341 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		17A080DE16E5325000366341 /* TAPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPHomeViewController.h; path = Classes/ViewControllers/TAPHomeViewController.h; sourceTree = "<group>"; };
-		17A080DF16E5325000366341 /* TAPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPHomeViewController.m; path = Classes/ViewControllers/TAPHomeViewController.m; sourceTree = "<group>"; };
-		17A080E016E5325000366341 /* TAPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPHomeViewController.xib; path = Classes/ViewControllers/TAPHomeViewController.xib; sourceTree = "<group>"; };
-		17A080E316E5327D00366341 /* TAPEventsProgramsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventsProgramsViewController.h; path = Classes/ViewControllers/TAPEventsProgramsViewController.h; sourceTree = "<group>"; };
-		17A080E416E5327D00366341 /* TAPEventsProgramsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventsProgramsViewController.m; path = Classes/ViewControllers/TAPEventsProgramsViewController.m; sourceTree = "<group>"; };
-		17A080E516E5327D00366341 /* TAPEventsProgramsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventsProgramsViewController.xib; path = Classes/ViewControllers/TAPEventsProgramsViewController.xib; sourceTree = "<group>"; };
-		17A080E816E532AB00366341 /* TAPTimelineStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTimelineStopViewController.h; path = Classes/ViewControllers/TAPTimelineStopViewController.h; sourceTree = "<group>"; };
-		17A080E916E532AB00366341 /* TAPTimelineStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTimelineStopViewController.m; path = Classes/ViewControllers/TAPTimelineStopViewController.m; sourceTree = "<group>"; };
-		17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPTimelineStopViewController.xib; path = Classes/ViewControllers/TAPTimelineStopViewController.xib; sourceTree = "<group>"; };
-		17A080ED16E532C400366341 /* TAPThemesStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPThemesStopViewController.h; path = Classes/ViewControllers/TAPThemesStopViewController.h; sourceTree = "<group>"; };
-		17A080EE16E532C400366341 /* TAPThemesStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPThemesStopViewController.m; path = Classes/ViewControllers/TAPThemesStopViewController.m; sourceTree = "<group>"; };
-		17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPThemesStopViewController.xib; path = Classes/ViewControllers/TAPThemesStopViewController.xib; sourceTree = "<group>"; };
-		17A080F216E532E200366341 /* TAPInterviewsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPInterviewsStopViewController.h; path = Classes/ViewControllers/TAPInterviewsStopViewController.h; sourceTree = "<group>"; };
-		17A080F316E532E200366341 /* TAPInterviewsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPInterviewsStopViewController.m; path = Classes/ViewControllers/TAPInterviewsStopViewController.m; sourceTree = "<group>"; };
-		17A080F416E532E200366341 /* TAPInterviewsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPInterviewsStopViewController.xib; path = Classes/ViewControllers/TAPInterviewsStopViewController.xib; sourceTree = "<group>"; };
-		17A080FC16E54D1100366341 /* TAPEventsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventsStopViewController.h; path = Classes/ViewControllers/TAPEventsStopViewController.h; sourceTree = "<group>"; };
-		17A080FD16E54D1100366341 /* TAPEventsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventsStopViewController.m; path = Classes/ViewControllers/TAPEventsStopViewController.m; sourceTree = "<group>"; };
-		17A080FE16E54D1100366341 /* TAPEventsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventsStopViewController.xib; path = Classes/ViewControllers/TAPEventsStopViewController.xib; sourceTree = "<group>"; };
-		17A0810116E54DCD00366341 /* TAPThemeStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPThemeStopViewController.h; path = Classes/ViewControllers/TAPThemeStopViewController.h; sourceTree = "<group>"; };
-		17A0810216E54DCD00366341 /* TAPThemeStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPThemeStopViewController.m; path = Classes/ViewControllers/TAPThemeStopViewController.m; sourceTree = "<group>"; };
-		17A0810316E54DCD00366341 /* TAPThemeStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPThemeStopViewController.xib; path = Classes/ViewControllers/TAPThemeStopViewController.xib; sourceTree = "<group>"; };
+		17A080DE16E5325000366341 /* TAPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPHomeViewController.h; path = "Classes/View Controllers/TAPHomeViewController.h"; sourceTree = "<group>"; };
+		17A080DF16E5325000366341 /* TAPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPHomeViewController.m; path = "Classes/View Controllers/TAPHomeViewController.m"; sourceTree = "<group>"; };
+		17A080E016E5325000366341 /* TAPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPHomeViewController.xib; path = "Classes/View Controllers/TAPHomeViewController.xib"; sourceTree = "<group>"; };
+		17A080E316E5327D00366341 /* TAPEventsProgramsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventsProgramsViewController.h; path = "Classes/View Controllers/TAPEventsProgramsViewController.h"; sourceTree = "<group>"; };
+		17A080E416E5327D00366341 /* TAPEventsProgramsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventsProgramsViewController.m; path = "Classes/View Controllers/TAPEventsProgramsViewController.m"; sourceTree = "<group>"; };
+		17A080E516E5327D00366341 /* TAPEventsProgramsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventsProgramsViewController.xib; path = "Classes/View Controllers/TAPEventsProgramsViewController.xib"; sourceTree = "<group>"; };
+		17A080E816E532AB00366341 /* TAPTimelineStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTimelineStopViewController.h; path = "Classes/View Controllers/TAPTimelineStopViewController.h"; sourceTree = "<group>"; };
+		17A080E916E532AB00366341 /* TAPTimelineStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTimelineStopViewController.m; path = "Classes/View Controllers/TAPTimelineStopViewController.m"; sourceTree = "<group>"; };
+		17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPTimelineStopViewController.xib; path = "Classes/View Controllers/TAPTimelineStopViewController.xib"; sourceTree = "<group>"; };
+		17A080ED16E532C400366341 /* TAPThemesStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPThemesStopViewController.h; path = "Classes/View Controllers/TAPThemesStopViewController.h"; sourceTree = "<group>"; };
+		17A080EE16E532C400366341 /* TAPThemesStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPThemesStopViewController.m; path = "Classes/View Controllers/TAPThemesStopViewController.m"; sourceTree = "<group>"; };
+		17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPThemesStopViewController.xib; path = "Classes/View Controllers/TAPThemesStopViewController.xib"; sourceTree = "<group>"; };
+		17A080F216E532E200366341 /* TAPInterviewsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPInterviewsStopViewController.h; path = "Classes/View Controllers/TAPInterviewsStopViewController.h"; sourceTree = "<group>"; };
+		17A080F316E532E200366341 /* TAPInterviewsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPInterviewsStopViewController.m; path = "Classes/View Controllers/TAPInterviewsStopViewController.m"; sourceTree = "<group>"; };
+		17A080F416E532E200366341 /* TAPInterviewsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPInterviewsStopViewController.xib; path = "Classes/View Controllers/TAPInterviewsStopViewController.xib"; sourceTree = "<group>"; };
+		17A080FC16E54D1100366341 /* TAPEventsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventsStopViewController.h; path = "Classes/View Controllers/TAPEventsStopViewController.h"; sourceTree = "<group>"; };
+		17A080FD16E54D1100366341 /* TAPEventsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventsStopViewController.m; path = "Classes/View Controllers/TAPEventsStopViewController.m"; sourceTree = "<group>"; };
+		17A080FE16E54D1100366341 /* TAPEventsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventsStopViewController.xib; path = "Classes/View Controllers/TAPEventsStopViewController.xib"; sourceTree = "<group>"; };
+		17A0810116E54DCD00366341 /* TAPThemeStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPThemeStopViewController.h; path = "Classes/View Controllers/TAPThemeStopViewController.h"; sourceTree = "<group>"; };
+		17A0810216E54DCD00366341 /* TAPThemeStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPThemeStopViewController.m; path = "Classes/View Controllers/TAPThemeStopViewController.m"; sourceTree = "<group>"; };
+		17A0810316E54DCD00366341 /* TAPThemeStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPThemeStopViewController.xib; path = "Classes/View Controllers/TAPThemeStopViewController.xib"; sourceTree = "<group>"; };
 		17AD6B6316FB83AD00D7D755 /* TAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPHelper.h; path = Classes/Tap/TAPHelper.h; sourceTree = "<group>"; };
 		17AD6B6416FB83AD00D7D755 /* TAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPHelper.m; path = Classes/Tap/TAPHelper.m; sourceTree = "<group>"; };
-		17AD6BA216FD487300D7D755 /* EventStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventStopCell.xib; path = Classes/EventStopCell.xib; sourceTree = "<group>"; };
-		17AD6BA416FD48DE00D7D755 /* EventStopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventStopCell.h; path = Classes/EventStopCell.h; sourceTree = "<group>"; };
-		17AD6BA516FD48DE00D7D755 /* EventStopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventStopCell.m; path = Classes/EventStopCell.m; sourceTree = "<group>"; };
+		17AD6BA216FD487300D7D755 /* EventStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventStopCell.xib; path = Classes/Views/EventStopCell.xib; sourceTree = "<group>"; };
+		17AD6BA416FD48DE00D7D755 /* EventStopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventStopCell.h; path = Classes/Views/EventStopCell.h; sourceTree = "<group>"; };
+		17AD6BA516FD48DE00D7D755 /* EventStopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventStopCell.m; path = Classes/Views/EventStopCell.m; sourceTree = "<group>"; };
 		17AD6BA71700BEDB00D7D755 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play@2x.png"; path = "Resources/Images/play@2x.png"; sourceTree = "<group>"; };
 		17AD6BA917023E0200D7D755 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "Categories/UIImage+Resize.h"; sourceTree = "<group>"; };
 		17AD6BAA17023E0200D7D755 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Categories/UIImage+Resize.m"; sourceTree = "<group>"; };
 		17D7DFFC16FA3CFD00F6B125 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Images/Icons/Icon-72.png"; sourceTree = "<group>"; };
 		17D7DFFE16FA3D1300F6B125 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Resources/Images/Icons/Icon-72@2x.png"; sourceTree = "<group>"; };
-		17E5149816EE69F600C84A54 /* ArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrowView.h; path = Classes/ArrowView.h; sourceTree = "<group>"; };
-		17E5149916EE69F600C84A54 /* ArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArrowView.m; path = Classes/ArrowView.m; sourceTree = "<group>"; };
+		17E5149816EE69F600C84A54 /* ArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrowView.h; path = Classes/Views/ArrowView.h; sourceTree = "<group>"; };
+		17E5149916EE69F600C84A54 /* ArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArrowView.m; path = Classes/Views/ArrowView.m; sourceTree = "<group>"; };
 		17E514A316EF63D600C84A54 /* arrow-blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-blank.png"; path = "Resources/Images/arrow-blank.png"; sourceTree = "<group>"; };
-		17E514A516EF70F800C84A54 /* InterviewQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewQuestionCell.h; path = Classes/InterviewQuestionCell.h; sourceTree = "<group>"; };
-		17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewQuestionCell.m; path = Classes/InterviewQuestionCell.m; sourceTree = "<group>"; };
-		621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewThemeCell.xib; sourceTree = "<group>"; };
-		621E8D2817DFA86F00C57BAA /* NewThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewThemeCell.h; path = Classes/NewThemeCell.h; sourceTree = "<group>"; };
-		621E8D2917DFA86F00C57BAA /* NewThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewThemeCell.m; path = Classes/NewThemeCell.m; sourceTree = "<group>"; };
-		628DDA34193E5D3E003C785A /* TAPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPBaseViewController.h; path = Classes/ViewControllers/TAPBaseViewController.h; sourceTree = "<group>"; };
-		628DDA35193E5D3E003C785A /* TAPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPBaseViewController.m; path = Classes/ViewControllers/TAPBaseViewController.m; sourceTree = "<group>"; };
+		17E514A516EF70F800C84A54 /* InterviewQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewQuestionCell.h; path = Classes/Views/InterviewQuestionCell.h; sourceTree = "<group>"; };
+		17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewQuestionCell.m; path = Classes/Views/InterviewQuestionCell.m; sourceTree = "<group>"; };
+		621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewThemeCell.xib; path = Classes/Views/NewThemeCell.xib; sourceTree = "<group>"; };
+		621E8D2817DFA86F00C57BAA /* NewThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewThemeCell.h; path = Classes/Views/NewThemeCell.h; sourceTree = "<group>"; };
+		621E8D2917DFA86F00C57BAA /* NewThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewThemeCell.m; path = Classes/Views/NewThemeCell.m; sourceTree = "<group>"; };
+		628DDA34193E5D3E003C785A /* TAPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPBaseViewController.h; path = "Classes/View Controllers/TAPBaseViewController.h"; sourceTree = "<group>"; };
+		628DDA35193E5D3E003C785A /* TAPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPBaseViewController.m; path = "Classes/View Controllers/TAPBaseViewController.m"; sourceTree = "<group>"; };
 		628DDA3A193F5DB1003C785A /* NSDictionary+TAPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+TAPUtils.h"; path = "Categories/NSDictionary+TAPUtils.h"; sourceTree = "<group>"; };
 		628DDA3B193F5DB1003C785A /* NSDictionary+TAPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+TAPUtils.m"; path = "Categories/NSDictionary+TAPUtils.m"; sourceTree = "<group>"; };
 		629E8D0A1993E08500AB99D5 /* VSTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSTheme.h; sourceTree = "<group>"; };
@@ -269,14 +269,14 @@
 		629E8D221993E08500AB99D5 /* TimelineViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewDelegate.h; sourceTree = "<group>"; };
 		629E8D2A1993F74C00AB99D5 /* DB5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DB5.plist; path = Resources/DB5.plist; sourceTree = "<group>"; };
 		62BAE48517F0E8C0005E6E13 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Resources/Images/back.png; sourceTree = "<group>"; };
-		62BAE48717F5F005005E6E13 /* TAPEventStopDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventStopDetailViewController.xib; path = Classes/ViewControllers/TAPEventStopDetailViewController.xib; sourceTree = "<group>"; };
-		62BAE48917F5F09F005E6E13 /* TAPEventStopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventStopDetailViewController.h; path = Classes/ViewControllers/TAPEventStopDetailViewController.h; sourceTree = "<group>"; };
-		62BAE48A17F5F09F005E6E13 /* TAPEventStopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventStopDetailViewController.m; path = Classes/ViewControllers/TAPEventStopDetailViewController.m; sourceTree = "<group>"; };
+		62BAE48717F5F005005E6E13 /* TAPEventStopDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventStopDetailViewController.xib; path = "Classes/View Controllers/TAPEventStopDetailViewController.xib"; sourceTree = "<group>"; };
+		62BAE48917F5F09F005E6E13 /* TAPEventStopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventStopDetailViewController.h; path = "Classes/View Controllers/TAPEventStopDetailViewController.h"; sourceTree = "<group>"; };
+		62BAE48A17F5F09F005E6E13 /* TAPEventStopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventStopDetailViewController.m; path = "Classes/View Controllers/TAPEventStopDetailViewController.m"; sourceTree = "<group>"; };
 		62F63B1919423A01004EA5F8 /* Content_with_image.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Content_with_image.html; path = Resources/HTML/Content_with_image.html; sourceTree = "<group>"; };
 		62F8CB0217FEFC8B004287D5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "TAP iPAD/Settings.bundle"; sourceTree = "<group>"; };
-		6523CF4E16F2EEA700B42ECE /* ThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeCell.h; path = Classes/ThemeCell.h; sourceTree = "<group>"; };
-		6523CF4F16F2EEA700B42ECE /* ThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeCell.m; path = Classes/ThemeCell.m; sourceTree = "<group>"; };
-		6523CF5116F2EEC500B42ECE /* ThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThemeCell.xib; path = Classes/ThemeCell.xib; sourceTree = "<group>"; };
+		6523CF4E16F2EEA700B42ECE /* ThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeCell.h; path = Classes/Views/ThemeCell.h; sourceTree = "<group>"; };
+		6523CF4F16F2EEA700B42ECE /* ThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeCell.m; path = Classes/Views/ThemeCell.m; sourceTree = "<group>"; };
+		6523CF5116F2EEC500B42ECE /* ThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThemeCell.xib; path = Classes/Views/ThemeCell.xib; sourceTree = "<group>"; };
 		652C1C1616FE947000646100 /* arrow-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-1@2x.png"; path = "Resources/Images/arrow-1@2x.png"; sourceTree = "<group>"; };
 		652C1C1716FE947000646100 /* arrow-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-2@2x.png"; path = "Resources/Images/arrow-2@2x.png"; sourceTree = "<group>"; };
 		652C1C1816FE947000646100 /* arrow-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-3@2x.png"; path = "Resources/Images/arrow-3@2x.png"; sourceTree = "<group>"; };
@@ -290,8 +290,8 @@
 		65A462AB16E97FB7009BBFD8 /* TapConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TapConfig.plist; path = Resources/TapConfig.plist; sourceTree = "<group>"; };
 		65A462AE16EBC4EF009BBFD8 /* EventsPrograms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = EventsPrograms.html; path = Resources/HTML/EventsPrograms.html; sourceTree = "<group>"; };
 		65A462B116ED04D8009BBFD8 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
-		65F424DE16F80F9F004D05B4 /* TimelineEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineEventCell.h; path = Classes/TimelineEventCell.h; sourceTree = "<group>"; };
-		65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineEventCell.m; path = Classes/TimelineEventCell.m; sourceTree = "<group>"; };
+		65F424DE16F80F9F004D05B4 /* TimelineEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineEventCell.h; path = Classes/Views/TimelineEventCell.h; sourceTree = "<group>"; };
+		65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineEventCell.m; path = Classes/Views/TimelineEventCell.m; sourceTree = "<group>"; };
 		A47C43871940A4F800B722C3 /* face2face-splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "face2face-splash@2x.png"; path = "Resources/Images/face2face-splash@2x.png"; sourceTree = "<group>"; };
 		A47C43881940A4F800B722C3 /* face2face-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "face2face-home@2x.png"; path = "Resources/Images/face2face-home@2x.png"; sourceTree = "<group>"; };
 		A47C438D1940C06300B722C3 /* post-impressionism.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "post-impressionism.png"; path = "Resources/Images/post-impressionism.png"; sourceTree = "<group>"; };
@@ -406,10 +406,9 @@
 			isa = PBXGroup;
 			children = (
 				652C1C2616FFF34B00646100 /* Categories */,
-				17AD6BA016FCDC5600D7D755 /* Custom Views */,
 				17AD6BA116FCDC9900D7D755 /* Tap */,
 				17A0808916E523E400366341 /* View Controllers */,
-				17A0808A16E5240900366341 /* Views */,
+				17AD6BA016FCDC5600D7D755 /* Views */,
 				17A0807616E5236200366341 /* AppDelegate.h */,
 				17A0807716E5236200366341 /* AppDelegate.m */,
 				652C1C2A16FFF43B00646100 /* KioskApplication.h */,
@@ -455,23 +454,6 @@
 				17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		17A0808A16E5240900366341 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A4C3F04A193EC0E700B173B1 /* TAPTiledImageScrollView.h */,
-				A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */,
-				A4C3F04C193EC0E700B173B1 /* TAPTiledView.h */,
-				A4C3F04D193EC0E700B173B1 /* TAPTiledView.m */,
-				17AD6BA216FD487300D7D755 /* EventStopCell.xib */,
-				17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */,
-				17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */,
-				17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */,
-				621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */,
-				6523CF5116F2EEC500B42ECE /* ThemeCell.xib */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		17A0808B16E5241900366341 /* Models */ = {
@@ -597,25 +579,35 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		17AD6BA016FCDC5600D7D755 /* Custom Views */ = {
+		17AD6BA016FCDC5600D7D755 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				17E5149816EE69F600C84A54 /* ArrowView.h */,
 				17E5149916EE69F600C84A54 /* ArrowView.m */,
 				17AD6BA416FD48DE00D7D755 /* EventStopCell.h */,
 				17AD6BA516FD48DE00D7D755 /* EventStopCell.m */,
+				17AD6BA216FD487300D7D755 /* EventStopCell.xib */,
 				17837B0816F3D74400E62BD5 /* ImageStopCell.h */,
 				17837B0916F3D74500E62BD5 /* ImageStopCell.m */,
+				17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */,
 				17837AC716F206AD00E62BD5 /* InterviewIntroductionCell.h */,
 				17837AC816F206AD00E62BD5 /* InterviewIntroductionCell.m */,
+				17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */,
 				17E514A516EF70F800C84A54 /* InterviewQuestionCell.h */,
 				17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */,
+				17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */,
 				621E8D2817DFA86F00C57BAA /* NewThemeCell.h */,
 				621E8D2917DFA86F00C57BAA /* NewThemeCell.m */,
+				621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */,
 				17A080BD16E525E400366341 /* NonSelectableTextView.h */,
 				17A080BE16E525E400366341 /* NonSelectableTextView.m */,
+				A4C3F04C193EC0E700B173B1 /* TAPTiledView.h */,
+				A4C3F04D193EC0E700B173B1 /* TAPTiledView.m */,
+				A4C3F04A193EC0E700B173B1 /* TAPTiledImageScrollView.h */,
+				A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */,
 				6523CF4E16F2EEA700B42ECE /* ThemeCell.h */,
 				6523CF4F16F2EEA700B42ECE /* ThemeCell.m */,
+				6523CF5116F2EEC500B42ECE /* ThemeCell.xib */,
 				65F424DE16F80F9F004D05B4 /* TimelineEventCell.h */,
 				65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */,
 				17837ACC16F2440100E62BD5 /* UnderlineButton.h */,
@@ -623,7 +615,7 @@
 				1747952616F78C190082745C /* UnderlineLabel.h */,
 				1747952716F78C190082745C /* UnderlineLabel.m */,
 			);
-			name = "Custom Views";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		17AD6BA116FCDC9900D7D755 /* Tap */ = {
