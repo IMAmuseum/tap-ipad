@@ -8,15 +8,15 @@
 
 #import "AppDelegate.h"
 #import "KioskApplication.h"
-#import "TAPTour.h"
-#import "TourMLParser.h"
-#import "TAPMenuViewController.h"
+#import "TAPBaseViewController.h"
+#import "TAPEventsProgramsViewController.h"
 #import "TAPHomeViewController.h"
+#import "TAPInterviewsStopViewController.h"
+#import "TAPMenuViewController.h"
 #import "TAPTimelineStopViewController.h"
 #import "TAPThemesStopViewController.h"
-#import "TAPInterviewsStopViewController.h"
-#import "TAPEventsProgramsViewController.h"
-#import "TAPBaseViewController.h"
+#import "TAPTour.h"
+#import "TourMLParser.h"
 
 // vendor
 #import "GAI.h"
@@ -41,11 +41,18 @@
     application.idleTimerDisabled = YES;
     
     // set the application defaults
+    // Here we're getting the device identifier, which is SET BY
+    // THE USER in the app settings on the device. This is used to
+    // identify particular devices when they show up in analytics
+    // data.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:@"" forKey:@"analytics_identifier"];
-    
     [defaults registerDefaults:appDefaults];
     [defaults synchronize];
+    
+    // maybe just use
+//    NSString *uniqueIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    // instead of above, with an explanation that it is lost after a wipe?
     
     // db5 theme setup
     self.themeLoader = [VSThemeLoader new];

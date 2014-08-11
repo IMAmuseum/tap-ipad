@@ -83,44 +83,6 @@
 		17E5149A16EE69F600C84A54 /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E5149916EE69F600C84A54 /* ArrowView.m */; };
 		17E514A416EF63D600C84A54 /* arrow-blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E514A316EF63D600C84A54 /* arrow-blank.png */; };
 		17E514A716EF70F800C84A54 /* InterviewQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */; };
-		621E8CFE17D6349A00C57BAA /* Avenir in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CD717D6349A00C57BAA /* Avenir */; };
-		621E8CFF17D6349A00C57BAA /* Avenir LT 35 Light Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CD817D6349A00C57BAA /* Avenir LT 35 Light Oblique.ttf */; };
-		621E8D0017D6349A00C57BAA /* Avenir LT 35 Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CD917D6349A00C57BAA /* Avenir LT 35 Light.ttf */; };
-		621E8D0117D6349A00C57BAA /* Avenir LT 45 Book Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CDA17D6349A00C57BAA /* Avenir LT 45 Book Oblique.ttf */; };
-		621E8D0217D6349A00C57BAA /* Avenir LT 45 Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CDB17D6349A00C57BAA /* Avenir LT 45 Book.ttf */; };
-		621E8D0317D6349A00C57BAA /* Avenir LT 55 Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CDC17D6349A00C57BAA /* Avenir LT 55 Oblique.ttf */; };
-		621E8D0417D6349A00C57BAA /* Avenir LT 55 Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CDD17D6349A00C57BAA /* Avenir LT 55 Roman.ttf */; };
-		621E8D0517D6349A00C57BAA /* Avenir LT 65 Medium Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CDE17D6349A00C57BAA /* Avenir LT 65 Medium Oblique.ttf */; };
-		621E8D0617D6349A00C57BAA /* Avenir LT 65 Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CDF17D6349A00C57BAA /* Avenir LT 65 Medium.ttf */; };
-		621E8D0717D6349A00C57BAA /* Avenir LT 85 Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE017D6349A00C57BAA /* Avenir LT 85 Heavy.ttf */; };
-		621E8D0817D6349A00C57BAA /* Avenir LT 86 Heavy Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE117D6349A00C57BAA /* Avenir LT 86 Heavy Oblique.ttf */; };
-		621E8D0917D6349A00C57BAA /* Avenir LT 95 Black Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE217D6349A00C57BAA /* Avenir LT 95 Black Oblique.ttf */; };
-		621E8D0A17D6349A00C57BAA /* Avenir LT 95 Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE317D6349A00C57BAA /* Avenir LT 95 Black.ttf */; };
-		621E8D0B17D6349A00C57BAA /* Avenir.suit in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE417D6349A00C57BAA /* Avenir.suit */; };
-		621E8D0C17D6349A00C57BAA /* GretaTextPro Bold (+).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE617D6349A00C57BAA /* GretaTextPro Bold (+).otf */; };
-		621E8D0D17D6349A00C57BAA /* GretaTextPro Bold (-).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE717D6349A00C57BAA /* GretaTextPro Bold (-).otf */; };
-		621E8D0E17D6349A00C57BAA /* GretaTextPro Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE817D6349A00C57BAA /* GretaTextPro Bold.otf */; };
-		621E8D0F17D6349A00C57BAA /* GretaTextPro BoldItalic (+).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CE917D6349A00C57BAA /* GretaTextPro BoldItalic (+).otf */; };
-		621E8D1017D6349A00C57BAA /* GretaTextPro BoldItalic (-).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CEA17D6349A00C57BAA /* GretaTextPro BoldItalic (-).otf */; };
-		621E8D1117D6349A00C57BAA /* GretaTextPro BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CEB17D6349A00C57BAA /* GretaTextPro BoldItalic.otf */; };
-		621E8D1217D6349A00C57BAA /* GretaTextPro Light (+).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CEC17D6349A00C57BAA /* GretaTextPro Light (+).otf */; };
-		621E8D1317D6349A00C57BAA /* GretaTextPro Light (-).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CED17D6349A00C57BAA /* GretaTextPro Light (-).otf */; };
-		621E8D1417D6349A00C57BAA /* GretaTextPro Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CEE17D6349A00C57BAA /* GretaTextPro Light.otf */; };
-		621E8D1517D6349A00C57BAA /* GretaTextPro LightItalic (+).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CEF17D6349A00C57BAA /* GretaTextPro LightItalic (+).otf */; };
-		621E8D1617D6349A00C57BAA /* GretaTextPro LightItalic (-).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF017D6349A00C57BAA /* GretaTextPro LightItalic (-).otf */; };
-		621E8D1717D6349A00C57BAA /* GretaTextPro LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF117D6349A00C57BAA /* GretaTextPro LightItalic.otf */; };
-		621E8D1817D6349A00C57BAA /* GretaTextPro Medium (+).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF217D6349A00C57BAA /* GretaTextPro Medium (+).otf */; };
-		621E8D1917D6349A00C57BAA /* GretaTextPro Medium (-).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF317D6349A00C57BAA /* GretaTextPro Medium (-).otf */; };
-		621E8D1A17D6349A00C57BAA /* GretaTextPro Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF417D6349A00C57BAA /* GretaTextPro Medium.otf */; };
-		621E8D1B17D6349A00C57BAA /* GretaTextPro MediumItalic (+).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF517D6349A00C57BAA /* GretaTextPro MediumItalic (+).otf */; };
-		621E8D1C17D6349A00C57BAA /* GretaTextPro MediumItalic (-).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF617D6349A00C57BAA /* GretaTextPro MediumItalic (-).otf */; };
-		621E8D1D17D6349A00C57BAA /* GretaTextPro MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF717D6349A00C57BAA /* GretaTextPro MediumItalic.otf */; };
-		621E8D1E17D6349A00C57BAA /* GretaTextPro Regular (+).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF817D6349A00C57BAA /* GretaTextPro Regular (+).otf */; };
-		621E8D1F17D6349A00C57BAA /* GretaTextPro Regular (-).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CF917D6349A00C57BAA /* GretaTextPro Regular (-).otf */; };
-		621E8D2017D6349A00C57BAA /* GretaTextPro Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CFA17D6349A00C57BAA /* GretaTextPro Regular.otf */; };
-		621E8D2117D6349A00C57BAA /* GretaTextPro RegularItalic (+).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CFB17D6349A00C57BAA /* GretaTextPro RegularItalic (+).otf */; };
-		621E8D2217D6349A00C57BAA /* GretaTextPro RegularItalic (-).otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CFC17D6349A00C57BAA /* GretaTextPro RegularItalic (-).otf */; };
-		621E8D2317D6349A00C57BAA /* GretaTextPro RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 621E8CFD17D6349A00C57BAA /* GretaTextPro RegularItalic.otf */; };
 		621E8D2717DFA84C00C57BAA /* NewThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */; };
 		621E8D2A17DFA87000C57BAA /* NewThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 621E8D2917DFA86F00C57BAA /* NewThemeCell.m */; };
 		628DDA36193E5D3E003C785A /* TAPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628DDA35193E5D3E003C785A /* TAPBaseViewController.m */; };
@@ -153,11 +115,8 @@
 		65A462AF16EBC4EF009BBFD8 /* EventsPrograms.html in Resources */ = {isa = PBXBuildFile; fileRef = 65A462AE16EBC4EF009BBFD8 /* EventsPrograms.html */; };
 		65A462B216ED04D8009BBFD8 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 65A462B116ED04D8009BBFD8 /* Bundles */; };
 		65F424E016F80F9F004D05B4 /* TimelineEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */; };
-		A426276118A18BAC00C322AE /* Franklin Gothic Book Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A426275F18A17C5000C322AE /* Franklin Gothic Book Italic.ttf */; };
-		A426276218A18BAC00C322AE /* Franklin Gothic Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A426276018A17C5000C322AE /* Franklin Gothic Book.ttf */; };
 		A47C43891940A4F800B722C3 /* face2face-splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43871940A4F800B722C3 /* face2face-splash@2x.png */; };
 		A47C438A1940A4F800B722C3 /* face2face-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43881940A4F800B722C3 /* face2face-home@2x.png */; };
-		A47C438C1940AB4200B722C3 /* Ephesus-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A47C438B1940A96F00B722C3 /* Ephesus-regular.otf */; };
 		A47C438E1940C06300B722C3 /* post-impressionism.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C438D1940C06300B722C3 /* post-impressionism.png */; };
 		A4C3F043193D6B1700B173B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3F042193D6B1700B173B1 /* libz.dylib */; };
 		A4C3F04E193EC0E700B173B1 /* TAPTiledImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */; };
@@ -189,15 +148,15 @@
 		17837B0816F3D74400E62BD5 /* ImageStopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageStopCell.h; path = Classes/ImageStopCell.h; sourceTree = "<group>"; };
 		17837B0916F3D74500E62BD5 /* ImageStopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageStopCell.m; path = Classes/ImageStopCell.m; sourceTree = "<group>"; };
 		17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageStopCell.xib; path = Classes/ImageStopCell.xib; sourceTree = "<group>"; };
-		178AAEF316E54E0F0061E735 /* TAPImageStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPImageStopViewController.h; path = Classes/TAPImageStopViewController.h; sourceTree = "<group>"; };
-		178AAEF416E54E0F0061E735 /* TAPImageStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPImageStopViewController.m; path = Classes/TAPImageStopViewController.m; sourceTree = "<group>"; };
-		178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPImageStopViewController.xib; path = Classes/TAPImageStopViewController.xib; sourceTree = "<group>"; };
+		178AAEF316E54E0F0061E735 /* TAPImageStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPImageStopViewController.h; path = Classes/ViewControllers/TAPImageStopViewController.h; sourceTree = "<group>"; };
+		178AAEF416E54E0F0061E735 /* TAPImageStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPImageStopViewController.m; path = Classes/ViewControllers/TAPImageStopViewController.m; sourceTree = "<group>"; };
+		178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPImageStopViewController.xib; path = Classes/ViewControllers/TAPImageStopViewController.xib; sourceTree = "<group>"; };
 		178AAEFD16E6721D0061E735 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "Resources/Images/background@2x.png"; sourceTree = "<group>"; };
 		178AAEFF16E672240061E735 /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header@2x.png"; path = "Resources/Images/header@2x.png"; sourceTree = "<group>"; };
 		178AAF0116E68CC00061E735 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "Resources/Images/Default-Landscape@2x.png"; sourceTree = "<group>"; };
-		178AAF0816E6A1670061E735 /* TAPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPMenuViewController.h; path = Classes/TAPMenuViewController.h; sourceTree = "<group>"; };
-		178AAF0916E6A1670061E735 /* TAPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPMenuViewController.m; path = Classes/TAPMenuViewController.m; sourceTree = "<group>"; };
-		178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPMenuViewController.xib; path = Classes/TAPMenuViewController.xib; sourceTree = "<group>"; };
+		178AAF0816E6A1670061E735 /* TAPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPMenuViewController.h; path = Classes/ViewControllers/TAPMenuViewController.h; sourceTree = "<group>"; };
+		178AAF0916E6A1670061E735 /* TAPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPMenuViewController.m; path = Classes/ViewControllers/TAPMenuViewController.m; sourceTree = "<group>"; };
+		178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPMenuViewController.xib; path = Classes/ViewControllers/TAPMenuViewController.xib; sourceTree = "<group>"; };
 		17A0806216E5236200366341 /* TAP iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TAP iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A0806516E5236200366341 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		17A0806716E5236200366341 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -244,24 +203,24 @@
 		17A080D516E527CB00366341 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		17A080D716E527DB00366341 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		17A080DB16E52B3300366341 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		17A080DE16E5325000366341 /* TAPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPHomeViewController.h; path = Classes/TAPHomeViewController.h; sourceTree = "<group>"; };
-		17A080DF16E5325000366341 /* TAPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPHomeViewController.m; path = Classes/TAPHomeViewController.m; sourceTree = "<group>"; };
-		17A080E016E5325000366341 /* TAPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPHomeViewController.xib; path = Classes/TAPHomeViewController.xib; sourceTree = "<group>"; };
-		17A080E316E5327D00366341 /* TAPEventsProgramsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventsProgramsViewController.h; path = Classes/TAPEventsProgramsViewController.h; sourceTree = "<group>"; };
-		17A080E416E5327D00366341 /* TAPEventsProgramsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventsProgramsViewController.m; path = Classes/TAPEventsProgramsViewController.m; sourceTree = "<group>"; };
-		17A080E516E5327D00366341 /* TAPEventsProgramsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventsProgramsViewController.xib; path = Classes/TAPEventsProgramsViewController.xib; sourceTree = "<group>"; };
-		17A080E816E532AB00366341 /* TAPTimelineStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTimelineStopViewController.h; path = Classes/TAPTimelineStopViewController.h; sourceTree = "<group>"; };
-		17A080E916E532AB00366341 /* TAPTimelineStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTimelineStopViewController.m; path = Classes/TAPTimelineStopViewController.m; sourceTree = "<group>"; };
-		17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPTimelineStopViewController.xib; path = Classes/TAPTimelineStopViewController.xib; sourceTree = "<group>"; };
-		17A080ED16E532C400366341 /* TAPThemesStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPThemesStopViewController.h; path = Classes/TAPThemesStopViewController.h; sourceTree = "<group>"; };
-		17A080EE16E532C400366341 /* TAPThemesStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPThemesStopViewController.m; path = Classes/TAPThemesStopViewController.m; sourceTree = "<group>"; };
-		17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPThemesStopViewController.xib; path = Classes/TAPThemesStopViewController.xib; sourceTree = "<group>"; };
-		17A080F216E532E200366341 /* TAPInterviewsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPInterviewsStopViewController.h; path = Classes/TAPInterviewsStopViewController.h; sourceTree = "<group>"; };
-		17A080F316E532E200366341 /* TAPInterviewsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPInterviewsStopViewController.m; path = Classes/TAPInterviewsStopViewController.m; sourceTree = "<group>"; };
-		17A080F416E532E200366341 /* TAPInterviewsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPInterviewsStopViewController.xib; path = Classes/TAPInterviewsStopViewController.xib; sourceTree = "<group>"; };
-		17A080FC16E54D1100366341 /* TAPEventsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventsStopViewController.h; path = Classes/TAPEventsStopViewController.h; sourceTree = "<group>"; };
-		17A080FD16E54D1100366341 /* TAPEventsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventsStopViewController.m; path = Classes/TAPEventsStopViewController.m; sourceTree = "<group>"; };
-		17A080FE16E54D1100366341 /* TAPEventsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventsStopViewController.xib; path = Classes/TAPEventsStopViewController.xib; sourceTree = "<group>"; };
+		17A080DE16E5325000366341 /* TAPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPHomeViewController.h; path = Classes/ViewControllers/TAPHomeViewController.h; sourceTree = "<group>"; };
+		17A080DF16E5325000366341 /* TAPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPHomeViewController.m; path = Classes/ViewControllers/TAPHomeViewController.m; sourceTree = "<group>"; };
+		17A080E016E5325000366341 /* TAPHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPHomeViewController.xib; path = Classes/ViewControllers/TAPHomeViewController.xib; sourceTree = "<group>"; };
+		17A080E316E5327D00366341 /* TAPEventsProgramsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventsProgramsViewController.h; path = Classes/ViewControllers/TAPEventsProgramsViewController.h; sourceTree = "<group>"; };
+		17A080E416E5327D00366341 /* TAPEventsProgramsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventsProgramsViewController.m; path = Classes/ViewControllers/TAPEventsProgramsViewController.m; sourceTree = "<group>"; };
+		17A080E516E5327D00366341 /* TAPEventsProgramsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventsProgramsViewController.xib; path = Classes/ViewControllers/TAPEventsProgramsViewController.xib; sourceTree = "<group>"; };
+		17A080E816E532AB00366341 /* TAPTimelineStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTimelineStopViewController.h; path = Classes/ViewControllers/TAPTimelineStopViewController.h; sourceTree = "<group>"; };
+		17A080E916E532AB00366341 /* TAPTimelineStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTimelineStopViewController.m; path = Classes/ViewControllers/TAPTimelineStopViewController.m; sourceTree = "<group>"; };
+		17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPTimelineStopViewController.xib; path = Classes/ViewControllers/TAPTimelineStopViewController.xib; sourceTree = "<group>"; };
+		17A080ED16E532C400366341 /* TAPThemesStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPThemesStopViewController.h; path = Classes/ViewControllers/TAPThemesStopViewController.h; sourceTree = "<group>"; };
+		17A080EE16E532C400366341 /* TAPThemesStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPThemesStopViewController.m; path = Classes/ViewControllers/TAPThemesStopViewController.m; sourceTree = "<group>"; };
+		17A080EF16E532C400366341 /* TAPThemesStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPThemesStopViewController.xib; path = Classes/ViewControllers/TAPThemesStopViewController.xib; sourceTree = "<group>"; };
+		17A080F216E532E200366341 /* TAPInterviewsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPInterviewsStopViewController.h; path = Classes/ViewControllers/TAPInterviewsStopViewController.h; sourceTree = "<group>"; };
+		17A080F316E532E200366341 /* TAPInterviewsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPInterviewsStopViewController.m; path = Classes/ViewControllers/TAPInterviewsStopViewController.m; sourceTree = "<group>"; };
+		17A080F416E532E200366341 /* TAPInterviewsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPInterviewsStopViewController.xib; path = Classes/ViewControllers/TAPInterviewsStopViewController.xib; sourceTree = "<group>"; };
+		17A080FC16E54D1100366341 /* TAPEventsStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventsStopViewController.h; path = Classes/ViewControllers/TAPEventsStopViewController.h; sourceTree = "<group>"; };
+		17A080FD16E54D1100366341 /* TAPEventsStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventsStopViewController.m; path = Classes/ViewControllers/TAPEventsStopViewController.m; sourceTree = "<group>"; };
+		17A080FE16E54D1100366341 /* TAPEventsStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPEventsStopViewController.xib; path = Classes/ViewControllers/TAPEventsStopViewController.xib; sourceTree = "<group>"; };
 		17A0810116E54DCD00366341 /* TAPThemeStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPThemeStopViewController.h; sourceTree = "<group>"; };
 		17A0810216E54DCD00366341 /* TAPThemeStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPThemeStopViewController.m; sourceTree = "<group>"; };
 		17A0810316E54DCD00366341 /* TAPThemeStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAPThemeStopViewController.xib; sourceTree = "<group>"; };
@@ -280,44 +239,6 @@
 		17E514A316EF63D600C84A54 /* arrow-blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-blank.png"; path = "Resources/Images/arrow-blank.png"; sourceTree = "<group>"; };
 		17E514A516EF70F800C84A54 /* InterviewQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewQuestionCell.h; path = Classes/InterviewQuestionCell.h; sourceTree = "<group>"; };
 		17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewQuestionCell.m; path = Classes/InterviewQuestionCell.m; sourceTree = "<group>"; };
-		621E8CD717D6349A00C57BAA /* Avenir */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Avenir; sourceTree = "<group>"; };
-		621E8CD817D6349A00C57BAA /* Avenir LT 35 Light Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 35 Light Oblique.ttf"; sourceTree = "<group>"; };
-		621E8CD917D6349A00C57BAA /* Avenir LT 35 Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 35 Light.ttf"; sourceTree = "<group>"; };
-		621E8CDA17D6349A00C57BAA /* Avenir LT 45 Book Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 45 Book Oblique.ttf"; sourceTree = "<group>"; };
-		621E8CDB17D6349A00C57BAA /* Avenir LT 45 Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 45 Book.ttf"; sourceTree = "<group>"; };
-		621E8CDC17D6349A00C57BAA /* Avenir LT 55 Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 55 Oblique.ttf"; sourceTree = "<group>"; };
-		621E8CDD17D6349A00C57BAA /* Avenir LT 55 Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 55 Roman.ttf"; sourceTree = "<group>"; };
-		621E8CDE17D6349A00C57BAA /* Avenir LT 65 Medium Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 65 Medium Oblique.ttf"; sourceTree = "<group>"; };
-		621E8CDF17D6349A00C57BAA /* Avenir LT 65 Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 65 Medium.ttf"; sourceTree = "<group>"; };
-		621E8CE017D6349A00C57BAA /* Avenir LT 85 Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 85 Heavy.ttf"; sourceTree = "<group>"; };
-		621E8CE117D6349A00C57BAA /* Avenir LT 86 Heavy Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 86 Heavy Oblique.ttf"; sourceTree = "<group>"; };
-		621E8CE217D6349A00C57BAA /* Avenir LT 95 Black Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 95 Black Oblique.ttf"; sourceTree = "<group>"; };
-		621E8CE317D6349A00C57BAA /* Avenir LT 95 Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir LT 95 Black.ttf"; sourceTree = "<group>"; };
-		621E8CE417D6349A00C57BAA /* Avenir.suit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Avenir.suit; sourceTree = "<group>"; };
-		621E8CE617D6349A00C57BAA /* GretaTextPro Bold (+).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Bold (+).otf"; sourceTree = "<group>"; };
-		621E8CE717D6349A00C57BAA /* GretaTextPro Bold (-).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Bold (-).otf"; sourceTree = "<group>"; };
-		621E8CE817D6349A00C57BAA /* GretaTextPro Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Bold.otf"; sourceTree = "<group>"; };
-		621E8CE917D6349A00C57BAA /* GretaTextPro BoldItalic (+).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro BoldItalic (+).otf"; sourceTree = "<group>"; };
-		621E8CEA17D6349A00C57BAA /* GretaTextPro BoldItalic (-).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro BoldItalic (-).otf"; sourceTree = "<group>"; };
-		621E8CEB17D6349A00C57BAA /* GretaTextPro BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro BoldItalic.otf"; sourceTree = "<group>"; };
-		621E8CEC17D6349A00C57BAA /* GretaTextPro Light (+).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Light (+).otf"; sourceTree = "<group>"; };
-		621E8CED17D6349A00C57BAA /* GretaTextPro Light (-).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Light (-).otf"; sourceTree = "<group>"; };
-		621E8CEE17D6349A00C57BAA /* GretaTextPro Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Light.otf"; sourceTree = "<group>"; };
-		621E8CEF17D6349A00C57BAA /* GretaTextPro LightItalic (+).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro LightItalic (+).otf"; sourceTree = "<group>"; };
-		621E8CF017D6349A00C57BAA /* GretaTextPro LightItalic (-).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro LightItalic (-).otf"; sourceTree = "<group>"; };
-		621E8CF117D6349A00C57BAA /* GretaTextPro LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro LightItalic.otf"; sourceTree = "<group>"; };
-		621E8CF217D6349A00C57BAA /* GretaTextPro Medium (+).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Medium (+).otf"; sourceTree = "<group>"; };
-		621E8CF317D6349A00C57BAA /* GretaTextPro Medium (-).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Medium (-).otf"; sourceTree = "<group>"; };
-		621E8CF417D6349A00C57BAA /* GretaTextPro Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Medium.otf"; sourceTree = "<group>"; };
-		621E8CF517D6349A00C57BAA /* GretaTextPro MediumItalic (+).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro MediumItalic (+).otf"; sourceTree = "<group>"; };
-		621E8CF617D6349A00C57BAA /* GretaTextPro MediumItalic (-).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro MediumItalic (-).otf"; sourceTree = "<group>"; };
-		621E8CF717D6349A00C57BAA /* GretaTextPro MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro MediumItalic.otf"; sourceTree = "<group>"; };
-		621E8CF817D6349A00C57BAA /* GretaTextPro Regular (+).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Regular (+).otf"; sourceTree = "<group>"; };
-		621E8CF917D6349A00C57BAA /* GretaTextPro Regular (-).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Regular (-).otf"; sourceTree = "<group>"; };
-		621E8CFA17D6349A00C57BAA /* GretaTextPro Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro Regular.otf"; sourceTree = "<group>"; };
-		621E8CFB17D6349A00C57BAA /* GretaTextPro RegularItalic (+).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro RegularItalic (+).otf"; sourceTree = "<group>"; };
-		621E8CFC17D6349A00C57BAA /* GretaTextPro RegularItalic (-).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro RegularItalic (-).otf"; sourceTree = "<group>"; };
-		621E8CFD17D6349A00C57BAA /* GretaTextPro RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GretaTextPro RegularItalic.otf"; sourceTree = "<group>"; };
 		621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewThemeCell.xib; sourceTree = "<group>"; };
 		621E8D2817DFA86F00C57BAA /* NewThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewThemeCell.h; path = Classes/NewThemeCell.h; sourceTree = "<group>"; };
 		621E8D2917DFA86F00C57BAA /* NewThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewThemeCell.m; path = Classes/NewThemeCell.m; sourceTree = "<group>"; };
@@ -349,8 +270,8 @@
 		629E8D2A1993F74C00AB99D5 /* DB5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DB5.plist; path = Resources/DB5.plist; sourceTree = "<group>"; };
 		62BAE48517F0E8C0005E6E13 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Resources/Images/back.png; sourceTree = "<group>"; };
 		62BAE48717F5F005005E6E13 /* TAPEventStopDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TAPEventStopDetailViewController.xib; sourceTree = "<group>"; };
-		62BAE48917F5F09F005E6E13 /* TAPEventStopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventStopDetailViewController.h; path = Classes/TAPEventStopDetailViewController.h; sourceTree = "<group>"; };
-		62BAE48A17F5F09F005E6E13 /* TAPEventStopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventStopDetailViewController.m; path = Classes/TAPEventStopDetailViewController.m; sourceTree = "<group>"; };
+		62BAE48917F5F09F005E6E13 /* TAPEventStopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPEventStopDetailViewController.h; path = Classes/ViewControllers/TAPEventStopDetailViewController.h; sourceTree = "<group>"; };
+		62BAE48A17F5F09F005E6E13 /* TAPEventStopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPEventStopDetailViewController.m; path = Classes/ViewControllers/TAPEventStopDetailViewController.m; sourceTree = "<group>"; };
 		62F63B1919423A01004EA5F8 /* Content_with_image.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Content_with_image.html; path = Resources/HTML/Content_with_image.html; sourceTree = "<group>"; };
 		62F8CB0217FEFC8B004287D5 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "TAP iPAD/Settings.bundle"; sourceTree = "<group>"; };
 		6523CF4E16F2EEA700B42ECE /* ThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeCell.h; path = Classes/ThemeCell.h; sourceTree = "<group>"; };
@@ -371,11 +292,8 @@
 		65A462B116ED04D8009BBFD8 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 		65F424DE16F80F9F004D05B4 /* TimelineEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineEventCell.h; path = Classes/TimelineEventCell.h; sourceTree = "<group>"; };
 		65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineEventCell.m; path = Classes/TimelineEventCell.m; sourceTree = "<group>"; };
-		A426275F18A17C5000C322AE /* Franklin Gothic Book Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Franklin Gothic Book Italic.ttf"; sourceTree = "<group>"; };
-		A426276018A17C5000C322AE /* Franklin Gothic Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Franklin Gothic Book.ttf"; sourceTree = "<group>"; };
 		A47C43871940A4F800B722C3 /* face2face-splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "face2face-splash@2x.png"; path = "Resources/Images/face2face-splash@2x.png"; sourceTree = "<group>"; };
 		A47C43881940A4F800B722C3 /* face2face-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "face2face-home@2x.png"; path = "Resources/Images/face2face-home@2x.png"; sourceTree = "<group>"; };
-		A47C438B1940A96F00B722C3 /* Ephesus-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ephesus-regular.otf"; sourceTree = "<group>"; };
 		A47C438D1940C06300B722C3 /* post-impressionism.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "post-impressionism.png"; path = "Resources/Images/post-impressionism.png"; sourceTree = "<group>"; };
 		A4C3F042193D6B1700B173B1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A4C3F04A193EC0E700B173B1 /* TAPTiledImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTiledImageScrollView.h; path = Classes/Views/TAPTiledImageScrollView.h; sourceTree = "<group>"; };
@@ -675,11 +593,6 @@
 		17A080DD16E52CEC00366341 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A47C438B1940A96F00B722C3 /* Ephesus-regular.otf */,
-				A426275F18A17C5000C322AE /* Franklin Gothic Book Italic.ttf */,
-				A426276018A17C5000C322AE /* Franklin Gothic Book.ttf */,
-				621E8CD617D6349A00C57BAA /* Avenir */,
-				621E8CE517D6349A00C57BAA /* Greta */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -723,58 +636,6 @@
 				17A0809516E524F600366341 /* TourML Parser */,
 			);
 			name = Tap;
-			sourceTree = "<group>";
-		};
-		621E8CD617D6349A00C57BAA /* Avenir */ = {
-			isa = PBXGroup;
-			children = (
-				621E8CD717D6349A00C57BAA /* Avenir */,
-				621E8CD817D6349A00C57BAA /* Avenir LT 35 Light Oblique.ttf */,
-				621E8CD917D6349A00C57BAA /* Avenir LT 35 Light.ttf */,
-				621E8CDA17D6349A00C57BAA /* Avenir LT 45 Book Oblique.ttf */,
-				621E8CDB17D6349A00C57BAA /* Avenir LT 45 Book.ttf */,
-				621E8CDC17D6349A00C57BAA /* Avenir LT 55 Oblique.ttf */,
-				621E8CDD17D6349A00C57BAA /* Avenir LT 55 Roman.ttf */,
-				621E8CDE17D6349A00C57BAA /* Avenir LT 65 Medium Oblique.ttf */,
-				621E8CDF17D6349A00C57BAA /* Avenir LT 65 Medium.ttf */,
-				621E8CE017D6349A00C57BAA /* Avenir LT 85 Heavy.ttf */,
-				621E8CE117D6349A00C57BAA /* Avenir LT 86 Heavy Oblique.ttf */,
-				621E8CE217D6349A00C57BAA /* Avenir LT 95 Black Oblique.ttf */,
-				621E8CE317D6349A00C57BAA /* Avenir LT 95 Black.ttf */,
-				621E8CE417D6349A00C57BAA /* Avenir.suit */,
-			);
-			path = Avenir;
-			sourceTree = "<group>";
-		};
-		621E8CE517D6349A00C57BAA /* Greta */ = {
-			isa = PBXGroup;
-			children = (
-				621E8CE617D6349A00C57BAA /* GretaTextPro Bold (+).otf */,
-				621E8CE717D6349A00C57BAA /* GretaTextPro Bold (-).otf */,
-				621E8CE817D6349A00C57BAA /* GretaTextPro Bold.otf */,
-				621E8CE917D6349A00C57BAA /* GretaTextPro BoldItalic (+).otf */,
-				621E8CEA17D6349A00C57BAA /* GretaTextPro BoldItalic (-).otf */,
-				621E8CEB17D6349A00C57BAA /* GretaTextPro BoldItalic.otf */,
-				621E8CEC17D6349A00C57BAA /* GretaTextPro Light (+).otf */,
-				621E8CED17D6349A00C57BAA /* GretaTextPro Light (-).otf */,
-				621E8CEE17D6349A00C57BAA /* GretaTextPro Light.otf */,
-				621E8CEF17D6349A00C57BAA /* GretaTextPro LightItalic (+).otf */,
-				621E8CF017D6349A00C57BAA /* GretaTextPro LightItalic (-).otf */,
-				621E8CF117D6349A00C57BAA /* GretaTextPro LightItalic.otf */,
-				621E8CF217D6349A00C57BAA /* GretaTextPro Medium (+).otf */,
-				621E8CF317D6349A00C57BAA /* GretaTextPro Medium (-).otf */,
-				621E8CF417D6349A00C57BAA /* GretaTextPro Medium.otf */,
-				621E8CF517D6349A00C57BAA /* GretaTextPro MediumItalic (+).otf */,
-				621E8CF617D6349A00C57BAA /* GretaTextPro MediumItalic (-).otf */,
-				621E8CF717D6349A00C57BAA /* GretaTextPro MediumItalic.otf */,
-				621E8CF817D6349A00C57BAA /* GretaTextPro Regular (+).otf */,
-				621E8CF917D6349A00C57BAA /* GretaTextPro Regular (-).otf */,
-				621E8CFA17D6349A00C57BAA /* GretaTextPro Regular.otf */,
-				621E8CFB17D6349A00C57BAA /* GretaTextPro RegularItalic (+).otf */,
-				621E8CFC17D6349A00C57BAA /* GretaTextPro RegularItalic (-).otf */,
-				621E8CFD17D6349A00C57BAA /* GretaTextPro RegularItalic.otf */,
-			);
-			path = Greta;
 			sourceTree = "<group>";
 		};
 		629E8D091993E08500AB99D5 /* DB5 */ = {
@@ -913,9 +774,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47C438C1940AB4200B722C3 /* Ephesus-regular.otf in Resources */,
-				A426276118A18BAC00C322AE /* Franklin Gothic Book Italic.ttf in Resources */,
-				A426276218A18BAC00C322AE /* Franklin Gothic Book.ttf in Resources */,
 				17A0807216E5236200366341 /* InfoPlist.strings in Resources */,
 				A47C438A1940A4F800B722C3 /* face2face-home@2x.png in Resources */,
 				17A0807A16E5236200366341 /* Default.png in Resources */,
@@ -968,47 +826,9 @@
 				652C1C2516FFDBAE00646100 /* expand-plus@2x.png in Resources */,
 				17AD6BA81700BEDB00D7D755 /* play@2x.png in Resources */,
 				655B39131703DA4600BC1ED4 /* Caption.html in Resources */,
-				621E8CFE17D6349A00C57BAA /* Avenir in Resources */,
-				621E8CFF17D6349A00C57BAA /* Avenir LT 35 Light Oblique.ttf in Resources */,
-				621E8D0017D6349A00C57BAA /* Avenir LT 35 Light.ttf in Resources */,
-				621E8D0117D6349A00C57BAA /* Avenir LT 45 Book Oblique.ttf in Resources */,
-				621E8D0217D6349A00C57BAA /* Avenir LT 45 Book.ttf in Resources */,
-				621E8D0317D6349A00C57BAA /* Avenir LT 55 Oblique.ttf in Resources */,
-				621E8D0417D6349A00C57BAA /* Avenir LT 55 Roman.ttf in Resources */,
-				621E8D0517D6349A00C57BAA /* Avenir LT 65 Medium Oblique.ttf in Resources */,
-				621E8D0617D6349A00C57BAA /* Avenir LT 65 Medium.ttf in Resources */,
-				621E8D0717D6349A00C57BAA /* Avenir LT 85 Heavy.ttf in Resources */,
-				621E8D0817D6349A00C57BAA /* Avenir LT 86 Heavy Oblique.ttf in Resources */,
-				621E8D0917D6349A00C57BAA /* Avenir LT 95 Black Oblique.ttf in Resources */,
-				621E8D0A17D6349A00C57BAA /* Avenir LT 95 Black.ttf in Resources */,
-				621E8D0B17D6349A00C57BAA /* Avenir.suit in Resources */,
 				62F63B1A19423A01004EA5F8 /* Content_with_image.html in Resources */,
-				621E8D0C17D6349A00C57BAA /* GretaTextPro Bold (+).otf in Resources */,
-				621E8D0D17D6349A00C57BAA /* GretaTextPro Bold (-).otf in Resources */,
-				621E8D0E17D6349A00C57BAA /* GretaTextPro Bold.otf in Resources */,
-				621E8D0F17D6349A00C57BAA /* GretaTextPro BoldItalic (+).otf in Resources */,
-				621E8D1017D6349A00C57BAA /* GretaTextPro BoldItalic (-).otf in Resources */,
-				621E8D1117D6349A00C57BAA /* GretaTextPro BoldItalic.otf in Resources */,
-				621E8D1217D6349A00C57BAA /* GretaTextPro Light (+).otf in Resources */,
-				621E8D1317D6349A00C57BAA /* GretaTextPro Light (-).otf in Resources */,
-				621E8D1417D6349A00C57BAA /* GretaTextPro Light.otf in Resources */,
-				621E8D1517D6349A00C57BAA /* GretaTextPro LightItalic (+).otf in Resources */,
-				621E8D1617D6349A00C57BAA /* GretaTextPro LightItalic (-).otf in Resources */,
-				621E8D1717D6349A00C57BAA /* GretaTextPro LightItalic.otf in Resources */,
-				621E8D1817D6349A00C57BAA /* GretaTextPro Medium (+).otf in Resources */,
 				629E8D2B1993F74C00AB99D5 /* DB5.plist in Resources */,
-				621E8D1917D6349A00C57BAA /* GretaTextPro Medium (-).otf in Resources */,
-				621E8D1A17D6349A00C57BAA /* GretaTextPro Medium.otf in Resources */,
-				621E8D1B17D6349A00C57BAA /* GretaTextPro MediumItalic (+).otf in Resources */,
-				621E8D1C17D6349A00C57BAA /* GretaTextPro MediumItalic (-).otf in Resources */,
-				621E8D1D17D6349A00C57BAA /* GretaTextPro MediumItalic.otf in Resources */,
-				621E8D1E17D6349A00C57BAA /* GretaTextPro Regular (+).otf in Resources */,
-				621E8D1F17D6349A00C57BAA /* GretaTextPro Regular (-).otf in Resources */,
-				621E8D2017D6349A00C57BAA /* GretaTextPro Regular.otf in Resources */,
-				621E8D2117D6349A00C57BAA /* GretaTextPro RegularItalic (+).otf in Resources */,
 				62BAE48817F5F005005E6E13 /* TAPEventStopDetailViewController.xib in Resources */,
-				621E8D2217D6349A00C57BAA /* GretaTextPro RegularItalic (-).otf in Resources */,
-				621E8D2317D6349A00C57BAA /* GretaTextPro RegularItalic.otf in Resources */,
 				621E8D2717DFA84C00C57BAA /* NewThemeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
