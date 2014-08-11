@@ -76,8 +76,8 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
     
-    NSError *error;
     // retrieve tours
+    NSError *error;
     NSArray *tours = [self.managedObjectContext executeFetchRequest:request error:&error];
     
     if ([tours count] == 0) {
@@ -91,15 +91,16 @@
     // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
     [GAI sharedInstance].dispatchInterval = 20;
     //For debugging
-//    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    // [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     // Create tracker instance.
-//    [[GAI sharedInstance] trackerWithTrackingId:[self.tapConfig objectForKey:@"GATrackerId"]];
+    // [[GAI sharedInstance] trackerWithTrackingId:[self.tapConfig objectForKey:@"GATrackerId"]];
     
-    // initialize view controllers
+    // first pull in the navigation items from config file
     TAPHomeViewController *homeViewController = [[TAPHomeViewController alloc] init];
     NSArray *navigationItems = [self.tapConfig objectForKey:@"NavigationItems"];
-    
     NSMutableArray *navigationItemsViewControllers = [[NSMutableArray alloc] init];
+    
+    // then initialize view controllers using those
     [navigationItemsViewControllers addObject:homeViewController];
     for (NSDictionary *navigationItem in navigationItems) {
         [navigationItemsViewControllers addObject:[[UINavigationController alloc] initWithRootViewController:[(TAPBaseViewController *)[NSClassFromString([navigationItem objectForKey:@"view"]) alloc] initWithConfigDictionary:navigationItem]]];

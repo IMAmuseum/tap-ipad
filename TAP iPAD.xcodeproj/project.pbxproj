@@ -85,6 +85,8 @@
 		17E514A716EF70F800C84A54 /* InterviewQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */; };
 		621E8D2717DFA84C00C57BAA /* NewThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */; };
 		621E8D2A17DFA87000C57BAA /* NewThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 621E8D2917DFA86F00C57BAA /* NewThemeCell.m */; };
+		622E1DF01999639C0094393A /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DEE1999639C0094393A /* LICENSE.md */; };
+		622E1DF11999639C0094393A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DEF1999639C0094393A /* README.md */; };
 		628DDA36193E5D3E003C785A /* TAPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628DDA35193E5D3E003C785A /* TAPBaseViewController.m */; };
 		628DDA3C193F5DB1003C785A /* NSDictionary+TAPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 628DDA3B193F5DB1003C785A /* NSDictionary+TAPUtils.m */; };
 		629E8D231993E08500AB99D5 /* VSTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 629E8D0B1993E08500AB99D5 /* VSTheme.m */; };
@@ -162,7 +164,7 @@
 		17A0806716E5236200366341 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		17A0806916E5236200366341 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		17A0806B16E5236200366341 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		17A0806F16E5236200366341 /* TAP iPAD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TAP iPAD-Info.plist"; path = "Resources/TAP iPAD-Info.plist"; sourceTree = "<group>"; };
+		17A0806F16E5236200366341 /* TAP iPAD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TAP iPAD-Info.plist"; sourceTree = "<group>"; };
 		17A0807116E5236200366341 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17A0807316E5236200366341 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17A0807516E5236200366341 /* TAP iPAD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TAP iPAD-Prefix.pch"; sourceTree = "<group>"; };
@@ -242,6 +244,8 @@
 		621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewThemeCell.xib; path = Classes/Views/NewThemeCell.xib; sourceTree = "<group>"; };
 		621E8D2817DFA86F00C57BAA /* NewThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewThemeCell.h; path = Classes/Views/NewThemeCell.h; sourceTree = "<group>"; };
 		621E8D2917DFA86F00C57BAA /* NewThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewThemeCell.m; path = Classes/Views/NewThemeCell.m; sourceTree = "<group>"; };
+		622E1DEE1999639C0094393A /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+		622E1DEF1999639C0094393A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		628DDA34193E5D3E003C785A /* TAPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPBaseViewController.h; path = "Classes/View Controllers/TAPBaseViewController.h"; sourceTree = "<group>"; };
 		628DDA35193E5D3E003C785A /* TAPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPBaseViewController.m; path = "Classes/View Controllers/TAPBaseViewController.m"; sourceTree = "<group>"; };
 		628DDA3A193F5DB1003C785A /* NSDictionary+TAPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+TAPUtils.h"; path = "Categories/NSDictionary+TAPUtils.h"; sourceTree = "<group>"; };
@@ -352,6 +356,8 @@
 				17A0806D16E5236200366341 /* TAP iPAD */,
 				17A0806416E5236200366341 /* Frameworks */,
 				17A0806316E5236200366341 /* Products */,
+				622E1DEE1999639C0094393A /* LICENSE.md */,
+				622E1DEF1999639C0094393A /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -808,6 +814,7 @@
 				17D7DFFF16FA3D1300F6B125 /* Icon-72@2x.png in Resources */,
 				17AD6BA316FD487300D7D755 /* EventStopCell.xib in Resources */,
 				652C1C1916FE947000646100 /* arrow-1@2x.png in Resources */,
+				622E1DF11999639C0094393A /* README.md in Resources */,
 				652C1C1A16FE947000646100 /* arrow-2@2x.png in Resources */,
 				A4F738AB189C354F0091DF1B /* indiana-splashscreen.png in Resources */,
 				652C1C1B16FE947000646100 /* arrow-3@2x.png in Resources */,
@@ -818,6 +825,7 @@
 				652C1C2516FFDBAE00646100 /* expand-plus@2x.png in Resources */,
 				17AD6BA81700BEDB00D7D755 /* play@2x.png in Resources */,
 				655B39131703DA4600BC1ED4 /* Caption.html in Resources */,
+				622E1DF01999639C0094393A /* LICENSE.md in Resources */,
 				62F63B1A19423A01004EA5F8 /* Content_with_image.html in Resources */,
 				629E8D2B1993F74C00AB99D5 /* DB5.plist in Resources */,
 				62BAE48817F5F005005E6E13 /* TAPEventStopDetailViewController.xib in Resources */,

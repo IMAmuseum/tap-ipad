@@ -8,83 +8,35 @@
 	<string>TAP Help Video.mp4</string>
 	<key>KioskMode</key>
 	<false/>
+    <!-- add a value here to hit a remote endpoint for tour data,
+        or leave blank if you intend to use a local bundle -->
 	<key>TourMLEndpoint</key>
 	<string></string>
 	<key>NavigationItems</key>
 	<array>
 		<dict>
 			<key>title</key>
-			<string>Terminology</string>
+			<string>HEADING1</string>
 			<key>view</key>
 			<string>TAPThemeStopViewController</string>
 			<key>keycode</key>
 			<string>100</string>
 			<key>trackedViewName</key>
-			<string>Terminology</string>
+			<string>HEADING1</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Artists</string>
+			<string>HEADING2</string>
 			<key>view</key>
 			<string>TAPThemesStopViewController</string>
 			<key>keycode</key>
 			<string>200</string>
 			<key>trackedViewName</key>
-			<string>Artists</string>
+			<string>HEADING2</string>
 			<key>itemsPerRow</key>
 			<integer>3</integer>
 			<key>columnWidth</key>
 			<integer>305</integer>
-			<key>rowHeight</key>
-			<integer>310</integer>
-			<key>verticalSpacing</key>
-			<integer>20</integer>
-			<key>scrollDirection</key>
-			<string>vertical</string>
-		</dict>
-		<dict>
-			<key>title</key>
-			<string>Critical Reception</string>
-			<key>view</key>
-			<string>TAPThemeStopViewController</string>
-			<key>keycode</key>
-			<string>300</string>
-			<key>trackedViewName</key>
-			<string>Critical Reception</string>
-		</dict>
-		<dict>
-			<key>title</key>
-			<string>Context</string>
-			<key>view</key>
-			<string>TAPThemesStopViewController</string>
-			<key>keycode</key>
-			<string>400</string>
-			<key>trackedViewName</key>
-			<string>Context</string>
-			<key>itemsPerRow</key>
-			<integer>3</integer>
-			<key>columnWidth</key>
-			<integer>305</integer>
-			<key>rowHeight</key>
-			<integer>310</integer>
-			<key>verticalSpacing</key>
-			<integer>20</integer>
-			<key>scrollDirection</key>
-			<string>vertical</string>
-		</dict>
-		<dict>
-			<key>title</key>
-			<string>Close Up</string>
-			<key>view</key>
-			<string>TAPThemesStopViewController</string>
-			<key>keycode</key>
-			<string>500</string>
-			<key>trackedViewName</key>
-			<string>CloseUp</string>
-			<key>itemsPerRow</key>
-			<integer>2</integer>
-			<key>columnWidth</key>
-			<integer>477</integer>
 			<key>rowHeight</key>
 			<integer>310</integer>
 			<key>verticalSpacing</key>
