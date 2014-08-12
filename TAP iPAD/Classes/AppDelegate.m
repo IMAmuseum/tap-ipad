@@ -50,10 +50,6 @@
     [defaults registerDefaults:appDefaults];
     [defaults synchronize];
     
-    // maybe just use
-//    NSString *uniqueIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    // instead of above, with an explanation that it is lost after a wipe?
-    
     // db5 theme setup
     self.themeLoader = [VSThemeLoader new];
     self.theme = self.themeLoader.defaultTheme;
