@@ -15,7 +15,7 @@
 @implementation TAPBaseViewController
 
 - (id)initWithConfigDictionary:(NSDictionary *)config {
-    return [super init];// @TODO ?????????
+    return [super init];
 }
 
 - (void)viewDidLoad
