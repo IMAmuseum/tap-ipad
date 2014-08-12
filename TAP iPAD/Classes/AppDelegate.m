@@ -203,10 +203,6 @@
 
 #pragma mark - Exception handling
 
-//void uncaughtExceptionHandler(NSException *exception) {
-//    [Flurry logError:@"Uncaught" message:@"Application Crash" exception:exception];
-//}
-
 -(void)startSession
 {
     [super startSession];
