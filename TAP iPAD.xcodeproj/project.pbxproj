@@ -87,6 +87,9 @@
 		621E8D2A17DFA87000C57BAA /* NewThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 621E8D2917DFA86F00C57BAA /* NewThemeCell.m */; };
 		622E1DF01999639C0094393A /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DEE1999639C0094393A /* LICENSE.md */; };
 		622E1DF11999639C0094393A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DEF1999639C0094393A /* README.md */; };
+		622E1DF5199A53EF0094393A /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DF2199A53EF0094393A /* Icon-29@2x.png */; };
+		622E1DF6199A53EF0094393A /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DF3199A53EF0094393A /* Icon-40@2x.png */; };
+		622E1DF7199A53EF0094393A /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DF4199A53EF0094393A /* Icon-76@2x.png */; };
 		628DDA36193E5D3E003C785A /* TAPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628DDA35193E5D3E003C785A /* TAPBaseViewController.m */; };
 		628DDA3C193F5DB1003C785A /* NSDictionary+TAPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 628DDA3B193F5DB1003C785A /* NSDictionary+TAPUtils.m */; };
 		629E8D231993E08500AB99D5 /* VSTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 629E8D0B1993E08500AB99D5 /* VSTheme.m */; };
@@ -117,15 +120,12 @@
 		65A462AF16EBC4EF009BBFD8 /* EventsPrograms.html in Resources */ = {isa = PBXBuildFile; fileRef = 65A462AE16EBC4EF009BBFD8 /* EventsPrograms.html */; };
 		65A462B216ED04D8009BBFD8 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 65A462B116ED04D8009BBFD8 /* Bundles */; };
 		65F424E016F80F9F004D05B4 /* TimelineEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */; };
-		A47C43891940A4F800B722C3 /* face2face-splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43871940A4F800B722C3 /* face2face-splash@2x.png */; };
-		A47C438A1940A4F800B722C3 /* face2face-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43881940A4F800B722C3 /* face2face-home@2x.png */; };
+		A47C43891940A4F800B722C3 /* tap-ipad-splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */; };
+		A47C438A1940A4F800B722C3 /* tap-ipad-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43881940A4F800B722C3 /* tap-ipad-home@2x.png */; };
 		A47C438E1940C06300B722C3 /* post-impressionism.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C438D1940C06300B722C3 /* post-impressionism.png */; };
 		A4C3F043193D6B1700B173B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3F042193D6B1700B173B1 /* libz.dylib */; };
 		A4C3F04E193EC0E700B173B1 /* TAPTiledImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */; };
 		A4C3F04F193EC0E700B173B1 /* TAPTiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C3F04D193EC0E700B173B1 /* TAPTiledView.m */; };
-		A4F738A9189C33AE0091DF1B /* indiana-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F738A8189C33AE0091DF1B /* indiana-home@2x.png */; };
-		A4F738AB189C354F0091DF1B /* indiana-splashscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F738AA189C354F0091DF1B /* indiana-splashscreen.png */; };
-		A4F738AD189C35C50091DF1B /* indiana-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F738AC189C35C50091DF1B /* indiana-tap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -246,6 +246,9 @@
 		621E8D2917DFA86F00C57BAA /* NewThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewThemeCell.m; path = Classes/Views/NewThemeCell.m; sourceTree = "<group>"; };
 		622E1DEE1999639C0094393A /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		622E1DEF1999639C0094393A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		622E1DF2199A53EF0094393A /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-29@2x.png"; path = "Resources/Images/Icons/Icon-29@2x.png"; sourceTree = "<group>"; };
+		622E1DF3199A53EF0094393A /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40@2x.png"; path = "Resources/Images/Icons/Icon-40@2x.png"; sourceTree = "<group>"; };
+		622E1DF4199A53EF0094393A /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "Resources/Images/Icons/Icon-76@2x.png"; sourceTree = "<group>"; };
 		628DDA34193E5D3E003C785A /* TAPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPBaseViewController.h; path = "Classes/View Controllers/TAPBaseViewController.h"; sourceTree = "<group>"; };
 		628DDA35193E5D3E003C785A /* TAPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPBaseViewController.m; path = "Classes/View Controllers/TAPBaseViewController.m"; sourceTree = "<group>"; };
 		628DDA3A193F5DB1003C785A /* NSDictionary+TAPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+TAPUtils.h"; path = "Categories/NSDictionary+TAPUtils.h"; sourceTree = "<group>"; };
@@ -296,17 +299,14 @@
 		65A462B116ED04D8009BBFD8 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 		65F424DE16F80F9F004D05B4 /* TimelineEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineEventCell.h; path = Classes/Views/TimelineEventCell.h; sourceTree = "<group>"; };
 		65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineEventCell.m; path = Classes/Views/TimelineEventCell.m; sourceTree = "<group>"; };
-		A47C43871940A4F800B722C3 /* face2face-splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "face2face-splash@2x.png"; path = "Resources/Images/face2face-splash@2x.png"; sourceTree = "<group>"; };
-		A47C43881940A4F800B722C3 /* face2face-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "face2face-home@2x.png"; path = "Resources/Images/face2face-home@2x.png"; sourceTree = "<group>"; };
+		A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-ipad-splash@2x.png"; path = "Resources/Images/tap-ipad-splash@2x.png"; sourceTree = "<group>"; };
+		A47C43881940A4F800B722C3 /* tap-ipad-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-ipad-home@2x.png"; path = "Resources/Images/tap-ipad-home@2x.png"; sourceTree = "<group>"; };
 		A47C438D1940C06300B722C3 /* post-impressionism.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "post-impressionism.png"; path = "Resources/Images/post-impressionism.png"; sourceTree = "<group>"; };
 		A4C3F042193D6B1700B173B1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A4C3F04A193EC0E700B173B1 /* TAPTiledImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTiledImageScrollView.h; path = Classes/Views/TAPTiledImageScrollView.h; sourceTree = "<group>"; };
 		A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTiledImageScrollView.m; path = Classes/Views/TAPTiledImageScrollView.m; sourceTree = "<group>"; };
 		A4C3F04C193EC0E700B173B1 /* TAPTiledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTiledView.h; path = Classes/Views/TAPTiledView.h; sourceTree = "<group>"; };
 		A4C3F04D193EC0E700B173B1 /* TAPTiledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTiledView.m; path = Classes/Views/TAPTiledView.m; sourceTree = "<group>"; };
-		A4F738A8189C33AE0091DF1B /* indiana-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "indiana-home@2x.png"; path = "Resources/Images/indiana-home@2x.png"; sourceTree = "<group>"; };
-		A4F738AA189C354F0091DF1B /* indiana-splashscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "indiana-splashscreen.png"; path = "Resources/Images/indiana-splashscreen.png"; sourceTree = "<group>"; };
-		A4F738AC189C35C50091DF1B /* indiana-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "indiana-tap.png"; path = "Resources/Images/indiana-tap.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +335,9 @@
 		1747952916FA3C490082745C /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				622E1DF2199A53EF0094393A /* Icon-29@2x.png */,
+				622E1DF3199A53EF0094393A /* Icon-40@2x.png */,
+				622E1DF4199A53EF0094393A /* Icon-76@2x.png */,
 				17D7DFFE16FA3D1300F6B125 /* Icon-72@2x.png */,
 				17D7DFFC16FA3CFD00F6B125 /* Icon-72.png */,
 				1747952C16FA3C5D0082745C /* Icon-Small-50.png */,
@@ -546,11 +549,8 @@
 			isa = PBXGroup;
 			children = (
 				A47C438D1940C06300B722C3 /* post-impressionism.png */,
-				A47C43871940A4F800B722C3 /* face2face-splash@2x.png */,
-				A47C43881940A4F800B722C3 /* face2face-home@2x.png */,
-				A4F738AC189C35C50091DF1B /* indiana-tap.png */,
-				A4F738AA189C354F0091DF1B /* indiana-splashscreen.png */,
-				A4F738A8189C33AE0091DF1B /* indiana-home@2x.png */,
+				A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */,
+				A47C43881940A4F800B722C3 /* tap-ipad-home@2x.png */,
 				17AD6BA71700BEDB00D7D755 /* play@2x.png */,
 				652C1C2416FFDBAD00646100 /* expand-plus@2x.png */,
 				652C1C2216FFCABA00646100 /* gradient.png */,
@@ -773,16 +773,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A0807216E5236200366341 /* InfoPlist.strings in Resources */,
-				A47C438A1940A4F800B722C3 /* face2face-home@2x.png in Resources */,
+				A47C438A1940A4F800B722C3 /* tap-ipad-home@2x.png in Resources */,
 				17A0807A16E5236200366341 /* Default.png in Resources */,
-				A47C43891940A4F800B722C3 /* face2face-splash@2x.png in Resources */,
+				A47C43891940A4F800B722C3 /* tap-ipad-splash@2x.png in Resources */,
 				17A0807E16E5236300366341 /* Default-568h@2x.png in Resources */,
 				17A080E216E5325000366341 /* TAPHomeViewController.xib in Resources */,
 				17A080E716E5327D00366341 /* TAPEventsProgramsViewController.xib in Resources */,
 				17A080EC16E532AB00366341 /* TAPTimelineStopViewController.xib in Resources */,
 				17A080F116E532C400366341 /* TAPThemesStopViewController.xib in Resources */,
-				A4F738AD189C35C50091DF1B /* indiana-tap.png in Resources */,
 				17A080F616E532E200366341 /* TAPInterviewsStopViewController.xib in Resources */,
+				622E1DF7199A53EF0094393A /* Icon-76@2x.png in Resources */,
 				62BAE48617F0E8C0005E6E13 /* back.png in Resources */,
 				62F8CB0317FEFC8C004287D5 /* Settings.bundle in Resources */,
 				17A0810016E54D1100366341 /* TAPEventsStopViewController.xib in Resources */,
@@ -801,6 +801,7 @@
 				17837AC616F1970900E62BD5 /* InterviewIntroductionCell.xib in Resources */,
 				6523CF5216F2EEC500B42ECE /* ThemeCell.xib in Resources */,
 				17837B0C16F3D7B000E62BD5 /* ImageStopCell.xib in Resources */,
+				622E1DF5199A53EF0094393A /* Icon-29@2x.png in Resources */,
 				1747952316F76E4A0082745C /* Content.html in Resources */,
 				1747953616FA3C5D0082745C /* Icon-Small-50.png in Resources */,
 				1747953716FA3C5D0082745C /* Icon-Small-50@2x.png in Resources */,
@@ -816,9 +817,7 @@
 				652C1C1916FE947000646100 /* arrow-1@2x.png in Resources */,
 				622E1DF11999639C0094393A /* README.md in Resources */,
 				652C1C1A16FE947000646100 /* arrow-2@2x.png in Resources */,
-				A4F738AB189C354F0091DF1B /* indiana-splashscreen.png in Resources */,
 				652C1C1B16FE947000646100 /* arrow-3@2x.png in Resources */,
-				A4F738A9189C33AE0091DF1B /* indiana-home@2x.png in Resources */,
 				652C1C1D16FE963200646100 /* back@2x.png in Resources */,
 				652C1C2016FE97A700646100 /* pause@2x.png in Resources */,
 				652C1C2316FFCABA00646100 /* gradient.png in Resources */,
@@ -828,6 +827,7 @@
 				622E1DF01999639C0094393A /* LICENSE.md in Resources */,
 				62F63B1A19423A01004EA5F8 /* Content_with_image.html in Resources */,
 				629E8D2B1993F74C00AB99D5 /* DB5.plist in Resources */,
+				622E1DF6199A53EF0094393A /* Icon-40@2x.png in Resources */,
 				62BAE48817F5F005005E6E13 /* TAPEventStopDetailViewController.xib in Resources */,
 				621E8D2717DFA84C00C57BAA /* NewThemeCell.xib in Resources */,
 			);
