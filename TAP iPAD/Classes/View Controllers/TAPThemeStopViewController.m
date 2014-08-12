@@ -10,7 +10,7 @@
 #import "TAPImageStopViewController.h"
 #import "AppDelegate.h"
 #import "UnderlineLabel.h"
-#import "NewThemeCell.h"
+#import "MultiCell.h"
 #import "TAPStop.h"
 #import "TAPConnection.h"
 #import "TAPContent.h"
@@ -131,7 +131,7 @@
     [self.themeContent.scrollView setBounces:NO];
     
     // register nib for uicollectionview
-    [self.artworkCollectionView registerNib:[UINib nibWithNibName:@"NewThemeCell" bundle:nil] forCellWithReuseIdentifier:@"NewThemeCell"];
+    [self.artworkCollectionView registerNib:[UINib nibWithNibName:@"MultiCell" bundle:nil] forCellWithReuseIdentifier:@"MultiCell"];
     
     // set up flowlayout
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -180,7 +180,7 @@
     // okay, let's grab that stop so we can find out what kind of stop the stop is. stop.
     TAPStop *contextStop = [self.childStops objectAtIndex:indexPath.row];
     NSString *stopView = contextStop.view;
-    NewThemeCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"NewThemeCell" forIndexPath:indexPath];
+    MultiCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"MultiCell" forIndexPath:indexPath];
 
     // is this an image stop?
     if ([stopView isEqualToString:@"image_stop"]) {

@@ -14,7 +14,7 @@
 #import "TAPSource.h"
 #import "TAPContent.h"
 #import "UIImage+Resize.h"
-#import "NewThemeCell.h"
+#import "MultiCell.h"
 
 // vendor
 #import "GAI.h"
@@ -74,7 +74,7 @@
     [self.content setBackgroundColor:[UIColor clearColor]];
     
     // register nib for uicollectionview
-    [self.artworkCollection registerNib:[UINib nibWithNibName:@"NewThemeCell" bundle:nil] forCellWithReuseIdentifier:@"NewThemeCell"];
+    [self.artworkCollection registerNib:[UINib nibWithNibName:@"MultiCell" bundle:nil] forCellWithReuseIdentifier:@"MultiCell"];
 
     // set up flowlayout
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -112,7 +112,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NewThemeCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"NewThemeCell" forIndexPath:indexPath];
+    MultiCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"MultiCell" forIndexPath:indexPath];
     TAPAsset *eventAsset = [self.artworkAssets objectAtIndex:indexPath.row];
     NSString *eventImage = [[[eventAsset getSourcesByPart:@"1150x1100"] objectAtIndex:0] uri];
     [cell setupImageStopWithImage:[UIImage imageWithContentsOfFile:eventImage] stop:self.eventStop];

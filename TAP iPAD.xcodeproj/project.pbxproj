@@ -83,8 +83,8 @@
 		17E5149A16EE69F600C84A54 /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E5149916EE69F600C84A54 /* ArrowView.m */; };
 		17E514A416EF63D600C84A54 /* arrow-blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E514A316EF63D600C84A54 /* arrow-blank.png */; };
 		17E514A716EF70F800C84A54 /* InterviewQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */; };
-		621E8D2717DFA84C00C57BAA /* NewThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */; };
-		621E8D2A17DFA87000C57BAA /* NewThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 621E8D2917DFA86F00C57BAA /* NewThemeCell.m */; };
+		621E8D2717DFA84C00C57BAA /* MultiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 621E8D2617DFA84B00C57BAA /* MultiCell.xib */; };
+		621E8D2A17DFA87000C57BAA /* MultiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 621E8D2917DFA86F00C57BAA /* MultiCell.m */; };
 		622E1DF01999639C0094393A /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DEE1999639C0094393A /* LICENSE.md */; };
 		622E1DF11999639C0094393A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DEF1999639C0094393A /* README.md */; };
 		622E1DF5199A53EF0094393A /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DF2199A53EF0094393A /* Icon-29@2x.png */; };
@@ -241,9 +241,9 @@
 		17E514A316EF63D600C84A54 /* arrow-blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-blank.png"; path = "Resources/Images/arrow-blank.png"; sourceTree = "<group>"; };
 		17E514A516EF70F800C84A54 /* InterviewQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewQuestionCell.h; path = Classes/Views/InterviewQuestionCell.h; sourceTree = "<group>"; };
 		17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewQuestionCell.m; path = Classes/Views/InterviewQuestionCell.m; sourceTree = "<group>"; };
-		621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewThemeCell.xib; path = Classes/Views/NewThemeCell.xib; sourceTree = "<group>"; };
-		621E8D2817DFA86F00C57BAA /* NewThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewThemeCell.h; path = Classes/Views/NewThemeCell.h; sourceTree = "<group>"; };
-		621E8D2917DFA86F00C57BAA /* NewThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewThemeCell.m; path = Classes/Views/NewThemeCell.m; sourceTree = "<group>"; };
+		621E8D2617DFA84B00C57BAA /* MultiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MultiCell.xib; path = Classes/Views/MultiCell.xib; sourceTree = "<group>"; };
+		621E8D2817DFA86F00C57BAA /* MultiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiCell.h; path = Classes/Views/MultiCell.h; sourceTree = "<group>"; };
+		621E8D2917DFA86F00C57BAA /* MultiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiCell.m; path = Classes/Views/MultiCell.m; sourceTree = "<group>"; };
 		622E1DEE1999639C0094393A /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		622E1DEF1999639C0094393A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		622E1DF2199A53EF0094393A /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-29@2x.png"; path = "Resources/Images/Icons/Icon-29@2x.png"; sourceTree = "<group>"; };
@@ -602,9 +602,9 @@
 				17E514A516EF70F800C84A54 /* InterviewQuestionCell.h */,
 				17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */,
 				17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */,
-				621E8D2817DFA86F00C57BAA /* NewThemeCell.h */,
-				621E8D2917DFA86F00C57BAA /* NewThemeCell.m */,
-				621E8D2617DFA84B00C57BAA /* NewThemeCell.xib */,
+				621E8D2817DFA86F00C57BAA /* MultiCell.h */,
+				621E8D2917DFA86F00C57BAA /* MultiCell.m */,
+				621E8D2617DFA84B00C57BAA /* MultiCell.xib */,
 				17A080BD16E525E400366341 /* NonSelectableTextView.h */,
 				17A080BE16E525E400366341 /* NonSelectableTextView.m */,
 				A4C3F04C193EC0E700B173B1 /* TAPTiledView.h */,
@@ -829,7 +829,7 @@
 				629E8D2B1993F74C00AB99D5 /* DB5.plist in Resources */,
 				622E1DF6199A53EF0094393A /* Icon-40@2x.png in Resources */,
 				62BAE48817F5F005005E6E13 /* TAPEventStopDetailViewController.xib in Resources */,
-				621E8D2717DFA84C00C57BAA /* NewThemeCell.xib in Resources */,
+				621E8D2717DFA84C00C57BAA /* MultiCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,7 +888,7 @@
 				17AD6BA616FD48DE00D7D755 /* EventStopCell.m in Sources */,
 				652C1C2C16FFF43E00646100 /* KioskApplication.m in Sources */,
 				17AD6BAB17023E0200D7D755 /* UIImage+Resize.m in Sources */,
-				621E8D2A17DFA87000C57BAA /* NewThemeCell.m in Sources */,
+				621E8D2A17DFA87000C57BAA /* MultiCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

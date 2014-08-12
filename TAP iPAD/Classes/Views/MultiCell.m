@@ -1,26 +1,29 @@
 //
-//  NewThemeCell.m
+//  MultiCell.m
 //  TAP iPAD
 //
 //  Created by David D'Amico on 9/10/13.
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "NewThemeCell.h"
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
+#import "MultiCell.h"
 #import <AVFoundation/AVFoundation.h>
 #import "TAPSource.h"
 #import "TAPTiledImageScrollView.h"
 #import "TAPStop.h"
 
-@interface NewThemeCell()
+// vendor
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+
+
+@interface MultiCell()
 @property (nonatomic, weak) IBOutlet UIView *videoView;
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
 @property (nonatomic, strong) NSString *stopTitle;
 @end
 
-@implementation NewThemeCell
+@implementation MultiCell
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -109,8 +112,6 @@
     } else {
         [self.moviePlayer setScalingMode:MPMovieScalingModeAspectFill];
     }
-//    [self.moviePlayer.view setBackgroundColor:[UIColor whiteColor]];
-//    [self.videoView setBackgroundColor:[UIColor whiteColor]];
     [self.moviePlayer setControlStyle:MPMovieControlStyleNone];
     [self.moviePlayer prepareToPlay];
     [self.videoView addSubview:self.moviePlayer.view];

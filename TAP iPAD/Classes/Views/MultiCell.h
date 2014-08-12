@@ -1,5 +1,5 @@
 //
-//  NewThemeCell.h
+//  MultiCell.h
 //  TAP iPAD
 //
 //  Created by David D'Amico on 9/10/13.
@@ -11,7 +11,7 @@
 #import "TAPAsset.h"
 #import "TAPStop.h"
 
-@interface NewThemeCell : UICollectionViewCell
+@interface MultiCell : UICollectionViewCell
 @property (nonatomic, weak) IBOutlet UIImageView *image;
 @property (nonatomic, weak) IBOutlet UIView *imageZoomView;
 @property (nonatomic, weak) IBOutlet UIButton *playButton;

@@ -161,7 +161,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TAP iPAD/Classes/Views/NewThemeCell.m"
+            filePath = "TAP iPAD/Classes/Views/MultiCell.m"
             timestampString = "402862601.155833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
