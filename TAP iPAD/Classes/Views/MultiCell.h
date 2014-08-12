@@ -5,6 +5,8 @@
 //  Created by David D'Amico on 9/10/13.
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
+//  Does pretty much the same thing as ThemeCell, but
+//  has built in handling for different types of media.
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
