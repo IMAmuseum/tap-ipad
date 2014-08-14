@@ -21,11 +21,14 @@
 @property (nonatomic, strong) NSString * type;
 @property (nonatomic, strong) TAPAssetRef *assetRef;
 @property (nonatomic, strong) NSSet *content;
+
 @property (nonatomic, strong) NSSet *propertySet;
 @property (nonatomic, strong) NSSet *source;
 @property (nonatomic, strong) TAPAssetRef *watermark;
-@property NSInteger parseIndex;
+@property (nonatomic, strong) NSNumber *parseIndex;
 
+- (NSString *)getAssetId;
+- (TAPContent *)getContentAtIndex:(NSInteger)index;
 - (NSArray *)getContentsByPart:(NSString *)part;
 - (NSArray *)getSourcesByPart:(NSString *)part;
 

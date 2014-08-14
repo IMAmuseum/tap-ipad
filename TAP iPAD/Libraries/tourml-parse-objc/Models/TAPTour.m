@@ -16,6 +16,7 @@
 
 @dynamic author;
 @dynamic id;
+@dynamic tourRefUrl;
 @dynamic bundlePath;
 @dynamic lastModified;
 @dynamic publishDate;
@@ -38,6 +39,8 @@
     
     if ([title objectForKey:[appDelegate language]]) {
         return [title objectForKey:[appDelegate language]];
+    } else if ([title objectForKey:@"en"]) {
+        return [title objectForKey:@"en"];
     } else {
         return [title objectForKey:@""];
     }
@@ -55,9 +58,31 @@
     
     if ([description objectForKey:[appDelegate language]]) {
         return [description objectForKey:[appDelegate language]];
+    } else if ([description objectForKey:@"en"]) {
+        return [description objectForKey:@"en"];
     } else {
         return [description objectForKey:@""];
     }
+}
+
+- (NSSet *)stopsFromArtworkId:(NSString *)artworkId
+{
+    // surely there is a better way to do this
+    NSMutableArray *stopsContainingAssetsWithId = [[NSMutableArray alloc] init];
+    for (TAPStop *stop in self.stop) {
+        NSArray *filteredAssets = [[stop getAssetsByUsage:@"artwork"] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"id = %@", artworkId]];
+        if ([filteredAssets count] > 0) {
+            [stopsContainingAssetsWithId addObject:stop];
+        }
+    }
+    return [[NSSet alloc] initWithArray:stopsContainingAssetsWithId];
+}
+
+- (NSSet *)stopsFromView:(NSString *)view
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"view = %@", view];
+    NSSet *result = [self.stop filteredSetUsingPredicate:predicate];
+    return result;
 }
 
 /**
@@ -80,6 +105,37 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id = %@", id];
     TAPStop *stop = [[self.stop filteredSetUsingPredicate:predicate] anyObject];
     return stop;
+}
+
+/**
+ * Convenience method for retrieving all assets with a particular usage
+ */
+- (NSArray *)getAppResourcesByUsage:(NSString *)usage
+{
+    NSMutableArray *assets = [[NSMutableArray alloc] init];
+    for (TAPAssetRef *assetRef in [self.appResource allObjects]) {
+        if ([assetRef.usage isEqualToString:usage]) {
+            [assets addObject:assetRef.asset];
+        }
+    }
+
+    return assets;
+}
+
+/**
+ * Convenience method for retrieving all resources with a particular usage by parseIndex
+ */
+- (NSArray *)getAppResourcesByUsageOrderByParseIndex:(NSString *)usage
+{
+    NSMutableArray *assets = [[NSMutableArray alloc] init];
+    for (TAPAssetRef *assetRef in [self.appResource allObjects]) {
+        if ([assetRef.usage isEqualToString:usage]) {
+            [assets addObject:assetRef.asset];
+        }
+    }
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"parseIndex" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    return [assets sortedArrayUsingDescriptors:sortDescriptors];
 }
 
 @end

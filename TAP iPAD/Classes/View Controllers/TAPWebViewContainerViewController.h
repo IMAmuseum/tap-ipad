@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
 
-@interface TAPGenericWebContainerViewController : GAITrackedViewController <UIScrollViewDelegate>
+@interface TAPWebViewContainerViewController : GAITrackedViewController <UIScrollViewDelegate>
 
 @end

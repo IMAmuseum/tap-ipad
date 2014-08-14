@@ -19,8 +19,24 @@
 @dynamic lastModified;
 @dynamic part;
 @dynamic uri;
+@dynamic originalUri;
 @dynamic propertySet;
 @dynamic relationship;
+
+- (NSString *)propertyByName:(NSString *)name
+{
+    NSArray *filteredProperties = [[self.propertySet filteredSetUsingPredicate:[NSPredicate predicateWithFormat:@"name = %@", name]] allObjects];
+    TAPProperty *targetProperty = [filteredProperties objectAtIndex:0];
+    return targetProperty.value;
+}
+
+- (NSString *)originalUri
+{
+    [self willAccessValueForKey:@"uri"];
+    NSString *originalUri = [self primitiveValueForKey:@"uri"];
+    [self didAccessValueForKey:@"uri"];
+    return originalUri;
+}
 
 - (NSString *)uri 
 {

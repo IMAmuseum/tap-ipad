@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSString *author;
 @property (nonatomic, strong) NSString *id;
+@property (nonatomic, strong) NSString *tourRefUrl;
 @property (nonatomic, strong) NSString *bundlePath;
 @property (nonatomic, strong) NSDate *lastModified;
 @property (nonatomic, strong) NSDate *publishDate;
@@ -27,6 +28,10 @@
 
 - (TAPStop *)stopFromKeycode:(NSString *)keycode;
 - (TAPStop *)stopFromId:(NSString *)id;
+- (NSSet *)stopsFromView:(NSString *)view;
+- (NSSet *)stopsFromArtworkId:(NSString *)artworkId;
+- (NSArray *)getAppResourcesByUsage:(NSString *)usage;
+- (NSArray *)getAppResourcesByUsageOrderByParseIndex:(NSString *)usage;
 
 @end
 

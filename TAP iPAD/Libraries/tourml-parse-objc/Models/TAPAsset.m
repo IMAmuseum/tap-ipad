@@ -28,6 +28,20 @@
 @dynamic watermark;
 @dynamic parseIndex;
 
+- (NSString *)getAssetId
+{
+    return self.id;
+}
+
+- (TAPContent *)getContentAtIndex:(NSInteger)index
+{
+    NSArray *contents = [self.content allObjects];
+    if (index > [contents count]) {
+        return nil;
+    }
+    return [contents objectAtIndex:index];
+}
+
 - (NSArray *)getContentsByPart:(NSString *)part
 {
     NSMutableArray *contents = [[NSMutableArray alloc] init];

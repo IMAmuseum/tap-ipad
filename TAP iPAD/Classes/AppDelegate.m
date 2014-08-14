@@ -9,20 +9,21 @@
 #import "AppDelegate.h"
 #import "KioskApplication.h"
 #import "TAPBaseViewController.h"
-#import "TAPGenericWebContainerViewController.h"
+#import "TAPWebViewContainerViewController.h"
 #import "TAPHomeViewController.h"
 #import "TAPInterviewsStopViewController.h"
 #import "TAPMenuViewController.h"
 #import "TAPTimelineStopViewController.h"
 #import "TAPThemesStopViewController.h"
-#import "TAPTour.h"
-#import "TourMLParser.h"
 
 // vendor
 #import "GAI.h"
 #import "GAIFields.h"
+#import "TAPTour.h"
+#import "TourMLParser.h"
 #import "VSThemeLoader.h"
 #import "VSTheme.h"
+
 
 @interface AppDelegate ()
 @property (nonatomic, strong) VSThemeLoader *themeLoader;

@@ -13,12 +13,14 @@
 #import "TAPAsset.h"
 #import "TAPContent.h"
 #import "TAPTour.h"
+#import "TAPTourSet.h"
 #import "TAPProperty.h"
 #import "TAPSource.h"
 #import "TAPAssetRef.h"
 #import "ISO8601DateFormatter.h"
 
 static NSMutableString *bundlePath;
+static NSMutableArray *endpoints;
 
 @implementation TourMLParser
 
@@ -26,18 +28,30 @@ static NSMutableString *bundlePath;
  * Kicks off the processing of tourml documents from a specified endpoint and any bundles found
  * in the 'Bundles' directory
  */
-+ (void)loadTours 
++ (void)loadTours:(NSArray *)additionalEndpoints
+{
+    endpoints = [[NSMutableArray alloc] init];
+    [endpoints addObjectsFromArray:additionalEndpoints];
+    
+    [self loadTours];
+}
+
++ (void)loadTours
 {
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     bundlePath = nil;
-    NSError *error;
+    
+    // set of endpoints
+    if (endpoints == nil) {
+        endpoints = [[NSMutableArray alloc] init];
+    }
     
     // process endpoint
     NSString *endpoint = [[appDelegate tapConfig] objectForKey:@"TourMLEndpoint"];
-    if (endpoint != nil) {
-        [self getExternalTourMLDoc:endpoint];
+    if (endpoint != nil && [endpoint length] > 0) {
+        [endpoints addObject:endpoint];
     }
-
+    
     // process bundles
     NSString *bundleDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Bundles"];
     NSDirectoryEnumerator *bundleEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:bundleDir];
@@ -50,32 +64,29 @@ static NSMutableString *bundlePath;
                 NSBundle *bundle = [NSBundle bundleWithPath:tourBundlePath];
                 if (bundle) {
                     NSString *tourDataPath = [bundle pathForResource:@"tour" ofType:@"xml"];
-                    NSData *xmlData = [[NSMutableData alloc] initWithContentsOfFile:tourDataPath];
-                    
-                    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
-                    if (doc == nil) {
-                        continue;
-                    }
-                    
-                    if ([[doc.rootElement name] isEqualToString:@"tourml:TourSet"]) {
-                        for (GDataXMLElement *ref in [doc.rootElement elementsForName:@"tourml:TourMLRef"]) {
-                            [self getExternalTourMLDoc:[[ref attributeForName:@"tourml:uri"] stringValue]];
-                        }
-                    } else {
-                        [self parseTourMLDoc:doc];
-                    }
+                    [endpoints addObject:tourDataPath];
                 }
             }
         }
     }
     
+    // now we should have a nice array of endpoints,
+    // run through them and get docs (and parse and
+    // persist them)
+    for (NSString *endpoint in endpoints) {
+        [self getExternalTourMLDoc:endpoint];
+    }
 }
 
 /**
  * Retrieve data from a given tourMLRef
  */
-+ (void)getExternalTourMLDoc:(NSString *)tourMLRef 
++ (TAPTour *)getExternalTourMLDoc:(NSString *)tourMLRef
 {
+    // @TODO should these maybe move to a class var?
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
     NSURL *url = [NSURL URLWithString:tourMLRef];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     
@@ -87,31 +98,59 @@ static NSMutableString *bundlePath;
     
     if ([xmlData length] == 0 && error != nil) {
         NSLog(@"Unable to retrieve document from endpoint.");
-        return;
+        return nil;
     } else if (error != nil) {
         NSLog(@"Error occured retrieving from endpoint: %@", error);
-        return;
+        return nil;
     }
     
     GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
     
     if (doc == nil) {
-        return;
+        return nil;
     }
     
+    
+    
     if ([[doc.rootElement name] isEqualToString:@"tourml:TourSet"]) {
-        for (GDataXMLElement *ref in [doc.rootElement elementsForName:@"tourml:TourMLRef"]) {
-            [self getExternalTourMLDoc:[[ref attributeForName:@"tourml:uri"] stringValue]];
+        
+        // check if we already have a tourset with this url, if we do dropit
+        NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"TourSet" inManagedObjectContext:context];
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entityDescription];
+        [request setPredicate: [NSPredicate predicateWithFormat: @"(tourRefUrl = %@)", tourMLRef]];
+        NSArray *existingToursets = [context executeFetchRequest:request error:&error];
+        for (TAPTourSet *existingTourset in existingToursets) {
+            [context deleteObject:existingTourset];
+            [context save:&error];
         }
+        
+        TAPTourSet *tourset = [NSEntityDescription insertNewObjectForEntityForName:@"TourSet" inManagedObjectContext:context];
+        NSMutableSet *tours = [[NSMutableSet alloc] init];
+        
+        for (GDataXMLElement *ref in [doc.rootElement elementsForName:@"tourml:TourMLRef"]) {
+            TAPTour *contextTour = [self getExternalTourMLDoc:[[ref attributeForName:@"tourml:uri"] stringValue]];
+            if (contextTour != nil) {
+                [tours addObject:contextTour];
+            }
+        }
+        tourset.tourRefUrl = tourMLRef;
+        tourset.tours = tours;
+        if (![context save:&error]) {
+            NSLog(@"Error saving: %@", [error localizedDescription]);
+        }
+        
+        return nil;
+        
     } else {
-        [self parseTourMLDoc:doc];
+        return [self parseTourMLDoc:doc fromUrl:url];
     }
 }
 
 /**
  * Parse an individual tour doc
  */
-+ (void)parseTourMLDoc:(GDataXMLDocument *)doc 
++ (TAPTour *)parseTourMLDoc:(GDataXMLDocument *)doc fromUrl:(NSURL *)tourRefUrl
 {
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
@@ -138,7 +177,7 @@ static NSMutableString *bundlePath;
             [context save:&error];
         } else {
             // tour in core data is newer so leave it alone
-            return;
+            return existingTour;
         }
     }
     
@@ -148,10 +187,10 @@ static NSMutableString *bundlePath;
     
     // generate path for tour
     NSString *assetsDirectory = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@", tourId]];
-
+    
     // handle creating the new directory or deleting the contents of the directory if it already exists
     if ([[NSFileManager defaultManager] fileExistsAtPath:assetsDirectory]) {
-        for (NSString *file in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:assetsDirectory error:&error]) {    
+        for (NSString *file in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:assetsDirectory error:&error]) {
             NSString *filePath = [assetsDirectory stringByAppendingPathComponent:file];
             [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
         }
@@ -161,8 +200,10 @@ static NSMutableString *bundlePath;
     
     // start creating new tour
     TAPTour *tour = [NSEntityDescription insertNewObjectForEntityForName:@"Tour" inManagedObjectContext:context];
+    
     // Tour attributes
     tour.id = tourId;
+    tour.tourRefUrl = [tourRefUrl absoluteString];
     tour.lastModified = lastModified;
     tour.bundlePath = bundlePath;
     // TourMetadata
@@ -177,7 +218,7 @@ static NSMutableString *bundlePath;
     tour.propertySet = [self processPropertySet:[[tourMetadata elementsForName:@"tourml:PropertySet"] objectAtIndex:0] withContext:context];
     // Stops
     tour.stop = [self processStops:doc.rootElement fromRoot:doc.rootElement withContext:context];
-
+    
     // check to see if a root stop element exists
     if ([[tourMetadata elementsForName:@"tourml:RootStopRef"] count] > 0) {
         NSString *rootStopRef = [[[[tourMetadata elementsForName:@"tourml:RootStopRef"] objectAtIndex:0] attributeForName:@"tourml:id"] stringValue];
@@ -185,21 +226,25 @@ static NSMutableString *bundlePath;
         NSSet *rootStops = [tour.stop filteredSetUsingPredicate:predicate];
         tour.rootStopRef = [rootStops anyObject];
     }
-
+    
     if (![context save:&error]) {
         NSLog(@"Error saving: %@", [error localizedDescription]);
     }
     
     bundlePath = nil;
+    return tour;
+    
 }
+
 
 /**
  * Process tour stops
  */
-+ (NSSet *)processStops:(GDataXMLElement *)element fromRoot:(GDataXMLElement *)root withContext:(NSManagedObjectContext *)context 
++ (NSSet *)processStops:(GDataXMLElement *)element fromRoot:(GDataXMLElement *)root withContext:(NSManagedObjectContext *)context
 {
     NSMutableSet *stops = [[NSMutableSet alloc] init];
     
+    NSInteger parseIncrementor = 1;
     for (GDataXMLElement *stopElement in [element elementsForName:@"tourml:Stop"]) {
         TAPStop *stop = [NSEntityDescription insertNewObjectForEntityForName:@"Stop" inManagedObjectContext:context];
         stop.id = [[stopElement attributeForName:@"tourml:id"] stringValue];
@@ -208,8 +253,10 @@ static NSMutableString *bundlePath;
         stop.desc = [self processDescription:[stopElement elementsForName:@"tourml:Description"] withContext:context];
         stop.propertySet = [self processPropertySet:[[stopElement elementsForName:@"tourml:PropertySet"] objectAtIndex:0] withContext:context];
         stop.assetRef = [self processAssets:[stopElement elementsForName:@"tourml:AssetRef"] fromRoot:root withContext:context];
+        stop.parseIndex = [NSNumber numberWithLong:parseIncrementor];
         
         [stops addObject:stop];
+        parseIncrementor++;
     }
     
     // now that all of the stops are available, add all of the associated connections
@@ -217,7 +264,7 @@ static NSMutableString *bundlePath;
         
         NSPredicate *sourcePredicate = [NSPredicate predicateWithFormat:@"id == %@", [[connectionElement attributeForName:@"tourml:srcId"] stringValue]];
         NSSet *filteredSource = [stops filteredSetUsingPredicate:sourcePredicate];
-
+        
         NSPredicate *destinationPredicate = [NSPredicate predicateWithFormat:@"id == %@", [[connectionElement attributeForName:@"tourml:destId"] stringValue]];
         NSSet *filteredDestination = [stops filteredSetUsingPredicate:destinationPredicate];
         
@@ -250,7 +297,7 @@ static NSMutableString *bundlePath;
         
         // get asset
         NSArray *assetSearch = [root nodesForXPath:[NSString stringWithFormat:@"/tourml:Tour/tourml:Asset[@tourml:id='%@']", assetRef.id] error:&error];
-
+        
         GDataXMLElement *assetElement = [assetSearch objectAtIndex:0];
         
         TAPAsset *asset = [NSEntityDescription insertNewObjectForEntityForName:@"Asset" inManagedObjectContext:context];
@@ -261,7 +308,7 @@ static NSMutableString *bundlePath;
         asset.machineRights = [[[assetElement elementsForName:@"tourml:MachineRights"] objectAtIndex:0] stringValue];
         asset.expiration = [self convertStringToDate:[[[assetElement elementsForName:@"tourml:MachineRights"] objectAtIndex:0] stringValue]];
         asset.propertySet = [self processPropertySet:[[assetElement elementsForName:@"tourml:PropertySet"] objectAtIndex:0] withContext:context];
-        asset.parseIndex = parseIncrementor;
+        asset.parseIndex = [NSNumber numberWithLong:parseIncrementor];
         
         // add asset content
         NSMutableSet *assetContent = [[NSMutableSet alloc] init];
@@ -275,7 +322,7 @@ static NSMutableString *bundlePath;
             [assetContent addObject:content];
         }
         asset.content = assetContent;
-
+        
         // add asset sources
         NSMutableSet *assetSources = [[NSMutableSet alloc] init];
         for (GDataXMLElement *sourceElement in [assetElement elementsForName:@"tourml:Source"]) {
@@ -303,7 +350,7 @@ static NSMutableString *bundlePath;
 /**
  * Generic method for processing titles
  */
-+ (NSDictionary *)processTitle:(NSArray *)elements withContext:(NSManagedObjectContext *)context 
++ (NSDictionary *)processTitle:(NSArray *)elements withContext:(NSManagedObjectContext *)context
 {
     NSMutableDictionary *titles = [[NSMutableDictionary alloc] init];
     
@@ -311,13 +358,13 @@ static NSMutableString *bundlePath;
         [titles setObject:[title stringValue] forKey:[[[title attributes] objectAtIndex:0] stringValue]];
     }
     
-    return titles;    
+    return titles;
 }
 
 /**
  * Generic method for processing descriptions
  */
-+ (NSDictionary *)processDescription:(NSArray *)elements withContext:(NSManagedObjectContext *)context 
++ (NSDictionary *)processDescription:(NSArray *)elements withContext:(NSManagedObjectContext *)context
 {
     NSMutableDictionary *descriptions = [[NSMutableDictionary alloc] init];
     
@@ -331,7 +378,7 @@ static NSMutableString *bundlePath;
 /**
  * Generic method of processing property sets
  */
-+ (NSSet *)processPropertySet:(GDataXMLElement *)element withContext:(NSManagedObjectContext *)context 
++ (NSSet *)processPropertySet:(GDataXMLElement *)element withContext:(NSManagedObjectContext *)context
 {
     NSMutableSet *propertySet = [[NSMutableSet alloc] init];
     
@@ -350,7 +397,7 @@ static NSMutableString *bundlePath;
  * Converts a given date string of yyyy-MM-dd'T'HH:mm:ss and converts
  * it to a NSDate.
  */
-+ (NSDate *)convertStringToDate:(NSString *)dateString 
++ (NSDate *)convertStringToDate:(NSString *)dateString
 {
     if (dateString == nil) return nil;
     ISO8601DateFormatter *formatter = [[ISO8601DateFormatter alloc] init];

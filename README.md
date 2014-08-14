@@ -24,4 +24,7 @@ This is just the singular view that the themes view drills into, but which can a
 
 These views are backed by TourML data (in our case generated using the TAP CMS) corresponding to the views in the structures described above.
 
+## Areas For Improvement in this codebase
+Coupling with tourml-parse-objc: 
+
 @TODO what is the interview view?
