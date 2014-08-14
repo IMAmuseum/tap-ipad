@@ -20,11 +20,16 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (nonatomic, strong) NSArray *tours;
+@property (nonatomic, strong) NSArray *tourSets;
+
 @property (nonatomic, strong) VSTheme *theme;
 @property (nonatomic, strong) TAPTour *currentTour;
 @property (nonatomic, strong) NSDictionary *tapConfig;
 @property (nonatomic, strong) NSString *language;
 @property CGFloat timelineScrollPosition;
+
+@property BOOL loadingComplete;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

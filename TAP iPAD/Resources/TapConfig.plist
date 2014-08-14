@@ -16,7 +16,7 @@
 			<key>title</key>
 			<string>HEADING1</string>
 			<key>view</key>
-			<string>TAPGridViewDetailController</string>
+			<string>TAPGridDetailViewController</string>
 			<key>keycode</key>
 			<string>100</string>
 			<key>trackedViewName</key>
