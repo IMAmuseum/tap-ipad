@@ -8,8 +8,6 @@
 	<string>TAP Help Video.mp4</string>
 	<key>KioskMode</key>
 	<false/>
-    <!-- add a value here to hit a remote endpoint for tour data,
-        or leave blank if you intend to use a local bundle -->
 	<key>TourMLEndpoint</key>
 	<string></string>
 	<key>NavigationItems</key>
@@ -18,7 +16,7 @@
 			<key>title</key>
 			<string>HEADING1</string>
 			<key>view</key>
-			<string>TAPThemeStopViewController</string>
+			<string>TAPGridViewDetailController</string>
 			<key>keycode</key>
 			<string>100</string>
 			<key>trackedViewName</key>
@@ -28,7 +26,7 @@
 			<key>title</key>
 			<string>HEADING2</string>
 			<key>view</key>
-			<string>TAPThemesStopViewController</string>
+			<string>TAPGridViewController</string>
 			<key>keycode</key>
 			<string>200</string>
 			<key>trackedViewName</key>

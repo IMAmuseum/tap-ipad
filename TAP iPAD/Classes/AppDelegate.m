@@ -13,7 +13,7 @@
 #import "TAPHomeViewController.h"
 #import "TAPInterviewsStopViewController.h"
 #import "TAPMenuViewController.h"
-#import "TAPTimelineStopViewController.h"
+#import "TAPTimelineViewController.h"
 #import "TAPGridViewController.h"
 
 // vendor

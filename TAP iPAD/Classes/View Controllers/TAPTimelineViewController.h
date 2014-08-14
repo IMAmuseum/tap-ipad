@@ -1,5 +1,5 @@
 //
-//  TimelineViewController.h
+//  TAPTimelineViewController.h
 //  TAP iPAD
 //
 //  Created by Daniel Cervantes on 3/4/13.
@@ -10,6 +10,6 @@
 #import "TimelineView.h"
 #import "GAITrackedViewController.h"
 
-@interface TAPTimelineStopViewController : GAITrackedViewController <UIScrollViewDelegate, TimelineViewDataSource>
+@interface TAPTimelineViewController : GAITrackedViewController <UIScrollViewDelegate, TimelineViewDataSource>
 - (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName;
 @end

@@ -52,8 +52,8 @@
 		17A080E216E5325000366341 /* TAPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080E016E5325000366341 /* TAPHomeViewController.xib */; };
 		17A080E616E5327D00366341 /* TAPWebViewContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080E416E5327D00366341 /* TAPWebViewContainerViewController.m */; };
 		17A080E716E5327D00366341 /* TAPWebViewContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080E516E5327D00366341 /* TAPWebViewContainerViewController.xib */; };
-		17A080EB16E532AB00366341 /* TAPTimelineStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080E916E532AB00366341 /* TAPTimelineStopViewController.m */; };
-		17A080EC16E532AB00366341 /* TAPTimelineStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */; };
+		17A080EB16E532AB00366341 /* TAPTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080E916E532AB00366341 /* TAPTimelineViewController.m */; };
+		17A080EC16E532AB00366341 /* TAPTimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080EA16E532AB00366341 /* TAPTimelineViewController.xib */; };
 		17A080F016E532C400366341 /* TAPGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080EE16E532C400366341 /* TAPGridViewController.m */; };
 		17A080F116E532C400366341 /* TAPGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A080EF16E532C400366341 /* TAPGridViewController.xib */; };
 		17A080F516E532E200366341 /* TAPInterviewsStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A080F316E532E200366341 /* TAPInterviewsStopViewController.m */; };
@@ -188,9 +188,9 @@
 		17A080E316E5327D00366341 /* TAPWebViewContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPWebViewContainerViewController.h; path = "Classes/View Controllers/TAPWebViewContainerViewController.h"; sourceTree = "<group>"; };
 		17A080E416E5327D00366341 /* TAPWebViewContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPWebViewContainerViewController.m; path = "Classes/View Controllers/TAPWebViewContainerViewController.m"; sourceTree = "<group>"; };
 		17A080E516E5327D00366341 /* TAPWebViewContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPWebViewContainerViewController.xib; path = "Classes/View Controllers/TAPWebViewContainerViewController.xib"; sourceTree = "<group>"; };
-		17A080E816E532AB00366341 /* TAPTimelineStopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTimelineStopViewController.h; path = "Classes/View Controllers/TAPTimelineStopViewController.h"; sourceTree = "<group>"; };
-		17A080E916E532AB00366341 /* TAPTimelineStopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTimelineStopViewController.m; path = "Classes/View Controllers/TAPTimelineStopViewController.m"; sourceTree = "<group>"; };
-		17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPTimelineStopViewController.xib; path = "Classes/View Controllers/TAPTimelineStopViewController.xib"; sourceTree = "<group>"; };
+		17A080E816E532AB00366341 /* TAPTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTimelineViewController.h; path = "Classes/View Controllers/TAPTimelineViewController.h"; sourceTree = "<group>"; };
+		17A080E916E532AB00366341 /* TAPTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTimelineViewController.m; path = "Classes/View Controllers/TAPTimelineViewController.m"; sourceTree = "<group>"; };
+		17A080EA16E532AB00366341 /* TAPTimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPTimelineViewController.xib; path = "Classes/View Controllers/TAPTimelineViewController.xib"; sourceTree = "<group>"; };
 		17A080ED16E532C400366341 /* TAPGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPGridViewController.h; path = "Classes/View Controllers/TAPGridViewController.h"; sourceTree = "<group>"; };
 		17A080EE16E532C400366341 /* TAPGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPGridViewController.m; path = "Classes/View Controllers/TAPGridViewController.m"; sourceTree = "<group>"; };
 		17A080EF16E532C400366341 /* TAPGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPGridViewController.xib; path = "Classes/View Controllers/TAPGridViewController.xib"; sourceTree = "<group>"; };
@@ -454,9 +454,9 @@
 				17A0810116E54DCD00366341 /* TAPGridDetailViewController.h */,
 				17A0810216E54DCD00366341 /* TAPGridDetailViewController.m */,
 				17A0810316E54DCD00366341 /* TAPGridDetailViewController.xib */,
-				17A080E816E532AB00366341 /* TAPTimelineStopViewController.h */,
-				17A080E916E532AB00366341 /* TAPTimelineStopViewController.m */,
-				17A080EA16E532AB00366341 /* TAPTimelineStopViewController.xib */,
+				17A080E816E532AB00366341 /* TAPTimelineViewController.h */,
+				17A080E916E532AB00366341 /* TAPTimelineViewController.m */,
+				17A080EA16E532AB00366341 /* TAPTimelineViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -780,7 +780,7 @@
 				17A0807E16E5236300366341 /* Default-568h@2x.png in Resources */,
 				17A080E216E5325000366341 /* TAPHomeViewController.xib in Resources */,
 				17A080E716E5327D00366341 /* TAPWebViewContainerViewController.xib in Resources */,
-				17A080EC16E532AB00366341 /* TAPTimelineStopViewController.xib in Resources */,
+				17A080EC16E532AB00366341 /* TAPTimelineViewController.xib in Resources */,
 				17A080F116E532C400366341 /* TAPGridViewController.xib in Resources */,
 				17A080F616E532E200366341 /* TAPInterviewsStopViewController.xib in Resources */,
 				622E1DF7199A53EF0094393A /* Icon-76@2x.png in Resources */,
@@ -861,7 +861,7 @@
 				62C13FF9199D00340019FA9C /* TAPAssetRef.m in Sources */,
 				17A080E116E5325000366341 /* TAPHomeViewController.m in Sources */,
 				17A080E616E5327D00366341 /* TAPWebViewContainerViewController.m in Sources */,
-				17A080EB16E532AB00366341 /* TAPTimelineStopViewController.m in Sources */,
+				17A080EB16E532AB00366341 /* TAPTimelineViewController.m in Sources */,
 				17A080F016E532C400366341 /* TAPGridViewController.m in Sources */,
 				17A080F516E532E200366341 /* TAPInterviewsStopViewController.m in Sources */,
 				62C13FF8199D00340019FA9C /* TAPAsset.m in Sources */,

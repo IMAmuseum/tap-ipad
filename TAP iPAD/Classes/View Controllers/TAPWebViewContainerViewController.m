@@ -25,8 +25,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self setTitle:@"Events & Programs"];
-        self.screenName = @"Events & Programs";
+        [self setTitle:@"Generic Web View"];
+        self.screenName = @"Generic Web View";
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         self.theme = appDelegate.theme;
     }

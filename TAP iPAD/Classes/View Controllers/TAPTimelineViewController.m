@@ -1,5 +1,5 @@
 //
-//  TimelineViewController.m
+//  TAPTimelineViewController.m
 //  TAP iPAD
 //
 //  Created by Daniel Cervantes on 3/4/13.
@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TAPTimelineStopViewController.h"
+#import "TAPTimelineViewController.h"
 #import "TAPTimelineDetailViewController.h"
 #import "TimelineView.h"
 #import "TimelineEventCell.h"
@@ -29,7 +29,7 @@
 #define CELL_WIDTH 275.0f
 #define IMAGE_TAG 1000
 
-@interface TAPTimelineStopViewController () {
+@interface TAPTimelineViewController () {
     int _startYear;
     int _endYear;
     float _beforeSplitWidth;
@@ -44,7 +44,7 @@
 @property (nonatomic, strong) VSTheme *theme;
 @end
 
-@implementation TAPTimelineStopViewController
+@implementation TAPTimelineViewController
 
 - (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName
 {
