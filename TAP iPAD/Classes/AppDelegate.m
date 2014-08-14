@@ -14,7 +14,7 @@
 #import "TAPInterviewsStopViewController.h"
 #import "TAPMenuViewController.h"
 #import "TAPTimelineStopViewController.h"
-#import "TAPThemesStopViewController.h"
+#import "TAPGridViewController.h"
 
 // vendor
 #import "GAI.h"

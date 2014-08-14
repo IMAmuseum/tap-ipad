@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ArrowView.h"
-#import "TAPThemesStopViewController.h"
-#import "TAPThemeStopViewController.h"
+#import "TAPGridViewController.h"
+#import "TAPGridDetailViewController.h"
 #import "ThemeCell.h"
 #import "NSDictionary+TAPUtils.h"
 #import "TAPTour.h"
@@ -21,7 +21,7 @@
 // vendor
 #import "VSTheme.h"
 
-@interface TAPThemesStopViewController ()
+@interface TAPGridViewController ()
 @property (nonatomic, strong) TAPStop *stop;
 @property (nonatomic, strong) NSMutableArray *themeStops;
 @property (nonatomic, strong) NSMutableArray *themeStopImages;
@@ -42,7 +42,7 @@
 @property (nonatomic, strong) VSTheme *theme;
 @end
 
-@implementation TAPThemesStopViewController
+@implementation TAPGridViewController
 
 - (id)initWithConfigDictionary:(NSDictionary *)config {
     
@@ -215,7 +215,7 @@
     }
     
     TAPStop *themeStop = [self.themeStops objectAtIndex:useIndex];
-    TAPThemeStopViewController *themeStopViewController = [[TAPThemeStopViewController alloc] initWithStop:themeStop];
+    TAPGridDetailViewController *themeStopViewController = [[TAPGridDetailViewController alloc] initWithStop:themeStop];
     
     // create fade transition
     CATransition *transition = [CATransition animation];

@@ -14,7 +14,7 @@
 #import "VSTheme.h"
 
 @interface TAPWebViewContainerViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *eventProgramContent;// @TODO refactor, rename stuff in here to express intent
+@property (weak, nonatomic) IBOutlet UIWebView *contentContainer;// @TODO refactor, rename stuff in here to express intent
 @property (nonatomic, strong) ArrowView *arrowIndicator;
 @property (nonatomic, strong) VSTheme *theme;
 @end
@@ -41,7 +41,7 @@
     UIFont *bodyFontItalic = [self.theme fontForKey:@"bodyFontItalic"];
     NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"EventsPrograms" ofType:@"html"];
     NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
-    [self.eventProgramContent loadHTMLString:[NSString stringWithFormat:htmlString,
+    [self.contentContainer loadHTMLString:[NSString stringWithFormat:htmlString,
                                               [bodyFont fontName],
                                               bodyFont.pointSize,
                                               [bodyFont fontName],
@@ -50,8 +50,8 @@
                                               bodyFont.pointSize,
                                               [bodyFontItalic fontName]]
                                      baseURL:nil];
-    [self.eventProgramContent.scrollView setBounces:NO];
-    [self.eventProgramContent.scrollView setDelegate:self];
+    [self.contentContainer.scrollView setBounces:NO];
+    [self.contentContainer.scrollView setDelegate:self];
     
     // add arrow indicator animation
     self.arrowIndicator = [[ArrowView alloc] initWithFrame:CGRectMake(929.0f, 641.0f, 75.0f, 35.0f)];
@@ -61,7 +61,7 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.eventProgramContent.scrollView setContentOffset:CGPointMake(0, 0)];
+    [self.contentContainer.scrollView setContentOffset:CGPointMake(0, 0)];
 }
 
 - (void)didReceiveMemoryWarning
