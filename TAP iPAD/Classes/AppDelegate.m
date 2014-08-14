@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "KioskApplication.h"
 #import "TAPBaseViewController.h"
-#import "TAPEventsProgramsViewController.h"
+#import "TAPGenericWebContainerViewController.h"
 #import "TAPHomeViewController.h"
 #import "TAPInterviewsStopViewController.h"
 #import "TAPMenuViewController.h"

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TAPEventStopDetailViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TAPTimelineDetailViewController">
             <connections>
                 <outlet property="artworkCollection" destination="EQf-oJ-rzd" id="W54-jc-TPE"/>
                 <outlet property="content" destination="4TS-WP-fXt" id="woE-1k-2Dw"/>

@@ -6,20 +6,20 @@
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "TAPEventsProgramsViewController.h"
+#import "TAPGenericWebContainerViewController.h"
 #import "AppDelegate.h"
 #import "ArrowView.h"
 
 // vendor
 #import "VSTheme.h"
 
-@interface TAPEventsProgramsViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *eventProgramContent;
+@interface TAPGenericWebContainerViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *eventProgramContent;// @TODO refactor, rename stuff in here to express intent
 @property (nonatomic, strong) ArrowView *arrowIndicator;
 @property (nonatomic, strong) VSTheme *theme;
 @end
 
-@implementation TAPEventsProgramsViewController
+@implementation TAPGenericWebContainerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

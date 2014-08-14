@@ -11,7 +11,7 @@
 #import "GAITrackedViewController.h"
 #import "TAPStop.h"
 
-@interface TAPEventStopDetailViewController : GAITrackedViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface TAPTimelineDetailViewController : GAITrackedViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) TAPStop *eventStop;
 @property (nonatomic, strong) NSArray *artworkAssets;
 @property (nonatomic, weak) IBOutlet UILabel *stopTitle;

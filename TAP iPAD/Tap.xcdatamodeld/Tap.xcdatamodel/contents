@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Asset" representedClassName="TAPAsset" syncable="YES">
         <attribute name="copyright" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creditLine" optional="YES" attributeType="String" syncable="YES"/>
@@ -58,6 +58,7 @@
     <entity name="Stop" representedClassName="TAPStop" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="parseIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="view" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="assetRef" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AssetRef" inverseName="stop" inverseEntity="AssetRef" syncable="YES"/>
@@ -75,19 +76,26 @@
         <attribute name="lastModified" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="publishDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="tourRefUrl" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="appResource" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AssetRef" inverseName="tour" inverseEntity="AssetRef" syncable="YES"/>
         <relationship name="propertySet" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Property" inverseName="tourPropertySet" inverseEntity="Property" syncable="YES"/>
         <relationship name="rootStopRef" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Stop" inverseName="tourRootStop" inverseEntity="Stop" syncable="YES"/>
         <relationship name="stop" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Stop" inverseName="tour" inverseEntity="Stop" syncable="YES"/>
+        <relationship name="tourset" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TourSet" inverseName="tours" inverseEntity="TourSet" syncable="YES"/>
+    </entity>
+    <entity name="TourSet" syncable="YES">
+        <attribute name="tourRefUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tours" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="tourset" inverseEntity="Tour" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Asset" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="AssetRef" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Connection" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Content" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Property" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Source" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Stop" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Tour" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Asset" positionX="0" positionY="0" width="128" height="225"/>
+        <element name="AssetRef" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Connection" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Content" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Property" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="Source" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Stop" positionX="0" positionY="0" width="128" height="210"/>
+        <element name="Tour" positionX="0" positionY="0" width="128" height="238"/>
+        <element name="TourSet" positionX="9" positionY="99" width="128" height="73"/>
     </elements>
 </model>
