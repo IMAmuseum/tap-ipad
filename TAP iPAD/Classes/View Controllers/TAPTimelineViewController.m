@@ -7,21 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "ArrowView.h"
 #import "TAPTimelineViewController.h"
 #import "TAPTimelineDetailViewController.h"
 #import "TimelineView.h"
 #import "TimelineEventCell.h"
-#import "AppDelegate.h"
+
+
+// vendor
+#import "VSTheme.h"
 #import "TAPTour.h"
 #import "TAPConnection.h"
 #import "TAPStop.h"
 #import "TAPAsset.h"
 #import "TAPSource.h"
 #import "TAPHelper.h"
-#import "ArrowView.h"
 
-// vendor
-#import "VSTheme.h"
 
 #define YEAR_SPACING_BEFORE 35.0f
 #define YEAR_SPACING_AFTER 40.0f
