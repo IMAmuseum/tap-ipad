@@ -1,5 +1,5 @@
 //
-//  ThemesViewController.h
+//  TAPGridViewController.h
 //  TAP iPAD
 //
 //  Created by Daniel Cervantes on 3/4/13.
