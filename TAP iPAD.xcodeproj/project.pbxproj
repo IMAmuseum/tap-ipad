@@ -117,7 +117,7 @@
 		652C1C2C16FFF43E00646100 /* KioskApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C1C2B16FFF43C00646100 /* KioskApplication.m */; };
 		655B39131703DA4600BC1ED4 /* Caption.html in Resources */ = {isa = PBXBuildFile; fileRef = 655B39121703DA4600BC1ED4 /* Caption.html */; };
 		65A462AC16E97FB7009BBFD8 /* TapConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65A462AB16E97FB7009BBFD8 /* TapConfig.plist */; };
-		65A462AF16EBC4EF009BBFD8 /* EventsPrograms.html in Resources */ = {isa = PBXBuildFile; fileRef = 65A462AE16EBC4EF009BBFD8 /* EventsPrograms.html */; };
+		65A462AF16EBC4EF009BBFD8 /* WebContainerContent.html in Resources */ = {isa = PBXBuildFile; fileRef = 65A462AE16EBC4EF009BBFD8 /* WebContainerContent.html */; };
 		65A462B216ED04D8009BBFD8 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 65A462B116ED04D8009BBFD8 /* Bundles */; };
 		65F424E016F80F9F004D05B4 /* TimelineEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */; };
 		A47C43891940A4F800B722C3 /* tap-ipad-splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */; };
@@ -295,7 +295,7 @@
 		652C1C2B16FFF43C00646100 /* KioskApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KioskApplication.m; path = Classes/KioskApplication.m; sourceTree = "<group>"; };
 		655B39121703DA4600BC1ED4 /* Caption.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Caption.html; path = Resources/HTML/Caption.html; sourceTree = "<group>"; };
 		65A462AB16E97FB7009BBFD8 /* TapConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TapConfig.plist; path = Resources/TapConfig.plist; sourceTree = "<group>"; };
-		65A462AE16EBC4EF009BBFD8 /* EventsPrograms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = EventsPrograms.html; path = Resources/HTML/EventsPrograms.html; sourceTree = "<group>"; };
+		65A462AE16EBC4EF009BBFD8 /* WebContainerContent.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = WebContainerContent.html; path = Resources/HTML/WebContainerContent.html; sourceTree = "<group>"; };
 		65A462B116ED04D8009BBFD8 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 		65F424DE16F80F9F004D05B4 /* TimelineEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineEventCell.h; path = Classes/Views/TimelineEventCell.h; sourceTree = "<group>"; };
 		65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineEventCell.m; path = Classes/Views/TimelineEventCell.m; sourceTree = "<group>"; };
@@ -714,7 +714,7 @@
 		65A462AD16EBC4CB009BBFD8 /* HTML */ = {
 			isa = PBXGroup;
 			children = (
-				65A462AE16EBC4EF009BBFD8 /* EventsPrograms.html */,
+				65A462AE16EBC4EF009BBFD8 /* WebContainerContent.html */,
 				1747952216F76E4A0082745C /* Content.html */,
 				655B39121703DA4600BC1ED4 /* Caption.html */,
 				62F63B1919423A01004EA5F8 /* Content_with_image.html */,
@@ -794,7 +794,7 @@
 				A47C438E1940C06300B722C3 /* post-impressionism.png in Resources */,
 				178AAF0C16E6A1680061E735 /* TAPMenuViewController.xib in Resources */,
 				65A462AC16E97FB7009BBFD8 /* TapConfig.plist in Resources */,
-				65A462AF16EBC4EF009BBFD8 /* EventsPrograms.html in Resources */,
+				65A462AF16EBC4EF009BBFD8 /* WebContainerContent.html in Resources */,
 				65A462B216ED04D8009BBFD8 /* Bundles in Resources */,
 				17E514A416EF63D600C84A54 /* arrow-blank.png in Resources */,
 				17837AC316F10DA300E62BD5 /* InterviewQuestionCell.xib in Resources */,

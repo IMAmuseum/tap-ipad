@@ -42,7 +42,7 @@
     
     UIFont *bodyFont = [self.theme fontForKey:@"bodyFont"];
     UIFont *bodyFontItalic = [self.theme fontForKey:@"bodyFontItalic"];
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"EventsPrograms" ofType:@"html"];
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"WebContainerContent" ofType:@"html"];
     NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     [self.contentContainer loadHTMLString:[NSString stringWithFormat:htmlString,
                                               [bodyFont fontName],
