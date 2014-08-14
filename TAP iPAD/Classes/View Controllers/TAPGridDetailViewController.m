@@ -11,18 +11,17 @@
 #import "AppDelegate.h"
 #import "UnderlineLabel.h"
 #import "MultiCell.h"
-#import "TAPStop.h"
-#import "TAPConnection.h"
-#import "TAPContent.h"
-#import "TAPAsset.h"
-#import "TAPSource.h"
-#import "TAPTour.h"
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
 
 // vendor
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "TAPAsset.h"
+#import "TAPConnection.h"
+#import "TAPContent.h"
+#import "TAPSource.h"
+#import "TAPStop.h"
+#import "TAPTour.h"
 #import "VSTheme.h"
-
 
 
 @interface TAPGridDetailViewController ()
