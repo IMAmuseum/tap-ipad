@@ -65,64 +65,35 @@
     // set default language
     [self setLanguage: [[NSLocale preferredLanguages] objectAtIndex:0]];
     
+    [TourMLParser loadTours];
+    
+    // setup fetch request for tour entity
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Tour" inManagedObjectContext:self.managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    NSError *error;
+    
+    // retrieve tours, leave available (for home/navigation, specifically)
+    [self setTours:[self.managedObjectContext executeFetchRequest:request error:&error]];
+    
+    if ([self.tours count] == 0) {
+        return NO;
+    }
+    
+    [self setCurrentTour:[self.tours objectAtIndex:0]];
+    
+    // setup fetch request for TourSet entity
+    entityDescription = [NSEntityDescription entityForName:@"TourSet" inManagedObjectContext:self.managedObjectContext];
+    request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    // retrieve tourSets, leave available (for home/navigation, specifically)
+    [self setTourSets:[self.managedObjectContext executeFetchRequest:request error:&error]];
+    
+    //
     
     
-    
-    // load tour data
-    NSMutableArray *endpoints = [[NSMutableArray alloc] init];
-    [endpoints addObject:[self.tapConfig objectForKey:@"TourMLEndpoint"]];
-    dispatch_queue_t myQueue = dispatch_queue_create("TourML_queue",NULL);
-    dispatch_async(myQueue, ^{
-        
-        // Perform long running process
-        [TourMLParser loadTours:nil];
-        
-        // setup fetch request for tour entity
-        NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Tour" inManagedObjectContext:self.managedObjectContext];
-        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        [request setEntity:entityDescription];
-        
-        NSError *error;
-        
-        // retrieve tours, leave available (for home/navigation, specifically)
-        [self setTours:[self.managedObjectContext executeFetchRequest:request error:&error]];
-        
-        // setup fetch request for TourSet entity
-        entityDescription = [NSEntityDescription entityForName:@"TourSet" inManagedObjectContext:self.managedObjectContext];
-        request = [[NSFetchRequest alloc] init];
-        [request setEntity:entityDescription];
-        
-        // retrieve tourSets, leave available (for home/navigation, specifically)
-        [self setTourSets:[self.managedObjectContext executeFetchRequest:request error:&error]];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Update the UI
-            self.loadingComplete = YES;
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"DidCompleteTourLoading" object:nil];
-        });
-    });
-    
-    
-    
-    
-    
-    
-    
-    
-//    // setup fetch request for tour entity
-//    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Tour" inManagedObjectContext:self.managedObjectContext];
-//    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-//    [request setEntity:entityDescription];
-//    
-//    // retrieve tours
-//    NSError *error;
-//    NSArray *tours = [self.managedObjectContext executeFetchRequest:request error:&error];
-//    
-//    if ([tours count] == 0) {
-//        return NO;
-//    }
-//    
-//    [self setCurrentTour:[tours objectAtIndex:0]];
 
     // Optional: automatically send uncaught exceptions to Google Analytics.
     [GAI sharedInstance].trackUncaughtExceptions = YES;
