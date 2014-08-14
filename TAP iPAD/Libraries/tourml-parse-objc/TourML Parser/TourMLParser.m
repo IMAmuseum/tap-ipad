@@ -87,7 +87,7 @@ static NSMutableArray *endpoints;
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     
-    NSURL *url = [NSURL URLWithString:tourMLRef];// @TODO here we go, not getting url out of bundle path
+    NSURL *url = [NSURL URLWithString:tourMLRef];
     if (url == nil) {
         url = [NSURL fileURLWithPath:tourMLRef];
     }
