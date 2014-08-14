@@ -1,5 +1,5 @@
 //
-//  EventStopDetailViewController.h
+//  TAPTimelineDetailViewController.h
 //  TAP iPAD
 //
 //  Created by David D'Amico on 9/27/13.

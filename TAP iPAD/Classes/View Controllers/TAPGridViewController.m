@@ -12,14 +12,15 @@
 #import "TAPGridDetailViewController.h"
 #import "ThemeCell.h"
 #import "NSDictionary+TAPUtils.h"
-#import "TAPTour.h"
-#import "TAPStop.h"
-#import "TAPConnection.h"
-#import "TAPAsset.h"
-#import "TAPSource.h"
 
 // vendor
+#import "TAPAsset.h"
+#import "TAPConnection.h"
+#import "TAPSource.h"
+#import "TAPStop.h"
+#import "TAPTour.h"
 #import "VSTheme.h"
+
 
 @interface TAPGridViewController ()
 @property (nonatomic, strong) TAPStop *stop;

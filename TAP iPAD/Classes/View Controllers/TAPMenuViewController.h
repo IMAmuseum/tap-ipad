@@ -1,5 +1,5 @@
 //
-//  MenuViewController.h
+//  TAPMenuViewController.h
 //  TAP iPAD
 //
 //  Created by Daniel Cervantes on 3/5/13.

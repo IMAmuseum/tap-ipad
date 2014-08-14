@@ -1,23 +1,21 @@
 //
-//  ImageStopViewController.m
+//  TAPImageStopViewController.m
 //  TAP iPAD
 //
 //  Created by Daniel Cervantes on 3/4/13.
 //  Copyright (c) 2013 IMA Lab. All rights reserved.
 //
 
-#import "TAPImageStopViewController.h"
 #import "AppDelegate.h"
-#import "UnderlineLabel.h"
-#import "TAPStop.h"
-#import "TAPAsset.h"
-#import "TAPSource.h"
-#import "TAPContent.h"
-
-// categories
+#import "TAPImageStopViewController.h"
 #import "UIImage+Resize.h"
+#import "UnderlineLabel.h"
 
 // vendor
+#import "TAPAsset.h"
+#import "TAPContent.h"
+#import "TAPStop.h"
+#import "TAPSource.h"
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
 #import "VSTheme.h"

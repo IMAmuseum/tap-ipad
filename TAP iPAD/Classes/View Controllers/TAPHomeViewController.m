@@ -1,5 +1,5 @@
 //
-//  HomeViewController.m
+//  TAPHomeViewController.m
 //  TAP iPAD
 //
 //  Created by Daniel Cervantes on 3/4/13.
