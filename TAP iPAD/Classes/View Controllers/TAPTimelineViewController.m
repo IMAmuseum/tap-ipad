@@ -49,6 +49,8 @@
 
 - (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName
 {
+    // new init like others to init from TAPConfig, I guess?
+    
     self = [super init];
     if (self) {
         [self setTitle:stopTitle];

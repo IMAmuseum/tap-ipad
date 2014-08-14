@@ -14,7 +14,7 @@
 #import "VSTheme.h"
 
 @interface TAPWebViewContainerViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *contentContainer;// @TODO refactor, rename stuff in here to express intent
+@property (weak, nonatomic) IBOutlet UIWebView *contentContainer;
 @property (nonatomic, strong) ArrowView *arrowIndicator;
 @property (nonatomic, strong) VSTheme *theme;
 @end
@@ -23,6 +23,9 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    
+    // new init like others to init from TAPConfig, I guess?
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self setTitle:@"Generic Web View"];
