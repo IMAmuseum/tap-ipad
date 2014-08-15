@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TAPBaseViewController.h"
 #import "GAITrackedViewController.h"
 
-@interface TAPWebViewContainerViewController : GAITrackedViewController <UIScrollViewDelegate>
+@interface TAPWebViewContainerViewController : TAPBaseViewController <UIScrollViewDelegate>
 - (id)initWithConfigDictionary:(NSDictionary *)config;
 @end
