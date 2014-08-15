@@ -9,6 +9,7 @@
 #import "TAPWebViewContainerViewController.h"
 #import "AppDelegate.h"
 #import "ArrowView.h"
+#import "NSDictionary+TAPUtils.h"
 
 // vendor
 #import "VSTheme.h"
@@ -17,21 +18,29 @@
 @property (weak, nonatomic) IBOutlet UIWebView *contentContainer;
 @property (nonatomic, strong) ArrowView *arrowIndicator;
 @property (nonatomic, strong) VSTheme *theme;
+@property (nonatomic, strong) NSString *htmlFile;
 @end
 
 @implementation TAPWebViewContainerViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithConfigDictionary:(NSDictionary *)config {
     
-    // new init like others to init from TAPConfig, I guess?
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        [self setTitle:@"Generic Web View"];
-        self.screenName = @"Generic Web View";
-        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        self.theme = appDelegate.theme;
+        NSArray *requiredKeys = @[@"title", @"htmlResourceName"];
+        if ([config containsAllKeysIn:requiredKeys]) {
+            
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            self.theme = appDelegate.theme;
+            
+            [self setTitle:[config objectForKey:@"title"]];
+            self.screenName = [config objectForKey:@"title"];
+            self.htmlFile = [[NSBundle mainBundle] pathForResource:[config objectForKey:@"htmlResourceName"] ofType:@"html"];
+            
+        } else {
+            self = nil;
+        }
+        
     }
     return self;
 }
@@ -39,20 +48,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIFont *bodyFont = [self.theme fontForKey:@"bodyFont"];
-    UIFont *bodyFontItalic = [self.theme fontForKey:@"bodyFontItalic"];
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"WebContainerContent" ofType:@"html"];
-    NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
-    [self.contentContainer loadHTMLString:[NSString stringWithFormat:htmlString,
-                                              [bodyFont fontName],
-                                              bodyFont.pointSize,
-                                              [bodyFont fontName],
-                                              bodyFont.pointSize,
-                                              [bodyFont fontName],
-                                              bodyFont.pointSize,
-                                              [bodyFontItalic fontName]]
-                                     baseURL:nil];
+    NSString *htmlString = [NSString stringWithContentsOfFile:self.htmlFile encoding:NSUTF8StringEncoding error:nil];
+    [self.contentContainer loadHTMLString:htmlString baseURL:nil];
     [self.contentContainer.scrollView setBounces:NO];
     [self.contentContainer.scrollView setDelegate:self];
     

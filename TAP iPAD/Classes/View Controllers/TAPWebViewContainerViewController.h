@@ -10,5 +10,5 @@
 #import "GAITrackedViewController.h"
 
 @interface TAPWebViewContainerViewController : GAITrackedViewController <UIScrollViewDelegate>
-
+- (id)initWithConfigDictionary:(NSDictionary *)config;
 @end

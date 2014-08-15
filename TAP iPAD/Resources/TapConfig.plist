@@ -42,6 +42,16 @@
 			<key>scrollDirection</key>
 			<string>vertical</string>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>HEADING3</string>
+			<key>view</key>
+			<string>TAPWebViewContainerViewController</string>
+			<key>trackedViewName</key>
+			<string>HEADING3</string>
+			<key>htmlResourceName</key>
+			<string>WebContainerContent</string>
+		</dict>
 	</array>
 	<key>Stops</key>
 	<dict>
