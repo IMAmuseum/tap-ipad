@@ -52,10 +52,6 @@
     [self.contentContainer loadHTMLString:htmlString baseURL:nil];
     [self.contentContainer.scrollView setBounces:NO];
     [self.contentContainer.scrollView setDelegate:self];
-    
-    // add arrow indicator animation
-    self.arrowIndicator = [[ArrowView alloc] initWithFrame:CGRectMake(929.0f, 641.0f, 75.0f, 35.0f)];
-    [self.view addSubview:self.arrowIndicator];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
