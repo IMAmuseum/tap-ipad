@@ -99,12 +99,6 @@
         self.themeStops = [[NSMutableArray alloc] init];
         self.themeStopImages = [[NSMutableArray alloc] init];
         
-        //hack for face2face
-        if ([[self.stop getPropertyValueByName:@"code"] isEqualToString:@"400"]) {
-            UIImage *tapImage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"post-impressionism" ofType:@"png"]];
-            [self.themeStopImages addObject:tapImage];
-        }
-        
         NSSortDescriptor *prioritySort = [[NSSortDescriptor alloc] initWithKey:@"priority" ascending:YES];
         for (TAPConnection *connection in [self.stop.sourceConnection sortedArrayUsingDescriptors:[NSArray arrayWithObject:prioritySort]]) {
             [self.themeStops addObject:connection.destinationStop];
@@ -203,18 +197,8 @@
     // reset timer
     [(KioskApplication *)[[UIApplication sharedApplication] delegate] resetIdleTimer];
     
-    //hack for face2face
-    if ([[self.stop getPropertyValueByName:@"code"] isEqualToString:@"400"] && indexPath.row == 0) {
-        return;
-    }
-    
     // get selected stop and initialize theme stop controller
-    //hack for face2face (row - 1)
     NSInteger useIndex = indexPath.row;
-    if ([[self.stop getPropertyValueByName:@"code"] isEqualToString:@"400"]) {
-        useIndex -= 1;
-    }
-    
     TAPStop *themeStop = [self.themeStops objectAtIndex:useIndex];
     TAPGridDetailViewController *themeStopViewController = [[TAPGridDetailViewController alloc] initWithStop:themeStop];
     
