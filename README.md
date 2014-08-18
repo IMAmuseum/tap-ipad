@@ -27,8 +27,8 @@ This is just the singular view that the Grid View drills into, but which can als
 - Stop Group
 	- Image/Video/Audio Stops
 
-## Interview Stop (Video Group View?)
-Rename this, get one into the app?
+## Video Group View
+This view is used to represent a bunch of categorized video stops in a horizontally scrolling page view.
 ### Backing data structure for this view
 - Stop Group
 	- Video Stop (+ category field)

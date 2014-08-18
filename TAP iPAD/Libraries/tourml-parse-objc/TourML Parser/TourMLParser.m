@@ -6,18 +6,21 @@
 //  Copyright (c) 2012 Indianapolis Museum of Art. All rights reserved.
 //
 
-#import "TourMLParser.h"
 #import "AppDelegate.h"
-#import "TAPStop.h"
-#import "TAPConnection.h"
 #import "TAPAsset.h"
+#import "TAPAssetRef.h"
+#import "TAPConnection.h"
 #import "TAPContent.h"
-#import "TAPTour.h"
-#import "TAPTourSet.h"
 #import "TAPProperty.h"
 #import "TAPSource.h"
-#import "TAPAssetRef.h"
+#import "TAPStop.h"
+#import "TAPTour.h"
+#import "TAPTourSet.h"
+#import "TourMLParser.h"
+
+// vendor
 #import "ISO8601DateFormatter.h"
+
 
 static NSMutableString *bundlePath;
 static NSMutableArray *endpoints;
