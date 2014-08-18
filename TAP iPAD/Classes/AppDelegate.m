@@ -11,7 +11,7 @@
 #import "TAPBaseViewController.h"
 #import "TAPWebViewContainerViewController.h"
 #import "TAPHomeViewController.h"
-#import "TAPInterviewsStopViewController.h"
+#import "TAPVideoGroupViewController.h"
 #import "TAPMenuViewController.h"
 #import "TAPTimelineViewController.h"
 #import "TAPGridViewController.h"

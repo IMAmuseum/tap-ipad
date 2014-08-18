@@ -76,7 +76,14 @@
     
 }
 
-- (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName itemsPerRow:(NSInteger)itemsPerRow columnWidth:(CGFloat)columnWidth rowHeight:(CGFloat)rowHeight verticalSpacing:(CGFloat)verticalSpacing scrollDirection:(UICollectionViewScrollDirection)scrollDirection
+- (id)initWithStopTitle:(NSString *)stopTitle
+                keycode:(NSString *)keycode
+        trackedViewName:(NSString *)trackedViewName
+            itemsPerRow:(NSInteger)itemsPerRow
+            columnWidth:(CGFloat)columnWidth
+              rowHeight:(CGFloat)rowHeight
+        verticalSpacing:(CGFloat)verticalSpacing
+        scrollDirection:(UICollectionViewScrollDirection)scrollDirection
 {
     
     self = [self init];
@@ -192,6 +199,7 @@
 }
 
 #pragma mark - UICollectionViewDelegate
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // reset timer

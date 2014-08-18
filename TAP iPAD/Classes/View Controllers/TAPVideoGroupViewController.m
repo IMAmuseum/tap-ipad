@@ -10,7 +10,7 @@
 #import "ArrowView.h"
 #import "InterviewIntroductionCell.h"
 #import "InterviewQuestionCell.h"
-#import "TAPInterviewsStopViewController.h"
+#import "TAPVideoGroupViewController.h"
 #import "TAPTour.h"
 #import "TAPStop.h"
 #import "TAPAsset.h"
@@ -28,7 +28,7 @@
 #define SECTION_TAG_OFFSET 1000
 #define SECTION_MENU_SPACING 20
 
-@interface TAPInterviewsStopViewController () {
+@interface TAPVideoGroupViewController () {
     NSInteger _currentIndex;
     NSInteger _currentSection;
 }
@@ -49,7 +49,7 @@
 - (void)toggleArrowIndicator;
 @end
 
-@implementation TAPInterviewsStopViewController
+@implementation TAPVideoGroupViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -63,13 +63,15 @@
         self.theme = appDelegate.theme;
 
         // setup categories
-        self.sections = [[NSArray alloc] initWithObjects:@"Introduction", @"Artist/Activist", @"Exhibition and Audience", @"China", nil];
-        
+        NSMutableArray *tempSections = [[NSMutableArray alloc] init];
         self.categoryStops = [[NSMutableDictionary alloc] init];
         // organize stops according to category
         for (TAPConnection *connection in [self.stop.sourceConnection allObjects]) {
             TAPStop *interviewStop = connection.destinationStop;
             NSString *category = [interviewStop getPropertyValueByName:@"category"];
+            if ([tempSections containsObject:category] == false) {
+                [tempSections addObject:category];
+            }
             if ([category length] != 0) {
                 if ([self.categoryStops objectForKey:category]) {
                     [[self.categoryStops objectForKey:category] addObject:interviewStop];
@@ -79,6 +81,7 @@
                 }
             }
         }
+        self.sections = tempSections;
     }
     return self;
 }

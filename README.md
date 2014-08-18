@@ -14,32 +14,35 @@ The timeline view is, more or less, what it sounds like. It maps a series of eve
 - Stop Group
 	- Event Stops
 
-## Themes "Stop" View
-This view presents a grid of an arbitrary number of, you guessed it 'themes,' which then allow the user to drill into a group of stops containing content around that theme.
+## Grid View
+This view presents a grid of an arbitrary number of section thumbnails which then allow the user to drill into a group of stops containing content around that theme.
 ### Backing data structure for this view
-- Stop Group
-	- Stop Group(s)
+- Stop Group (the grid)
+	- Stop Group(s) (the grid detail)
 		- Image/Video/Audio Stop(s)
 
-## Theme "Stop" View
-This is just the singular view that the themes view drills into, but which can also be used as a top-level view.
+## Grid Detail View
+This is just the singular view that the Grid View drills into, but which can also be used as a top-level view.
 ### Backing data structure for this view
 - Stop Group
 	- Image/Video/Audio Stops
 
-## Interview Stop
+## Interview Stop (Video Group View?)
 Rename this, get one into the app?
 ### Backing data structure for this view
+- Stop Group
+	- Video Stop (+ category field)
 
 ## Generic Web Container View
-This is a container for loading LOCAL web content into a UIWebView. It has no backing TourML content, just what you put in the 
+This is a container for loading LOCAL web content into a UIWebView. It has no backing TourML content, just what you put in the WebContainerContent.html file.
 
 
 
 
 
-## Areas For Improvement in this codebase
+## Areas For Improvement
 Coupling with tourml-parse-objc
 Async data fetch that doesn't block the UI? (what would this ui even do with that?)
+Alter web container to allow loading of remote content?
 
 @TODO what is the interview view?

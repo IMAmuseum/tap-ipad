@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
 
-@interface TAPInterviewsStopViewController : GAITrackedViewController<UICollectionViewDataSource>
+@interface TAPVideoGroupViewController : GAITrackedViewController<UICollectionViewDataSource>
 
 @end
