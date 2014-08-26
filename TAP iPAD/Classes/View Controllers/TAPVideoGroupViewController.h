@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
+#import "TAPBaseViewController.h"
 
-@interface TAPVideoGroupViewController : GAITrackedViewController<UICollectionViewDataSource>
+@interface TAPVideoGroupViewController : TAPBaseViewController<UICollectionViewDataSource>
 
 @end

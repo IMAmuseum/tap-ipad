@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TAP iPad App Custom Stops feature.
+ */
+
+include_once 'tap_ipad_app_custom_stops.features.inc';

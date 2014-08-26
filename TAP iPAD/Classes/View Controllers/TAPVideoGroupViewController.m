@@ -17,6 +17,7 @@
 #import "TAPSource.h"
 #import "TAPConnection.h"
 #import "UnderlineButton.h"
+#import "NSDictionary+TAPUtils.h"
 
 // vendor
 #import "GAI.h"
@@ -50,6 +51,22 @@
 @end
 
 @implementation TAPVideoGroupViewController
+
+-(id)initWithConfigDictionary:(NSDictionary *)config
+{
+    self = [super initWithConfigDictionary:config];
+    if (self) {
+        // validate incoming config values
+        NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName", @"itemsPerRow", @"columnWidth", @"rowHeight", @"verticalSpacing", @"scrollDirection"];
+        if ([config containsAllKeysIn:requiredKeys]) {
+            
+        } else {
+            NSLog(@"Tried to instantiate ThemesStopViewController without all required config items, please check TAPConfig");
+            self = nil;
+        }
+    }
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

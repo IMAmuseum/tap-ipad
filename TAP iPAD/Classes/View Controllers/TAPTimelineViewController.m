@@ -23,11 +23,13 @@
 #import "TAPSource.h"
 #import "TAPHelper.h"
 
-
-#define YEAR_SPACING_BEFORE 35.0f
+// @TODO pull these out into config, set defaults if not present
+// @TODO also expand documentation to explain how these work - use the actual usage example to explain it
+#define YEAR_SPACING_BEFORE 40.0f
 #define YEAR_SPACING_AFTER 40.0f
 #define YEAR_SPLIT 1945
-#define CELL_WIDTH 275.0f
+
+#define CELL_WIDTH 275.0f// @TODO do we still use this?
 #define IMAGE_TAG 1000
 
 @interface TAPTimelineViewController () {

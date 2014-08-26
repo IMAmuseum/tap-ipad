@@ -28,7 +28,6 @@
 		178AAEF716E54E0F0061E735 /* TAPImageStopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */; };
 		178AAEFE16E6721D0061E735 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 178AAEFD16E6721D0061E735 /* background@2x.png */; };
 		178AAF0016E672240061E735 /* header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 178AAEFF16E672240061E735 /* header@2x.png */; };
-		178AAF0216E68CC00061E735 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 178AAF0116E68CC00061E735 /* Default-Landscape@2x.png */; };
 		178AAF0B16E6A1680061E735 /* TAPMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178AAF0916E6A1670061E735 /* TAPMenuViewController.m */; };
 		178AAF0C16E6A1680061E735 /* TAPMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */; };
 		17A0806616E5236200366341 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A0806516E5236200366341 /* UIKit.framework */; };
@@ -122,7 +121,6 @@
 		65F424E016F80F9F004D05B4 /* TimelineEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */; };
 		A47C43891940A4F800B722C3 /* tap-ipad-splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */; };
 		A47C438A1940A4F800B722C3 /* tap-ipad-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43881940A4F800B722C3 /* tap-ipad-home@2x.png */; };
-		A47C438E1940C06300B722C3 /* post-impressionism.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C438D1940C06300B722C3 /* post-impressionism.png */; };
 		A4C3F043193D6B1700B173B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3F042193D6B1700B173B1 /* libz.dylib */; };
 		A4C3F04E193EC0E700B173B1 /* TAPTiledImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */; };
 		A4C3F04F193EC0E700B173B1 /* TAPTiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C3F04D193EC0E700B173B1 /* TAPTiledView.m */; };
@@ -155,7 +153,6 @@
 		178AAEF516E54E0F0061E735 /* TAPImageStopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPImageStopViewController.xib; path = "Classes/View Controllers/TAPImageStopViewController.xib"; sourceTree = "<group>"; };
 		178AAEFD16E6721D0061E735 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "Resources/Images/background@2x.png"; sourceTree = "<group>"; };
 		178AAEFF16E672240061E735 /* header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "header@2x.png"; path = "Resources/Images/header@2x.png"; sourceTree = "<group>"; };
-		178AAF0116E68CC00061E735 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "Resources/Images/Default-Landscape@2x.png"; sourceTree = "<group>"; };
 		178AAF0816E6A1670061E735 /* TAPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPMenuViewController.h; path = "Classes/View Controllers/TAPMenuViewController.h"; sourceTree = "<group>"; };
 		178AAF0916E6A1670061E735 /* TAPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPMenuViewController.m; path = "Classes/View Controllers/TAPMenuViewController.m"; sourceTree = "<group>"; };
 		178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPMenuViewController.xib; path = "Classes/View Controllers/TAPMenuViewController.xib"; sourceTree = "<group>"; };
@@ -301,7 +298,6 @@
 		65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineEventCell.m; path = Classes/Views/TimelineEventCell.m; sourceTree = "<group>"; };
 		A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-ipad-splash@2x.png"; path = "Resources/Images/tap-ipad-splash@2x.png"; sourceTree = "<group>"; };
 		A47C43881940A4F800B722C3 /* tap-ipad-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-ipad-home@2x.png"; path = "Resources/Images/tap-ipad-home@2x.png"; sourceTree = "<group>"; };
-		A47C438D1940C06300B722C3 /* post-impressionism.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "post-impressionism.png"; path = "Resources/Images/post-impressionism.png"; sourceTree = "<group>"; };
 		A4C3F042193D6B1700B173B1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A4C3F04A193EC0E700B173B1 /* TAPTiledImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTiledImageScrollView.h; path = Classes/Views/TAPTiledImageScrollView.h; sourceTree = "<group>"; };
 		A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTiledImageScrollView.m; path = Classes/Views/TAPTiledImageScrollView.m; sourceTree = "<group>"; };
@@ -501,7 +497,6 @@
 		17A080CF16E5270F00366341 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				A47C438D1940C06300B722C3 /* post-impressionism.png */,
 				A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */,
 				A47C43881940A4F800B722C3 /* tap-ipad-home@2x.png */,
 				17AD6BA71700BEDB00D7D755 /* play@2x.png */,
@@ -515,7 +510,6 @@
 				652C1C1816FE947000646100 /* arrow-3@2x.png */,
 				1747952916FA3C490082745C /* Icons */,
 				17E514A316EF63D600C84A54 /* arrow-blank.png */,
-				178AAF0116E68CC00061E735 /* Default-Landscape@2x.png */,
 				178AAEFF16E672240061E735 /* header@2x.png */,
 				178AAEFD16E6721D0061E735 /* background@2x.png */,
 				17A0807916E5236200366341 /* Default.png */,
@@ -790,8 +784,6 @@
 				178AAEF716E54E0F0061E735 /* TAPImageStopViewController.xib in Resources */,
 				178AAEFE16E6721D0061E735 /* background@2x.png in Resources */,
 				178AAF0016E672240061E735 /* header@2x.png in Resources */,
-				178AAF0216E68CC00061E735 /* Default-Landscape@2x.png in Resources */,
-				A47C438E1940C06300B722C3 /* post-impressionism.png in Resources */,
 				178AAF0C16E6A1680061E735 /* TAPMenuViewController.xib in Resources */,
 				65A462AC16E97FB7009BBFD8 /* TapConfig.plist in Resources */,
 				65A462AF16EBC4EF009BBFD8 /* WebContainerContent.html in Resources */,

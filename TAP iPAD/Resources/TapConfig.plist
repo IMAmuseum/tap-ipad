@@ -13,24 +13,34 @@
 	<key>NavigationItems</key>
 	<array>
 		<dict>
-			<key>title</key>
-			<string>HEADING1</string>
 			<key>view</key>
-			<string>TAPGridDetailViewController</string>
+			<string>TAPTimelineViewController</string>
+			<key>title</key>
+			<string>Timeline</string>
 			<key>keycode</key>
 			<string>100</string>
 			<key>trackedViewName</key>
-			<string>HEADING1</string>
+			<string>Timeline</string>
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>HEADING2</string>
+			<string>Grid Detail</string>
 			<key>view</key>
-			<string>TAPGridViewController</string>
+			<string>TAPGridDetailViewController</string>
 			<key>keycode</key>
 			<string>200</string>
 			<key>trackedViewName</key>
-			<string>HEADING2</string>
+			<string>Grid Detail</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Grid</string>
+			<key>view</key>
+			<string>TAPGridViewController</string>
+			<key>keycode</key>
+			<string>300</string>
+			<key>trackedViewName</key>
+			<string>Grid</string>
 			<key>itemsPerRow</key>
 			<integer>3</integer>
 			<key>columnWidth</key>
@@ -43,12 +53,22 @@
 			<string>vertical</string>
 		</dict>
 		<dict>
+			<key>view</key>
+			<string>TAPVideoGroupViewController</string>
 			<key>title</key>
-			<string>HEADING3</string>
+			<string>Video Group</string>
+			<key>keycode</key>
+			<string>400</string>
+			<key>trackedViewName</key>
+			<string>Video Group</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Web Container</string>
 			<key>view</key>
 			<string>TAPWebViewContainerViewController</string>
 			<key>trackedViewName</key>
-			<string>HEADING3</string>
+			<string>Web Container</string>
 			<key>htmlResourceName</key>
 			<string>WebContainerContent</string>
 		</dict>
