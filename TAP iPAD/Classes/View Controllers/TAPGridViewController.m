@@ -110,10 +110,14 @@
         for (TAPConnection *connection in [self.stop.sourceConnection sortedArrayUsingDescriptors:[NSArray arrayWithObject:prioritySort]]) {
             [self.themeStops addObject:connection.destinationStop];
             
-            TAPAsset *themeAsset = [[connection.destinationStop getAssetsByUsage:@"header_image"] objectAtIndex:0];
-            NSString *themeImage = [[[themeAsset source] anyObject] uri];
-            UIImage *tapImage = [UIImage imageWithContentsOfFile:themeImage];
-            [self.themeStopImages addObject:tapImage];
+            if ([[connection.destinationStop getAssetsByUsage:@"header_image"] count] > 0) {
+                TAPAsset *themeAsset = [[connection.destinationStop getAssetsByUsage:@"header_image"] objectAtIndex:0];
+                NSString *themeImage = [[[themeAsset source] anyObject] uri];
+                UIImage *tapImage = [UIImage imageWithContentsOfFile:themeImage];
+                [self.themeStopImages addObject:tapImage];
+            } else {
+                NSLog(@"no asset found on stop, my friend");
+            }
         }
         
         self.totalItems = [self.themeStopImages count];

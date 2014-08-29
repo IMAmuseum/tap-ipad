@@ -85,10 +85,10 @@
         for (TAPConnection *connection in [self.stop.sourceConnection allObjects]) {
             TAPStop *interviewStop = connection.destinationStop;
             NSString *category = [interviewStop getPropertyValueByName:@"category"];
-            if ([tempSections containsObject:category] == false) {
+            if (category != nil && [tempSections containsObject:category] == false) {
                 [tempSections addObject:category];
             }
-            if ([category length] != 0) {
+            if (category != nil && [category length] != 0) {
                 if ([self.categoryStops objectForKey:category]) {
                     [[self.categoryStops objectForKey:category] addObject:interviewStop];
                 } else {
@@ -230,7 +230,7 @@
     
     // register event
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Interviews" action:@"Selected Section" label:[self.sections objectAtIndex:index] value:[NSNumber numberWithBool:TRUE]] build]];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:self.screenName action:@"Selected Section" label:[self.sections objectAtIndex:index] value:[NSNumber numberWithBool:TRUE]] build]];
 }
 
 - (void)navigateToSection:(NSInteger)section
