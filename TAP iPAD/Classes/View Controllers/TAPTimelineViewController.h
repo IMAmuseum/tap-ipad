@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "TimelineView.h"
 #import "GAITrackedViewController.h"
+#import "TAPBaseViewController.h"
 
-@interface TAPTimelineViewController : GAITrackedViewController <UIScrollViewDelegate, TimelineViewDataSource>
+@interface TAPTimelineViewController : TAPBaseViewController <UIScrollViewDelegate, TimelineViewDataSource>
 - (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName;
 @end

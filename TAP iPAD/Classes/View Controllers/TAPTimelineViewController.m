@@ -12,6 +12,7 @@
 #import "TAPTimelineDetailViewController.h"
 #import "TimelineView.h"
 #import "TimelineEventCell.h"
+#import "NSDictionary+TAPUtils.h"
 
 
 // vendor
@@ -25,12 +26,12 @@
 
 // @TODO pull these out into config, set defaults if not present
 // @TODO also expand documentation to explain how these work - use the actual usage example to explain it
-#define YEAR_SPACING_BEFORE 40.0f
-#define YEAR_SPACING_AFTER 40.0f
-#define YEAR_SPLIT 1945
+#define DEAULT_YEAR_SPACING_BEFORE 40.0f
+#define DEAULT_YEAR_SPACING_AFTER 40.0f
+#define DEAULT_YEAR_SPLIT 1945
 
-#define CELL_WIDTH 275.0f// @TODO do we still use this?
-#define IMAGE_TAG 1000
+#define DEAULT_CELL_WIDTH 275.0f// @TODO do we still use this?
+#define DEAULT_IMAGE_TAG 1000
 
 @interface TAPTimelineViewController () {
     int _startYear;
@@ -45,9 +46,32 @@
 @property (nonatomic, strong) ArrowView *arrowIndicator;
 @property (nonatomic, strong) NSString *trackedViewName;
 @property (nonatomic, strong) VSTheme *theme;
+
+@property float year_spacing_before;
+@property float year_spacing_after;
+@property float year_split;
+@property float cell_width;
+@property float image_tag;
+
 @end
 
 @implementation TAPTimelineViewController
+
+- (id)initWithConfigDictionary:(NSDictionary *)config
+{
+    self = [super self];
+    if (self) {
+        NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName"];
+        if ([config containsAllKeysIn:requiredKeys]) {
+            self.year_spacing_before = DEAULT_YEAR_SPACING_BEFORE;
+            self.year_spacing_after = DEAULT_YEAR_SPACING_AFTER;
+            self.year_split = DEAULT_YEAR_SPLIT;
+            self.cell_width = DEAULT_CELL_WIDTH;
+            self.image_tag = DEAULT_IMAGE_TAG;
+        }
+    }
+    return self;
+}
 
 - (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName
 {
@@ -82,8 +106,8 @@
         _startYear = startDateComponents.year - 2;
         _endYear = endDateComponents.year + 1;
         // set scrollview widths
-        _beforeSplitWidth = (YEAR_SPLIT - _startYear) * YEAR_SPACING_BEFORE;
-        _afterSplitWidth = (_endYear - YEAR_SPLIT) * YEAR_SPACING_AFTER;
+        _beforeSplitWidth = (self.year_split - _startYear) * self.year_spacing_before;
+        _afterSplitWidth = (_endYear - self.year_split) * self.year_spacing_after;
     }
     return self;
 }
@@ -146,8 +170,8 @@
 
 - (void)didFinishLayingSubviewsForTimelineView:(TimelineView *)timeline
 {
-    float currentSpacing = YEAR_SPACING_BEFORE;
-    int tickPosition = YEAR_SPACING_BEFORE;
+    float currentSpacing = self.year_spacing_before;
+    int tickPosition = self.year_spacing_before;
     int currentYear = _startYear + 1;
 
     while (tickPosition < timeline.contentSize.width) {
@@ -198,26 +222,26 @@
     
     // calculate x and width based on start/end dates
     if (startDateComponent.year == endDateComponent.year) {
-        width = CELL_WIDTH;
-        if (startDateComponent.year <= YEAR_SPLIT) {
-            x = (startDateComponent.year - _startYear) * YEAR_SPACING_BEFORE - (CELL_WIDTH / 2);
+        width = self.cell_width;
+        if (startDateComponent.year <= self.year_split) {
+            x = (startDateComponent.year - _startYear) * self.year_spacing_before - (self.cell_width / 2);
         } else {
-            x = ((startDateComponent.year - YEAR_SPLIT) * YEAR_SPACING_AFTER + _beforeSplitWidth) - (CELL_WIDTH / 2);
+            x = ((startDateComponent.year - self.year_split) * self.year_spacing_after + _beforeSplitWidth) - (self.cell_width / 2);
         }
         
     } else {
         float startDateWidth = 0;
-        if (startDateComponent.year <= YEAR_SPLIT) {
-            startDateWidth = (startDateComponent.year - _startYear) * YEAR_SPACING_BEFORE;
+        if (startDateComponent.year <= self.year_split) {
+            startDateWidth = (startDateComponent.year - _startYear) * self.year_spacing_before;
         } else {
-            startDateWidth = ((startDateComponent.year - YEAR_SPLIT) * YEAR_SPACING_AFTER) + _beforeSplitWidth;
+            startDateWidth = ((startDateComponent.year - self.year_split) * self.year_spacing_after) + _beforeSplitWidth;
         }
         
         float endDateWidth = 0;
-        if (endDateComponent.year <= YEAR_SPLIT) {
-            endDateWidth = (endDateComponent.year - _startYear) * YEAR_SPACING_BEFORE;
+        if (endDateComponent.year <= self.year_split) {
+            endDateWidth = (endDateComponent.year - _startYear) * self.year_spacing_before;
         } else {
-            endDateWidth = ((endDateComponent.year - YEAR_SPLIT) * YEAR_SPACING_AFTER) + _beforeSplitWidth;
+            endDateWidth = ((endDateComponent.year - self.year_split) * self.year_spacing_after) + _beforeSplitWidth;
         }
         
         width = endDateWidth - startDateWidth;
@@ -263,7 +287,7 @@
     [singleTapImage setNumberOfTouchesRequired:1];
     [cell.eventImage addGestureRecognizer:singleTapImage];
     [cell.eventImage setUserInteractionEnabled:YES];
-    [cell.eventImage setTag:IMAGE_TAG + index];
+    [cell.eventImage setTag:self.image_tag + index];
 
     // set title gesture recognizer
     UITapGestureRecognizer *singleTapTitle = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(eventSelected:)];
@@ -271,7 +295,7 @@
     [singleTapTitle setNumberOfTouchesRequired:1];
     [cell.eventTitle addGestureRecognizer:singleTapTitle];
     [cell.eventTitle setUserInteractionEnabled:YES];
-    [cell.eventTitle setTag:IMAGE_TAG + index];
+    [cell.eventTitle setTag:self.image_tag + index];
     
     return cell;
 }
@@ -293,7 +317,7 @@
 # pragma mark - Gestures
 
 - (void)eventSelected:(UIGestureRecognizer *)gestureRecognizer {
-    int index = [[gestureRecognizer view] tag] - IMAGE_TAG;
+    int index = [[gestureRecognizer view] tag] - self.image_tag;
     
     // initialize themes stop controller
     TAPTimelineDetailViewController *eventStopDetailViewController = [[TAPTimelineDetailViewController alloc] initWithEventStop:[self.events objectAtIndex:index]];

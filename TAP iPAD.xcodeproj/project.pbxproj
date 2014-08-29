@@ -70,8 +70,6 @@
 		17E514A716EF70F800C84A54 /* InterviewQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */; };
 		621E8D2717DFA84C00C57BAA /* MultiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 621E8D2617DFA84B00C57BAA /* MultiCell.xib */; };
 		621E8D2A17DFA87000C57BAA /* MultiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 621E8D2917DFA86F00C57BAA /* MultiCell.m */; };
-		622E1DF01999639C0094393A /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DEE1999639C0094393A /* LICENSE.md */; };
-		622E1DF11999639C0094393A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DEF1999639C0094393A /* README.md */; };
 		622E1DF5199A53EF0094393A /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DF2199A53EF0094393A /* Icon-29@2x.png */; };
 		622E1DF6199A53EF0094393A /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DF3199A53EF0094393A /* Icon-40@2x.png */; };
 		622E1DF7199A53EF0094393A /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 622E1DF4199A53EF0094393A /* Icon-76@2x.png */; };
@@ -808,7 +806,6 @@
 				17AD6BA316FD487300D7D755 /* EventStopCell.xib in Resources */,
 				652C1C1916FE947000646100 /* arrow-1@2x.png in Resources */,
 				62C14001199D00340019FA9C /* README.md in Resources */,
-				622E1DF11999639C0094393A /* README.md in Resources */,
 				652C1C1A16FE947000646100 /* arrow-2@2x.png in Resources */,
 				652C1C1B16FE947000646100 /* arrow-3@2x.png in Resources */,
 				652C1C1D16FE963200646100 /* back@2x.png in Resources */,
@@ -817,7 +814,6 @@
 				652C1C2516FFDBAE00646100 /* expand-plus@2x.png in Resources */,
 				17AD6BA81700BEDB00D7D755 /* play@2x.png in Resources */,
 				655B39131703DA4600BC1ED4 /* Caption.html in Resources */,
-				622E1DF01999639C0094393A /* LICENSE.md in Resources */,
 				62F63B1A19423A01004EA5F8 /* Content_with_image.html in Resources */,
 				629E8D2B1993F74C00AB99D5 /* DB5.plist in Resources */,
 				622E1DF6199A53EF0094393A /* Icon-40@2x.png in Resources */,
