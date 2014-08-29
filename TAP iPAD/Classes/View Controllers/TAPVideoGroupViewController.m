@@ -110,7 +110,7 @@
     _currentSection = 0;
     
     // register custom cells;
-    [self.collectionView registerNib:[UINib nibWithNibName:@"InterviewIntroductionCell" bundle:nil] forCellWithReuseIdentifier:@"InterviewIntroductionCell"];
+//    [self.collectionView registerNib:[UINib nibWithNibName:@"InterviewIntroductionCell" bundle:nil] forCellWithReuseIdentifier:@"InterviewIntroductionCell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"InterviewQuestionCell" bundle:nil] forCellWithReuseIdentifier:@"InterviewQuestionCell"];
     
     // add header label
@@ -270,12 +270,12 @@
         [self.currentCell removeVideo];
     }
     
-    if (indexPath.section == 0) {
-        InterviewIntroductionCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"InterviewIntroductionCell" forIndexPath:indexPath];
-        [cell.title setFont:[self.theme fontForKey:@"headingFont"]];
-        [cell.content setFont:[self.theme fontForKey:@"headingFont"]];
-        return cell;
-    } else {
+//    if (indexPath.section == 0) {
+//        InterviewIntroductionCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"InterviewIntroductionCell" forIndexPath:indexPath];
+//        [cell.title setFont:[self.theme fontForKey:@"headingFont"]];
+//        [cell.content setFont:[self.theme fontForKey:@"headingFont"]];
+//        return cell;
+//    } else {
         InterviewQuestionCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"InterviewQuestionCell" forIndexPath:indexPath];
         NSString *sectionName = [self.sections objectAtIndex:indexPath.section];
         TAPStop *stop = [[self.categoryStops objectForKey:sectionName] objectAtIndex:indexPath.row];
@@ -304,7 +304,7 @@
         
         self.currentCell = cell;
         return cell;
-    }
+//    }
 }
 
 - (void)toggleArrowIndicator
