@@ -196,7 +196,7 @@
         currentYear += 5;
 
         if (tickPosition >= _beforeSplitWidth) {
-            currentSpacing = YEAR_SPACING_AFTER;
+            currentSpacing = self.year_spacing_after;
         }
     }
 }
