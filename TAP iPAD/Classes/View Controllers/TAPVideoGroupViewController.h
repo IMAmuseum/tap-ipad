@@ -11,5 +11,5 @@
 #import "TAPBaseViewController.h"
 
 @interface TAPVideoGroupViewController : TAPBaseViewController<UICollectionViewDataSource>
-
+- (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName;
 @end

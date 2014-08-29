@@ -54,31 +54,30 @@
 
 -(id)initWithConfigDictionary:(NSDictionary *)config
 {
-    self = [super initWithConfigDictionary:config];
-    if (self) {
-        // validate incoming config values
-        NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName"];
-        if ([config containsAllKeysIn:requiredKeys]) {
-            
-        } else {
-            NSLog(@"Tried to instantiate TAPVideoGroupViewController without all required config items, please check TAPConfig");
-            self = nil;
-        }
+    // validate incoming config values
+    NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName"];
+    if ([config containsAllKeysIn:requiredKeys]) {
+        self = [self initWithStopTitle:[config objectForKey:@"title"]
+                               keycode:[config objectForKey:@"keycode"]
+                       trackedViewName:[config objectForKey:@"trackedViewName"]];
+    } else {
+        NSLog(@"Tried to instantiate TAPVideoGroupViewController without all required config items, please check TAPConfig");
+        self = nil;
     }
     return self;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super self];
     if (self) {
-        [self setTitle:@"Interviews"];
-        self.screenName = @"Interviews";
-        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        self.stop = [appDelegate.currentTour stopFromKeycode:@"300"];
+        [self setTitle:stopTitle];
+        self.screenName = trackedViewName;
         
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        self.stop = [appDelegate.currentTour stopFromKeycode:keycode];
         self.theme = appDelegate.theme;
-
+        
         // setup categories
         NSMutableArray *tempSections = [[NSMutableArray alloc] init];
         self.categoryStops = [[NSMutableDictionary alloc] init];
