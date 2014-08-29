@@ -91,8 +91,8 @@
         }
         
         self = [self initWithStopTitle:[config objectForKey:@"title"]
-                        keycode:[config objectForKey:@"keycode"]
-                trackedViewName:[config objectForKey:@"trackedViewName"]];
+                               keycode:[config objectForKey:@"keycode"]
+                       trackedViewName:[config objectForKey:@"trackedViewName"]];
     } else {
         self = nil;
     }
