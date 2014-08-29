@@ -116,7 +116,7 @@
                 UIImage *tapImage = [UIImage imageWithContentsOfFile:themeImage];
                 [self.themeStopImages addObject:tapImage];
             } else {
-                NSLog(@"no asset found on stop, my friend");
+                NSLog(@"No asset found on grid item stop, my friend.");
             }
         }
         
