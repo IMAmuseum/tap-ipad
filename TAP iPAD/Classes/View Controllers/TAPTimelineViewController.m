@@ -59,16 +59,42 @@
 
 - (id)initWithConfigDictionary:(NSDictionary *)config
 {
-    self = [super self];
-    if (self) {
-        NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName"];
-        if ([config containsAllKeysIn:requiredKeys]) {
+    NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName", @"yearSplit", @"imageTag", @"cellWidth", @"yearSpacingBefore", @"yearSpacingAfter"];
+    if ([config containsAllKeysIn:requiredKeys]) {
+        
+        // config validation
+        // @TODO offload to a utility method
+        if ((NSNumber *)[config objectForKey:@"yearSpacingBefore"] != nil) {
+            self.year_spacing_before = [(NSNumber *)[config objectForKey:@"yearSpacingBefore"] floatValue];
+        } else {
             self.year_spacing_before = DEAULT_YEAR_SPACING_BEFORE;
+        }
+        if ((NSNumber *)[config objectForKey:@"yearSpacingAfter"] != nil) {
+            self.year_spacing_after = [(NSNumber *)[config objectForKey:@"yearSpacingAfter"] floatValue];
+        } else {
             self.year_spacing_after = DEAULT_YEAR_SPACING_AFTER;
+        }
+        if ((NSNumber *)[config objectForKey:@"yearSplit"] != nil) {
+            self.year_split = [(NSNumber *)[config objectForKey:@"yearSplit"] floatValue];
+        } else {
             self.year_split = DEAULT_YEAR_SPLIT;
+        }
+        if ((NSNumber *)[config objectForKey:@"cellWidth"] != nil) {
+            self.cell_width = [(NSNumber *)[config objectForKey:@"cellWidth"] floatValue];
+        } else {
             self.cell_width = DEAULT_CELL_WIDTH;
+        }
+        if ((NSNumber *)[config objectForKey:@"imageTag"] != nil) {
+            self.image_tag = [(NSNumber *)[config objectForKey:@"imageTag"] floatValue];
+        } else {
             self.image_tag = DEAULT_IMAGE_TAG;
         }
+        
+        self = [self initWithStopTitle:[config objectForKey:@"title"]
+                        keycode:[config objectForKey:@"keycode"]
+                trackedViewName:[config objectForKey:@"trackedViewName"]];
+    } else {
+        self = nil;
     }
     return self;
 }

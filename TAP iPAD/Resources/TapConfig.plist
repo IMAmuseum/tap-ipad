@@ -61,6 +61,16 @@
 			<string>400</string>
 			<key>trackedViewName</key>
 			<string>Video Group</string>
+			<key>yearSplit</key>
+			<integer>1945</integer>
+			<key>yearSpacingBefore</key>
+			<integer>40</integer>
+			<key>yearSpacingAfter</key>
+			<integer>40</integer>
+			<key>cellWidth</key>
+			<integer>1000</integer>
+			<key>imageTag</key>
+			<integer>275</integer>
 		</dict>
 		<dict>
 			<key>title</key>
