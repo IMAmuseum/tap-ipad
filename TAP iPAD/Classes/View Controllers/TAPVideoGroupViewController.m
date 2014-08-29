@@ -57,11 +57,11 @@
     self = [super initWithConfigDictionary:config];
     if (self) {
         // validate incoming config values
-        NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName", @"itemsPerRow", @"columnWidth", @"rowHeight", @"verticalSpacing", @"scrollDirection"];
+        NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName"];
         if ([config containsAllKeysIn:requiredKeys]) {
             
         } else {
-            NSLog(@"Tried to instantiate ThemesStopViewController without all required config items, please check TAPConfig");
+            NSLog(@"Tried to instantiate TAPVideoGroupViewController without all required config items, please check TAPConfig");
             self = nil;
         }
     }
