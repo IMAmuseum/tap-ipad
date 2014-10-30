@@ -90,16 +90,12 @@
     
     // retrieve tourSets, leave available (for home/navigation, specifically)
     [self setTourSets:[self.managedObjectContext executeFetchRequest:request error:&error]];
-    
-    //
-    
-    
 
     // Optional: automatically send uncaught exceptions to Google Analytics.
-//    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    // [GAI sharedInstance].trackUncaughtExceptions = YES;
     // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
     [GAI sharedInstance].dispatchInterval = 20;
-    //For debugging
+    // For debugging
     // [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     // Create tracker instance.
     // [[GAI sharedInstance] trackerWithTrackingId:[self.tapConfig objectForKey:@"GATrackerId"]];
