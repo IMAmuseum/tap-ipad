@@ -129,8 +129,8 @@
         NSDateComponents *startDateComponents = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:startDate];
         NSDateComponents *endDateComponents = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:endDate];
         // keep track of years
-        _startYear = startDateComponents.year - 2;
-        _endYear = endDateComponents.year + 1;
+        _startYear = startDateComponents.year - 2.0f;
+        _endYear = endDateComponents.year + 1.0f;
         // set scrollview widths
         _beforeSplitWidth = (self.year_split - _startYear) * self.year_spacing_before;
         _afterSplitWidth = (_endYear - self.year_split) * self.year_spacing_after;
