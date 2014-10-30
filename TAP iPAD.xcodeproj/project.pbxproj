@@ -18,8 +18,6 @@
 		1747953C16FA3C5D0082745C /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 1747953216FA3C5D0082745C /* iTunesArtwork.png */; };
 		1747953D16FA3C5D0082745C /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1747953316FA3C5D0082745C /* iTunesArtwork@2x.png */; };
 		17837AC316F10DA300E62BD5 /* InterviewQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */; };
-		17837AC616F1970900E62BD5 /* InterviewIntroductionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */; };
-		17837AC916F206AD00E62BD5 /* InterviewIntroductionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17837AC816F206AD00E62BD5 /* InterviewIntroductionCell.m */; };
 		17837ACE16F2440200E62BD5 /* UnderlineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17837ACD16F2440100E62BD5 /* UnderlineButton.m */; };
 		17837AD216F39EA100E62BD5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17837AD116F39EA100E62BD5 /* QuartzCore.framework */; };
 		17837B0A16F3D74600E62BD5 /* ImageStopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17837B0916F3D74500E62BD5 /* ImageStopCell.m */; };
@@ -137,9 +135,6 @@
 		1747953216FA3C5D0082745C /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = Resources/Images/Icons/iTunesArtwork.png; sourceTree = "<group>"; };
 		1747953316FA3C5D0082745C /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "Resources/Images/Icons/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InterviewQuestionCell.xib; path = Classes/Views/InterviewQuestionCell.xib; sourceTree = "<group>"; };
-		17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InterviewIntroductionCell.xib; path = Classes/Views/InterviewIntroductionCell.xib; sourceTree = "<group>"; };
-		17837AC716F206AD00E62BD5 /* InterviewIntroductionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewIntroductionCell.h; path = Classes/Views/InterviewIntroductionCell.h; sourceTree = "<group>"; };
-		17837AC816F206AD00E62BD5 /* InterviewIntroductionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewIntroductionCell.m; path = Classes/Views/InterviewIntroductionCell.m; sourceTree = "<group>"; };
 		17837ACC16F2440100E62BD5 /* UnderlineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnderlineButton.h; path = Classes/Views/UnderlineButton.h; sourceTree = "<group>"; };
 		17837ACD16F2440100E62BD5 /* UnderlineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnderlineButton.m; path = Classes/Views/UnderlineButton.m; sourceTree = "<group>"; };
 		17837AD116F39EA100E62BD5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -541,9 +536,6 @@
 				17837B0816F3D74400E62BD5 /* ImageStopCell.h */,
 				17837B0916F3D74500E62BD5 /* ImageStopCell.m */,
 				17837B0B16F3D7B000E62BD5 /* ImageStopCell.xib */,
-				17837AC716F206AD00E62BD5 /* InterviewIntroductionCell.h */,
-				17837AC816F206AD00E62BD5 /* InterviewIntroductionCell.m */,
-				17837AC516F1970900E62BD5 /* InterviewIntroductionCell.xib */,
 				17E514A516EF70F800C84A54 /* InterviewQuestionCell.h */,
 				17E514A616EF70F800C84A54 /* InterviewQuestionCell.m */,
 				17837AC216F10DA300E62BD5 /* InterviewQuestionCell.xib */,
@@ -788,7 +780,6 @@
 				65A462B216ED04D8009BBFD8 /* Bundles in Resources */,
 				17E514A416EF63D600C84A54 /* arrow-blank.png in Resources */,
 				17837AC316F10DA300E62BD5 /* InterviewQuestionCell.xib in Resources */,
-				17837AC616F1970900E62BD5 /* InterviewIntroductionCell.xib in Resources */,
 				6523CF5216F2EEC500B42ECE /* ThemeCell.xib in Resources */,
 				17837B0C16F3D7B000E62BD5 /* ImageStopCell.xib in Resources */,
 				622E1DF5199A53EF0094393A /* Icon-29@2x.png in Resources */,
@@ -861,7 +852,6 @@
 				17E5149A16EE69F600C84A54 /* ArrowView.m in Sources */,
 				628DDA3C193F5DB1003C785A /* NSDictionary+TAPUtils.m in Sources */,
 				17E514A716EF70F800C84A54 /* InterviewQuestionCell.m in Sources */,
-				17837AC916F206AD00E62BD5 /* InterviewIntroductionCell.m in Sources */,
 				17837ACE16F2440200E62BD5 /* UnderlineButton.m in Sources */,
 				629E8D241993E08500AB99D5 /* VSThemeLoader.m in Sources */,
 				6523CF5016F2EEA700B42ECE /* ThemeCell.m in Sources */,
