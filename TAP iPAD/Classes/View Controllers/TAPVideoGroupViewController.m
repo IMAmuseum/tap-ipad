@@ -109,6 +109,9 @@
     _currentIndex = 0;
     _currentSection = 0;
     
+    // hide navigation controller
+    [self.navigationController setNavigationBarHidden:YES];
+    
     // register custom cells;
     [self.collectionView registerNib:[UINib nibWithNibName:@"InterviewQuestionCell" bundle:nil] forCellWithReuseIdentifier:@"InterviewQuestionCell"];
     

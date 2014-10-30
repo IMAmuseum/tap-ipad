@@ -36,7 +36,6 @@
             [self setTitle:[config objectForKey:@"title"]];
             self.screenName = [config objectForKey:@"title"];
             self.htmlFile = [[NSBundle mainBundle] pathForResource:[config objectForKey:@"htmlResourceName"] ofType:@"html"];
-            
         } else {
             self = nil;
         }
@@ -48,6 +47,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // hide navigation controller
+    [self.navigationController setNavigationBarHidden:YES];
+    
     NSString *htmlString = [NSString stringWithContentsOfFile:self.htmlFile encoding:NSUTF8StringEncoding error:nil];
     [self.contentContainer loadHTMLString:htmlString baseURL:nil];
     [self.contentContainer.scrollView setBounces:NO];
