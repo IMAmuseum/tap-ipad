@@ -113,8 +113,10 @@
             if ([[connection.destinationStop getAssetsByUsage:@"header_image"] count] > 0) {
                 TAPAsset *themeAsset = [[connection.destinationStop getAssetsByUsage:@"header_image"] objectAtIndex:0];
                 NSString *themeImage = [[[themeAsset source] anyObject] uri];
-                UIImage *tapImage = [UIImage imageWithContentsOfFile:themeImage];
-                [self.themeStopImages addObject:tapImage];
+                if (themeImage != nil) {
+                    UIImage *tapImage = [UIImage imageWithContentsOfFile:themeImage];
+                    [self.themeStopImages addObject:tapImage];
+                }
             } else {
                 NSLog(@"No asset found on grid item stop, my friend.");
             }
