@@ -1,5 +1,5 @@
 //
-//  TAPInterviewsViewController.m
+//  TAPVideoGroupController.m
 //  TAP iPAD
 //
 //  Created by Daniel Cervantes on 3/4/13.
@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ArrowView.h"
-#import "InterviewIntroductionCell.h"
 #import "InterviewQuestionCell.h"
 #import "TAPVideoGroupViewController.h"
 #import "TAPTour.h"
@@ -26,13 +25,14 @@
 #import "VSTheme.h"
 
 #define CELL_OFFSET 1024.0f
-#define SECTION_TAG_OFFSET 1000
+#define SECTION_TAG_OFFSET 1000.0f
 #define SECTION_MENU_SPACING 20
 
 @interface TAPVideoGroupViewController () {
     NSInteger _currentIndex;
     NSInteger _currentSection;
 }
+
 @property (nonatomic, strong) TAPStop *stop;
 @property (nonatomic, strong) NSArray *sections;
 @property (nonatomic, strong) NSMutableDictionary *categoryStops;
@@ -110,12 +110,11 @@
     _currentSection = 0;
     
     // register custom cells;
-    [self.collectionView registerNib:[UINib nibWithNibName:@"InterviewIntroductionCell" bundle:nil] forCellWithReuseIdentifier:@"InterviewIntroductionCell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"InterviewQuestionCell" bundle:nil] forCellWithReuseIdentifier:@"InterviewQuestionCell"];
     
     // add header label
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 0, 140.0f, self.header.frame.size.height)];
-    [headerLabel setText:@"VIDEO TOPICS:"];
+    [headerLabel setText:@"TOPICS:"];
     [headerLabel setFont:[self.theme fontForKey:@"headingFont"]];
     [headerLabel setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:headerLabel];
@@ -129,12 +128,10 @@
         [attributedSection addAttribute:NSFontAttributeName value:[self.theme fontForKey:@"headingFont"] range:NSMakeRange(0, [attributedSection length])];
         [attributedSection addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [attributedSection length])];
 
-        if (index != 0) {
-            NSInteger count = [[self.categoryStops objectForKey:[self.sections objectAtIndex:index]] count];
-            NSMutableAttributedString *attributedSectionCount = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@" (%@)", [NSString stringWithFormat:@"%i", count]]];
-            [attributedSectionCount addAttribute:NSFontAttributeName value:[self.theme fontForKey:@"headingFont"] range:NSMakeRange(0, [attributedSectionCount length])];
-            [attributedSection appendAttributedString:attributedSectionCount];
-        }
+        NSInteger count = [[self.categoryStops objectForKey:[self.sections objectAtIndex:index]] count];
+        NSMutableAttributedString *attributedSectionCount = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@" (%@)", [NSString stringWithFormat:@"%li", (long)count]]];
+        [attributedSectionCount addAttribute:NSFontAttributeName value:[self.theme fontForKey:@"headingFont"] range:NSMakeRange(0, [attributedSectionCount length])];
+        [attributedSection appendAttributedString:attributedSectionCount];
     
 		UnderlineButton *button = [[UnderlineButton alloc] initWithTheme:self.theme];
         [button setTag:SECTION_TAG_OFFSET + index];
@@ -149,9 +146,7 @@
         
 		[self.header addSubview:button];
         
-        if (index == 0) {
-            [button setSelected:YES];
-        }
+        [button setSelected:YES];
         
         previousWidth += fontSize.width + SECTION_MENU_SPACING;
         index++;
@@ -185,18 +180,13 @@
 
 - (NSInteger)getSectionOffset:(NSInteger)section
 {
-    int offset = 0;
+    NSInteger offset = 0;
     
-    if (section == 0) {
-        offset = 0;
-    } else if (section == 1) {
-        offset = 1;
-    } else {
-        for (NSInteger index = 0; index < section; index++) {
-            offset +=  [[self.categoryStops objectForKey:[self.sections objectAtIndex:index]] count];
-        }
-        offset++;
+    for (NSInteger index = 0; index < section; index++) {
+        offset +=  [[self.categoryStops objectForKey:[self.sections objectAtIndex:index]] count];
     }
+    offset++;
+    
     return offset;
 }
 
@@ -250,12 +240,8 @@
 #pragma mark - UICollectionView Datasource
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 1;
-    } else {
-        NSString *sectionName = [self.sections objectAtIndex:section];
-        return [[self.categoryStops objectForKey:sectionName] count];
-    }
+    NSString *sectionName = [self.sections objectAtIndex:section];
+    return [[self.categoryStops objectForKey:sectionName] count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
@@ -270,41 +256,36 @@
         [self.currentCell removeVideo];
     }
     
-    if (indexPath.section == 0) {
-        InterviewIntroductionCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"InterviewIntroductionCell" forIndexPath:indexPath];
-        [cell.title setFont:[self.theme fontForKey:@"headingFont"]];
-        [cell.content setFont:[self.theme fontForKey:@"headingFont"]];
-        return cell;
-    } else {
-        InterviewQuestionCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"InterviewQuestionCell" forIndexPath:indexPath];
-        NSString *sectionName = [self.sections objectAtIndex:indexPath.section];
-        TAPStop *stop = [[self.categoryStops objectForKey:sectionName] objectAtIndex:indexPath.row];
-        
-        // set question
-        [cell.question setText:(NSString *)stop.title];
-        [cell.question setFont:[self.theme fontForKey:@"headingFont"]];
-        
-        // set video url
-        TAPAsset *videoAsset = [[stop getAssetsByUsage:@"video"] objectAtIndex:0];
-        NSString *videoPath = [[[videoAsset source] anyObject] uri];
+    InterviewQuestionCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"InterviewQuestionCell" forIndexPath:indexPath];
+    NSString *sectionName = [self.sections objectAtIndex:indexPath.section];
+    TAPStop *stop = [[self.categoryStops objectForKey:sectionName] objectAtIndex:indexPath.row];
+    
+    // set question
+    [cell.question setText:(NSString *)stop.title];
+    [cell.question setFont:[self.theme fontForKey:@"headingFont"]];
+    
+    // set video url
+    TAPAsset *videoAsset = [[stop getAssetsByUsage:@"video"] objectAtIndex:0];
+    NSString *videoPath = [[[videoAsset source] anyObject] uri];
+    if (videoPath != nil) {
         [cell setVideoUrl:[NSURL fileURLWithPath:videoPath]];
-        
-        // set poster image
-        TAPAsset *posterAsset = [[stop getAssetsByUsage:@"image"] objectAtIndex:0];
-        NSString *posterImage = [[[posterAsset source] anyObject] uri];
-        [cell.posterImage setImage:[UIImage imageWithContentsOfFile:posterImage]];
-
-        // set button image
-        [cell.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
-        
-        // register event
-        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-        [tracker send:[[[GAIDictionaryBuilder createAppView] set:(NSString *)stop.title
-                                                          forKey:kGAIScreenName] build]];
-        
-        self.currentCell = cell;
-        return cell;
     }
+    
+    // set poster image
+    TAPAsset *posterAsset = [[stop getAssetsByUsage:@"image"] objectAtIndex:0];
+    NSString *posterImage = [[[posterAsset source] anyObject] uri];
+    [cell.posterImage setImage:[UIImage imageWithContentsOfFile:posterImage]];
+
+    // set button image
+    [cell.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+    
+    // register event
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[[GAIDictionaryBuilder createAppView] set:(NSString *)stop.title
+                                                      forKey:kGAIScreenName] build]];
+    
+    self.currentCell = cell;
+    return cell;
 }
 
 - (void)toggleArrowIndicator
@@ -334,7 +315,7 @@
         [self toggleArrowIndicator];
         [self updateSupplementalSections];
         
-        int page = _currentIndex - [self getSectionOffset:_currentSection];
+        NSInteger page = _currentIndex - [self getSectionOffset:_currentSection];
         [self.pager setCurrentPage:page];
     }
 }
