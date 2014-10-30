@@ -55,6 +55,8 @@
 {
     self = [super init];
     if (self) {
+        self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
         [self setStop:stop];
         
         // organize stops according to category
