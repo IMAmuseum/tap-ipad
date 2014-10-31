@@ -293,7 +293,9 @@
     // set title/date image
     TAPAsset *eventTitleAsset = [[eventStop getAssetsByUsage:@"image"] objectAtIndex:0];
     NSString *eventTitleImage = [[[eventTitleAsset source] anyObject] uri];
-    [cell.eventTitle setImage:[UIImage imageWithContentsOfFile:eventTitleImage]];
+    if (eventTitleImage != nil) {
+        [cell.eventTitle setImage:[UIImage imageWithContentsOfFile:eventTitleImage]];
+    }
     
     // set theme image
     TAPAsset *eventAsset = [[eventStop getAssetsByUsageOrderByParseIndex:@"image_asset"] objectAtIndex:0];

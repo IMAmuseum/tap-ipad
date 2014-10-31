@@ -16,11 +16,11 @@
 			<key>imageTag</key>
 			<string>275</string>
 			<key>cellWidth</key>
-			<string>1000</string>
+			<string>6000</string>
 			<key>yearSpacingAfter</key>
-			<string>40</string>
+			<string>20</string>
 			<key>yearSpacingBefore</key>
-			<string>40</string>
+			<string>20</string>
 			<key>yearSplit</key>
 			<string>1945</string>
 			<key>view</key>
