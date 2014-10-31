@@ -57,18 +57,18 @@ static NSMutableArray *endpoints;
     
     // process bundles
     NSString *bundleDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Bundles"];
-    NSDirectoryEnumerator *bundleEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:bundleDir];
-    if (bundleEnumerator) {
-        NSString *currBundlePath;
-        while (currBundlePath = [bundleEnumerator nextObject]) {
-            if ([[currBundlePath pathExtension] isEqualToString:@"bundle"]) {
-                NSString *tourBundlePath = [bundleDir stringByAppendingPathComponent:currBundlePath];
-                bundlePath = [NSMutableString stringWithFormat:@"%@", tourBundlePath];
-                NSBundle *bundle = [NSBundle bundleWithPath:tourBundlePath];
-                if (bundle) {
-                    NSString *tourDataPath = [bundle pathForResource:@"tour" ofType:@"xml"];
-                    [endpoints addObject:tourDataPath];
-                }
+    
+    NSArray *dirFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:bundleDir error:nil];
+    NSArray *bundles = [dirFiles filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self ENDSWITH '.bundle'"]];
+    
+    if ([bundles count]) {
+        for (NSString *bundleFile in bundles) {
+            NSString *tourBundlePath = [bundleDir stringByAppendingPathComponent:bundleFile];
+            bundlePath = [NSMutableString stringWithFormat:@"%@", tourBundlePath];
+            NSBundle *bundle = [NSBundle bundleWithPath:tourBundlePath];
+            if (bundle) {
+                NSString *tourDataPath = [bundle pathForResource:@"tour" ofType:@"xml"];
+                [endpoints addObject:tourDataPath];
             }
         }
     }
