@@ -12,6 +12,8 @@
 #import "TAPGridDetailViewController.h"
 #import "ThemeCell.h"
 #import "NSDictionary+TAPUtils.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAI.h"
 
 // vendor
 #import "TAPAsset.h"
@@ -41,6 +43,9 @@
 @property (nonatomic, strong) ArrowView *arrowIndicator;
 @property const UICollectionViewScrollDirection scrollDirection;
 @property (nonatomic, strong) VSTheme *theme;
+@property TAPStop *selectedStop;
+@property NSURL *selectedVideoUrl;
+@property (nonatomic, strong) MPMoviePlayerViewController *moviePlayer;
 @end
 
 @implementation TAPGridViewController
@@ -110,8 +115,8 @@
         for (TAPConnection *connection in [self.stop.sourceConnection sortedArrayUsingDescriptors:[NSArray arrayWithObject:prioritySort]]) {
             [self.themeStops addObject:connection.destinationStop];
             
-            if ([[connection.destinationStop getAssetsByUsage:@"header_image"] count] > 0) {
-                TAPAsset *themeAsset = [[connection.destinationStop getAssetsByUsage:@"header_image"] objectAtIndex:0];
+            if ([[connection.destinationStop getAssetsByUsage:@"image"] count] > 0) {
+                TAPAsset *themeAsset = [[connection.destinationStop getAssetsByUsage:@"image"] objectAtIndex:0];
                 NSString *themeImage = [[[themeAsset source] anyObject] uri];
                 if (themeImage != nil) {
                     UIImage *tapImage = [UIImage imageWithContentsOfFile:themeImage];
@@ -212,18 +217,29 @@
     [(KioskApplication *)[[UIApplication sharedApplication] delegate] resetIdleTimer];
     
     // get selected stop and initialize theme stop controller
-    NSInteger useIndex = indexPath.row;
-    TAPStop *themeStop = [self.themeStops objectAtIndex:useIndex];
-    TAPGridDetailViewController *themeStopViewController = [[TAPGridDetailViewController alloc] initWithStop:themeStop];
+    self.selectedStop = [self.themeStops objectAtIndex:indexPath.row];
     
-    // create fade transition
-    CATransition *transition = [CATransition animation];
-    transition.duration = 0.5;
-    transition.type = kCATransitionFade;
-    transition.subtype = kCATransitionFromTop;
-    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
-    // push view theme view controller onto the stack
-    [self.navigationController pushViewController:themeStopViewController animated:NO];
+    if ([self.selectedStop.view  isEqual: @"video_stop"]) {
+        TAPAsset *videoAsset = [[self.selectedStop getAssetsByUsage:@"video"] objectAtIndex:0];
+        NSString *videoPath = [[[videoAsset source] anyObject] uri];
+        self.selectedVideoUrl = [NSURL fileURLWithPath:videoPath];
+        
+        [self initializeVideo];
+    } else {
+        // get selected stop and initialize theme stop controller
+        NSInteger useIndex = indexPath.row;
+        TAPStop *themeStop = [self.themeStops objectAtIndex:useIndex];
+        TAPGridDetailViewController *themeStopViewController = [[TAPGridDetailViewController alloc] initWithStop:themeStop];
+        
+        // create fade transition
+        CATransition *transition = [CATransition animation];
+        transition.duration = 0.5;
+        transition.type = kCATransitionFade;
+        transition.subtype = kCATransitionFromTop;
+        [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+        // push view theme view controller onto the stack
+        [self.navigationController pushViewController:themeStopViewController animated:NO];
+    }
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -248,6 +264,70 @@
     } else {
         [self.arrowIndicator setHidden:YES];
     }
+}
+
+#pragma mark - video playback methods, repurposed from interviewquestioncell. thanks Dan!
+- (void)initializeVideo
+{
+    self.moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:self.selectedVideoUrl];
+    self.moviePlayer.moviePlayer.controlStyle = MPMovieControlStyleFullscreen;
+    [self presentMoviePlayerViewControllerAnimated:self.moviePlayer];
+    // Add finished observer
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:self.moviePlayer.moviePlayer];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayerStateChanged:)
+                                                 name:MPMoviePlayerPlaybackStateDidChangeNotification
+                                               object:self.moviePlayer.moviePlayer];
+}
+
+-(void)moviePlayBackDidFinish:(NSNotification *)notification
+{
+    int reason = [[[notification userInfo] valueForKey:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] intValue];
+    NSString *gaReason = @"";
+    if (reason == MPMovieFinishReasonPlaybackEnded) {
+        //movie finished playin
+        gaReason = @"video_complete";
+    }else if (reason == MPMovieFinishReasonUserExited) {
+        //user hit the done button
+        gaReason = @"video_done_button";
+    }else if (reason == MPMovieFinishReasonPlaybackError) {
+        //error
+        gaReason = @"video_error";
+    }
+    
+    // register event
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Video Stop" action:gaReason label:(NSString *)self.selectedStop.title value:nil] build]];
+    
+    self.selectedStop = NULL;
+    self.selectedVideoUrl = NULL;
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
+
+-(void)moviePlayerStateChanged:(NSNotification *)notification
+{
+    MPMoviePlaybackState playbackState = [[notification object] playbackState];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    if (playbackState == MPMoviePlaybackStatePaused) {
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Video Stop" action:@"video_pause" label:(NSString *)self.selectedStop.title value:nil] build]];
+    } else if (playbackState == MPMoviePlaybackStatePlaying) {
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Video Stop" action:@"video_play" label:(NSString *)self.selectedStop.title value:nil] build]];
+    } else if (playbackState == MPMoviePlaybackStateSeekingForward) {
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Video Stop" action:@"video_forward" label:(NSString *)self.selectedStop.title value:nil] build]];
+    } else if (playbackState == MPMoviePlaybackStateSeekingBackward) {
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Video Stop" action:@"video_reverse" label:(NSString *)self.selectedStop.title value:nil] build]];
+    } else if (playbackState == MPMoviePlaybackStateStopped) {
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Video Stop" action:@"video_stopped" label:(NSString *)self.selectedStop.title value:nil] build]];
+        
+    }
+    
 }
 
 - (BOOL)prefersStatusBarHidden{

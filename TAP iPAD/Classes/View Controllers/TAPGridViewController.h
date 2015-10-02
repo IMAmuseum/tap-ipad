@@ -13,4 +13,6 @@
 @interface TAPGridViewController : TAPBaseViewController <UICollectionViewDataSource>
 - (id)initWithConfigDictionary:(NSDictionary *)config;
 - (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName itemsPerRow:(NSInteger)itemsPerRow columnWidth:(CGFloat)columnWidth rowHeight:(CGFloat)rowHeight verticalSpacing:(CGFloat)verticalSpacing scrollDirection:(UICollectionViewScrollDirection)scrollDirection;
+- (void)initializeVideo;
+- (void)moviePlayBackDidFinish:(NSNotification *)notification;
 @end
