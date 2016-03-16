@@ -101,12 +101,12 @@
      [[GAI sharedInstance] trackerWithTrackingId:[self.tapConfig objectForKey:@"GATrackerId"]];
     
     // first pull in the navigation items from config file
-    TAPHomeViewController *homeViewController = [[TAPHomeViewController alloc] init];
+//    TAPHomeViewController *homeViewController = [[TAPHomeViewController alloc] init];
     NSArray *navigationItems = [self.tapConfig objectForKey:@"NavigationItems"];
     NSMutableArray *navigationItemsViewControllers = [[NSMutableArray alloc] init];
     
     // then initialize view controllers using those
-    [navigationItemsViewControllers addObject:homeViewController];
+//    [navigationItemsViewControllers addObject:homeViewController];
     for (NSDictionary *navigationItem in navigationItems) {
         [navigationItemsViewControllers addObject:[[UINavigationController alloc] initWithRootViewController:[(TAPBaseViewController *)[NSClassFromString([navigationItem objectForKey:@"view"]) alloc] initWithConfigDictionary:navigationItem]]];
     }
