@@ -39,12 +39,12 @@
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.theme = appDelegate.theme;
     
-    [self.menuDropShow.layer setShadowColor:[[UIColor blackColor] CGColor]];
-    [self.menuDropShow.layer setMasksToBounds:NO];
-    [self.menuDropShow.layer setShadowOffset:CGSizeMake(0, 2)];
-    [self.menuDropShow.layer setShadowRadius:0.0f];
-    [self.menuDropShow.layer setShadowOpacity:0.05f];
-    [self.menuDropShow setBackgroundColor:[UIColor whiteColor]];
+//    [self.menuDropShow.layer setShadowColor:[[UIColor blackColor] CGColor]];
+//    [self.menuDropShow.layer setMasksToBounds:NO];
+//    [self.menuDropShow.layer setShadowOffset:CGSizeMake(0, 2)];
+//    [self.menuDropShow.layer setShadowRadius:0.0f];
+//    [self.menuDropShow.layer setShadowOpacity:0.05f];
+//    [self.menuDropShow setBackgroundColor:[UIColor whiteColor]];
 
     // setup navigation
     [self setNavigation];
@@ -104,29 +104,31 @@
     NSUInteger index = 0;
     float previousWidth = 0;
 
-	for (UIViewController *viewController in self.viewControllers) {
-        if ([viewController.title isEqualToString:@"Home"]) {
-            ++index;
-            continue;
-        }
-        
-		UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setTitleColor:[self.theme colorForKey:@"navigationFontColor"] forState:UIControlStateNormal];
-        [button setTag:TAG_OFFSET + index];
-        [button.titleLabel setFont:[self.theme fontForKey:@"headingFont"]];
-		[button setTitle:[viewController.title uppercaseString] forState:UIControlStateNormal];
-		[button addTarget:self action:@selector(navigationItemPressed:) forControlEvents:UIControlEventTouchDown];
-        [button.titleLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
-        CGSize fontSize = [button.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:button.titleLabel.font}];
-        CGRect buttonFrame = CGRectMake(previousWidth, 10.0f, fontSize.width + 20.0f, 65.0f);
-        [button setFrame:buttonFrame];
-        
-		[self.menuContainerView addSubview:button];
-        
-        previousWidth += fontSize.width + 20.0f + MENU_SPACING;
+    if ([self.viewControllers count] > 1) {
+        for (UIViewController *viewController in self.viewControllers) {
+            if ([viewController.title isEqualToString:@"Home"]) {
+                ++index;
+                continue;
+            }
+            
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            [button setTitleColor:[self.theme colorForKey:@"navigationFontColor"] forState:UIControlStateNormal];
+            [button setTag:TAG_OFFSET + index];
+            [button.titleLabel setFont:[self.theme fontForKey:@"headingFont"]];
+            [button setTitle:[viewController.title uppercaseString] forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(navigationItemPressed:) forControlEvents:UIControlEventTouchDown];
+            [button.titleLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
+            CGSize fontSize = [button.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:button.titleLabel.font}];
+            CGRect buttonFrame = CGRectMake(previousWidth, 10.0f, fontSize.width + 20.0f, 65.0f);
+            [button setFrame:buttonFrame];
+            
+            [self.menuContainerView addSubview:button];
+            
+            previousWidth += fontSize.width + 20.0f + MENU_SPACING;
 
-		++index;
-	}
+            ++index;
+        }
+    }
 }
 
 - (void)resetViewController
