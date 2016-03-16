@@ -4,6 +4,12 @@
 <dict>
 	<key>Default</key>
 	<dict>
+		<key>videoTitleFontColor</key>
+		<string>373737</string>
+		<key>videoTitleFontSize</key>
+		<string>17</string>
+		<key>videoTitleFont</key>
+		<string>HelveticaNeue</string>
 		<key>splashColor</key>
 		<string>c03e19</string>
 		<key>accentColor</key>
@@ -13,7 +19,7 @@
 		<key>bodyFont</key>
 		<string>HelveticaNeue</string>
 		<key>bodyFontSize</key>
-		<integer>14</integer>
+		<integer>16</integer>
 		<key>bodyFontColor</key>
 		<string>ffffff</string>
 		<key>bodyFontItalic</key>
