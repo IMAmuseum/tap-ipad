@@ -2,6 +2,46 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NavigationItems</key>
+	<array>
+		<dict>
+			<key>displayCategories</key>
+			<false/>
+			<key>view</key>
+			<string>TAPVideoGroupViewController</string>
+			<key>title</key>
+			<string>Video Group</string>
+			<key>keycode</key>
+			<string>100</string>
+			<key>trackedViewName</key>
+			<string>Video Group</string>
+			<key>imageTag</key>
+			<integer>275</integer>
+		</dict>
+	</array>
+	<key>NavigationItemsMultiVideo</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Grid</string>
+			<key>view</key>
+			<string>TAPGridViewController</string>
+			<key>keycode</key>
+			<string>100</string>
+			<key>trackedViewName</key>
+			<string>Grid</string>
+			<key>itemsPerRow</key>
+			<integer>3</integer>
+			<key>columnWidth</key>
+			<integer>305</integer>
+			<key>rowHeight</key>
+			<integer>310</integer>
+			<key>verticalSpacing</key>
+			<integer>20</integer>
+			<key>scrollDirection</key>
+			<string>vertical</string>
+		</dict>
+	</array>
 	<key>GATrackerId</key>
 	<string>UA-1868672-34</string>
 	<key>HelpVideo</key>
@@ -10,7 +50,7 @@
 	<false/>
 	<key>TourMLEndpoint</key>
 	<string></string>
-	<key>NavigationItems</key>
+	<key>NavigationItemsDefault</key>
 	<array>
 		<dict>
 			<key>imageTag</key>
