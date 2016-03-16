@@ -138,4 +138,19 @@
     return [assets sortedArrayUsingDescriptors:sortDescriptors];
 }
 
+/**
+ * Override the getter so that we can get the proper path (storing full path in db was breaking in simulator)
+ */
+- (NSString *)bundlePath
+{
+    [self willAccessValueForKey:@"bundlePath"];
+    NSString *dbValue = [self primitiveValueForKey:@"bundlePath"];
+    [self didAccessValueForKey:@"bundlePath"];
+    
+    NSString *bundleDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Bundles"];
+    NSString *tourBundlePath = [bundleDir stringByAppendingPathComponent:dbValue];
+    
+    return tourBundlePath;
+}
+
 @end

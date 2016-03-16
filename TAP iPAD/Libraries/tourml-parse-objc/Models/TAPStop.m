@@ -108,9 +108,14 @@
             [assets addObject:assetRef.asset];
         }
     }
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    return [assets sortedArrayUsingDescriptors:sortDescriptors];
+    
+    NSMutableArray *sortedAssets = [[NSMutableArray alloc] init];
+    NSSortDescriptor *parseSort = [[NSSortDescriptor alloc] initWithKey:@"parseIndex" ascending:YES];
+    for (TAPAsset *asset in [assets sortedArrayUsingDescriptors:@[parseSort]]) {
+        [sortedAssets addObject:asset];
+    }
+    
+    return sortedAssets;
 }
 
 /**
@@ -135,6 +140,13 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@ AND value != nil AND (language == %@ OR language == nil)", name, appDelegate.language];
     TAPProperty *property = [[self.propertySet filteredSetUsingPredicate:predicate] anyObject];
     return property.value;
+}
+
+- (NSArray *)getSourceConnectionsByPriority
+{
+    NSArray *sourceConnecitons = [self.sourceConnection allObjects];
+    
+    return sourceConnecitons;
 }
 
 - (NSComparisonResult)compareByKeycode:(TAPStop *)otherObject

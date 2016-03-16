@@ -64,7 +64,7 @@ static NSMutableArray *endpoints;
     if ([bundles count]) {
         for (NSString *bundleFile in bundles) {
             NSString *tourBundlePath = [bundleDir stringByAppendingPathComponent:bundleFile];
-            bundlePath = [NSMutableString stringWithFormat:@"%@", tourBundlePath];
+            bundlePath = [NSMutableString stringWithFormat:@"%@", bundleFile];
             NSBundle *bundle = [NSBundle bundleWithPath:tourBundlePath];
             if (bundle) {
                 NSString *tourDataPath = [bundle pathForResource:@"tour" ofType:@"xml"];
@@ -110,8 +110,8 @@ static NSMutableArray *endpoints;
         NSLog(@"Error occured retrieving from endpoint: %@", error);
         return nil;
     }
-    
-    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
+    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData encoding:NSUTF8StringEncoding error:&error];
+//    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData options:0 error:&error];
     
     if (doc == nil) {
         return nil;
