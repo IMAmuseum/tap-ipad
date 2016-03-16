@@ -75,8 +75,6 @@
 		628DDA3C193F5DB1003C785A /* NSDictionary+TAPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 628DDA3B193F5DB1003C785A /* NSDictionary+TAPUtils.m */; };
 		629E8D231993E08500AB99D5 /* VSTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 629E8D0B1993E08500AB99D5 /* VSTheme.m */; };
 		629E8D241993E08500AB99D5 /* VSThemeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 629E8D0D1993E08500AB99D5 /* VSThemeLoader.m */; };
-		629E8D251993E08500AB99D5 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 629E8D101993E08500AB99D5 /* GDataXMLNode.m */; };
-		629E8D261993E08500AB99D5 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629E8D181993E08500AB99D5 /* libGoogleAnalyticsServices.a */; };
 		629E8D271993E08500AB99D5 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 629E8D1B1993E08500AB99D5 /* ISO8601DateFormatter.m */; };
 		629E8D281993E08500AB99D5 /* TimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629E8D1E1993E08500AB99D5 /* TimelineView.m */; };
 		629E8D291993E08500AB99D5 /* TimelineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629E8D201993E08500AB99D5 /* TimelineViewCell.m */; };
@@ -115,6 +113,7 @@
 		65A462AF16EBC4EF009BBFD8 /* WebContainerContent.html in Resources */ = {isa = PBXBuildFile; fileRef = 65A462AE16EBC4EF009BBFD8 /* WebContainerContent.html */; };
 		65A462B216ED04D8009BBFD8 /* Bundles in Resources */ = {isa = PBXBuildFile; fileRef = 65A462B116ED04D8009BBFD8 /* Bundles */; };
 		65F424E016F80F9F004D05B4 /* TimelineEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */; };
+		9C0325FF147DB1888D98F6EE /* libPods-TAP iPAD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FB0C41EBC5526EBC12BE3D /* libPods-TAP iPAD.a */; };
 		A47C43891940A4F800B722C3 /* tap-ipad-splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */; };
 		A47C438A1940A4F800B722C3 /* tap-ipad-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47C43881940A4F800B722C3 /* tap-ipad-home@2x.png */; };
 		A4C3F043193D6B1700B173B1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C3F042193D6B1700B173B1 /* libz.dylib */; };
@@ -149,7 +148,7 @@
 		178AAF0816E6A1670061E735 /* TAPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPMenuViewController.h; path = "Classes/View Controllers/TAPMenuViewController.h"; sourceTree = "<group>"; };
 		178AAF0916E6A1670061E735 /* TAPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPMenuViewController.m; path = "Classes/View Controllers/TAPMenuViewController.m"; sourceTree = "<group>"; };
 		178AAF0A16E6A1680061E735 /* TAPMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TAPMenuViewController.xib; path = "Classes/View Controllers/TAPMenuViewController.xib"; sourceTree = "<group>"; };
-		17A0806216E5236200366341 /* TAP iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TAP iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A0806216E5236200366341 /* Marie Webster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marie Webster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A0806516E5236200366341 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		17A0806716E5236200366341 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		17A0806916E5236200366341 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -219,15 +218,6 @@
 		629E8D0B1993E08500AB99D5 /* VSTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSTheme.m; sourceTree = "<group>"; };
 		629E8D0C1993E08500AB99D5 /* VSThemeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSThemeLoader.h; sourceTree = "<group>"; };
 		629E8D0D1993E08500AB99D5 /* VSThemeLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSThemeLoader.m; sourceTree = "<group>"; };
-		629E8D0F1993E08500AB99D5 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		629E8D101993E08500AB99D5 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
-		629E8D121993E08500AB99D5 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
-		629E8D131993E08500AB99D5 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		629E8D141993E08500AB99D5 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
-		629E8D151993E08500AB99D5 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
-		629E8D161993E08500AB99D5 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
-		629E8D171993E08500AB99D5 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
-		629E8D181993E08500AB99D5 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		629E8D1A1993E08500AB99D5 /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
 		629E8D1B1993E08500AB99D5 /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
 		629E8D1D1993E08500AB99D5 /* TimelineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineView.h; sourceTree = "<group>"; };
@@ -289,6 +279,7 @@
 		65A462B116ED04D8009BBFD8 /* Bundles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bundles; sourceTree = "<group>"; };
 		65F424DE16F80F9F004D05B4 /* TimelineEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineEventCell.h; path = Classes/Views/TimelineEventCell.h; sourceTree = "<group>"; };
 		65F424DF16F80F9F004D05B4 /* TimelineEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineEventCell.m; path = Classes/Views/TimelineEventCell.m; sourceTree = "<group>"; };
+		A1FB0C41EBC5526EBC12BE3D /* libPods-TAP iPAD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TAP iPAD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47C43871940A4F800B722C3 /* tap-ipad-splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-ipad-splash@2x.png"; path = "Resources/Images/tap-ipad-splash@2x.png"; sourceTree = "<group>"; };
 		A47C43881940A4F800B722C3 /* tap-ipad-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tap-ipad-home@2x.png"; path = "Resources/Images/tap-ipad-home@2x.png"; sourceTree = "<group>"; };
 		A4C3F042193D6B1700B173B1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -296,6 +287,8 @@
 		A4C3F04B193EC0E700B173B1 /* TAPTiledImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTiledImageScrollView.m; path = Classes/Views/TAPTiledImageScrollView.m; sourceTree = "<group>"; };
 		A4C3F04C193EC0E700B173B1 /* TAPTiledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TAPTiledView.h; path = Classes/Views/TAPTiledView.h; sourceTree = "<group>"; };
 		A4C3F04D193EC0E700B173B1 /* TAPTiledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TAPTiledView.m; path = Classes/Views/TAPTiledView.m; sourceTree = "<group>"; };
+		D4D9F6F0917CF9C87029D9E9 /* Pods-TAP iPAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAP iPAD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TAP iPAD/Pods-TAP iPAD.debug.xcconfig"; sourceTree = "<group>"; };
+		DBC1E71234DA83199637643E /* Pods-TAP iPAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAP iPAD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TAP iPAD/Pods-TAP iPAD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,7 +307,7 @@
 				17A0806816E5236200366341 /* Foundation.framework in Frameworks */,
 				17A0806A16E5236200366341 /* CoreGraphics.framework in Frameworks */,
 				17A0806C16E5236200366341 /* CoreData.framework in Frameworks */,
-				629E8D261993E08500AB99D5 /* libGoogleAnalyticsServices.a in Frameworks */,
+				9C0325FF147DB1888D98F6EE /* libPods-TAP iPAD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,13 +343,14 @@
 				17A0806316E5236200366341 /* Products */,
 				622E1DEE1999639C0094393A /* LICENSE.md */,
 				622E1DEF1999639C0094393A /* README.md */,
+				EE49F2B6A58ACF11ED1BD34E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		17A0806316E5236200366341 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17A0806216E5236200366341 /* TAP iPad.app */,
+				17A0806216E5236200366341 /* Marie Webster.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,6 +369,7 @@
 				17837AD116F39EA100E62BD5 /* QuartzCore.framework */,
 				17A080D716E527DB00366341 /* SystemConfiguration.framework */,
 				17A0806516E5236200366341 /* UIKit.framework */,
+				A1FB0C41EBC5526EBC12BE3D /* libPods-TAP iPAD.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -454,8 +449,6 @@
 			isa = PBXGroup;
 			children = (
 				629E8D091993E08500AB99D5 /* DB5 */,
-				629E8D0E1993E08500AB99D5 /* GDataXML */,
-				629E8D111993E08500AB99D5 /* GoogleAnalytics */,
 				629E8D191993E08500AB99D5 /* ISO8601DataFormatter */,
 				629E8D1C1993E08500AB99D5 /* TimelineView */,
 				62C13FD8199D00340019FA9C /* tourml-parse-objc */,
@@ -573,31 +566,6 @@
 			path = Libraries/DB5;
 			sourceTree = "<group>";
 		};
-		629E8D0E1993E08500AB99D5 /* GDataXML */ = {
-			isa = PBXGroup;
-			children = (
-				629E8D0F1993E08500AB99D5 /* GDataXMLNode.h */,
-				629E8D101993E08500AB99D5 /* GDataXMLNode.m */,
-			);
-			name = GDataXML;
-			path = Libraries/GDataXML;
-			sourceTree = "<group>";
-		};
-		629E8D111993E08500AB99D5 /* GoogleAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				629E8D121993E08500AB99D5 /* GAI.h */,
-				629E8D131993E08500AB99D5 /* GAIDictionaryBuilder.h */,
-				629E8D141993E08500AB99D5 /* GAIFields.h */,
-				629E8D151993E08500AB99D5 /* GAILogger.h */,
-				629E8D161993E08500AB99D5 /* GAITrackedViewController.h */,
-				629E8D171993E08500AB99D5 /* GAITracker.h */,
-				629E8D181993E08500AB99D5 /* libGoogleAnalyticsServices.a */,
-			);
-			name = GoogleAnalytics;
-			path = Libraries/GoogleAnalytics;
-			sourceTree = "<group>";
-		};
 		629E8D191993E08500AB99D5 /* ISO8601DataFormatter */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,6 +674,15 @@
 			name = HTML;
 			sourceTree = "<group>";
 		};
+		EE49F2B6A58ACF11ED1BD34E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4D9F6F0917CF9C87029D9E9 /* Pods-TAP iPAD.debug.xcconfig */,
+				DBC1E71234DA83199637643E /* Pods-TAP iPAD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -713,9 +690,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A0808416E5236300366341 /* Build configuration list for PBXNativeTarget "TAP iPAD" */;
 			buildPhases = (
+				381C4DE8F139A77A328830EB /* Check Pods Manifest.lock */,
 				17A0805E16E5236200366341 /* Sources */,
 				17A0805F16E5236200366341 /* Frameworks */,
 				17A0806016E5236200366341 /* Resources */,
+				4F135BB6E4FA80927FEC1C4C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -723,7 +702,7 @@
 			);
 			name = "TAP iPAD";
 			productName = "TAP iPAD";
-			productReference = 17A0806216E5236200366341 /* TAP iPad.app */;
+			productReference = 17A0806216E5236200366341 /* Marie Webster.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -734,6 +713,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "IMA Lab";
+				TargetAttributes = {
+					17A0806116E5236200366341 = {
+						DevelopmentTeam = GFB6FS595Y;
+					};
+				};
 			};
 			buildConfigurationList = 17A0805D16E5236200366341 /* Build configuration list for PBXProject "TAP iPAD" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -815,6 +799,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		381C4DE8F139A77A328830EB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4F135BB6E4FA80927FEC1C4C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TAP iPAD/Pods-TAP iPAD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		17A0805E16E5236200366341 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -822,7 +839,6 @@
 			files = (
 				17A0807416E5236200366341 /* main.m in Sources */,
 				17A0807816E5236200366341 /* AppDelegate.m in Sources */,
-				629E8D251993E08500AB99D5 /* GDataXMLNode.m in Sources */,
 				62C13FFF199D00340019FA9C /* TAPTour.m in Sources */,
 				629E8D231993E08500AB99D5 /* VSTheme.m in Sources */,
 				629E8D281993E08500AB99D5 /* TimelineView.m in Sources */,
@@ -947,12 +963,14 @@
 		};
 		17A0808516E5236300366341 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4D9F6F0917CF9C87029D9E9 /* Pods-TAP iPAD.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TAP iPAD/TAP iPAD-Prefix.pch";
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "TAP iPAD/TAP iPAD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -960,8 +978,9 @@
 					"$(SRCROOT)/TAP\\ iPAD/Libraries/GoogleAnalytics/**",
 					"$(PROJECT_DIR)/TAP\\ iPAD/Libraries/GoogleAnalytics",
 				);
-				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "TAP iPad";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.imamuseum.lab.tap-ipad-webster";
+				PRODUCT_NAME = "Marie Webster";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -970,12 +989,14 @@
 		};
 		17A0808616E5236300366341 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBC1E71234DA83199637643E /* Pods-TAP iPAD.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TAP iPAD/TAP iPAD-Prefix.pch";
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "TAP iPAD/TAP iPAD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -983,8 +1004,9 @@
 					"$(SRCROOT)/TAP\\ iPAD/Libraries/GoogleAnalytics/**",
 					"$(PROJECT_DIR)/TAP\\ iPAD/Libraries/GoogleAnalytics",
 				);
-				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "TAP iPad";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.imamuseum.lab.tap-ipad-webster";
+				PRODUCT_NAME = "Marie Webster";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;

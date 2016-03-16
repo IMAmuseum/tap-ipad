@@ -98,7 +98,7 @@
     // For debugging
     // [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     // Create tracker instance.
-    // [[GAI sharedInstance] trackerWithTrackingId:[self.tapConfig objectForKey:@"GATrackerId"]];
+     [[GAI sharedInstance] trackerWithTrackingId:[self.tapConfig objectForKey:@"GATrackerId"]];
     
     // first pull in the navigation items from config file
     TAPHomeViewController *homeViewController = [[TAPHomeViewController alloc] init];
