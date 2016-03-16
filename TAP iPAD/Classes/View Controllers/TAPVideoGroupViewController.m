@@ -31,60 +31,92 @@
 @interface TAPVideoGroupViewController () {
     NSInteger _currentIndex;
     NSInteger _currentSection;
+    NSInteger _totalStops;
 }
 
 @property (nonatomic, strong) TAPStop *stop;
 @property (nonatomic, strong) NSArray *sections;
 @property (nonatomic, strong) NSMutableDictionary *categoryStops;
 @property (nonatomic, strong) ArrowView *arrowIndicator;
+
+@property (nonatomic, strong) UIImageView *arrowIndicatorLeft;
+@property (nonatomic, strong) UIImageView *arrowIndicatorRight;
+
 @property (nonatomic, weak) InterviewQuestionCell *currentCell;
 @property (nonatomic, weak) IBOutlet UIView *header;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, weak) IBOutlet UIPageControl *pager;
+@property (nonatomic, weak) IBOutlet UILabel *headerLabel;
 @property (nonatomic, strong) VSTheme *theme;
+@property (nonatomic) bool displayCategories;
 
 - (NSInteger)getSectionOffset:(NSInteger)section;
 - (void)sectionNavigationClicked:(UIButton *)sender;
 - (void)navigateToSection:(NSInteger)section;
 - (void)updateSupplementalSections;
 - (void)toggleArrowIndicator;
+- (void)toggleArrowIndicatorRight;
+- (void)toggleArrowIndicatorLeft;
+
 @end
 
 @implementation TAPVideoGroupViewController
 
 -(id)initWithConfigDictionary:(NSDictionary *)config
 {
-    // validate incoming config values
-    NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName"];
-    if ([config containsAllKeysIn:requiredKeys]) {
-        self = [self initWithStopTitle:[config objectForKey:@"title"]
-                               keycode:[config objectForKey:@"keycode"]
-                       trackedViewName:[config objectForKey:@"trackedViewName"]];
-    } else {
-        NSLog(@"Tried to instantiate TAPVideoGroupViewController without all required config items, please check TAPConfig");
-        self = nil;
+    self = [super self];
+    if (self) {
+        // validate incoming config values
+        NSArray *requiredKeys = @[@"title", @"keycode", @"trackedViewName"];
+        if ([config containsAllKeysIn:requiredKeys]) {
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            
+            TAPStop *stop = nil;
+            if ([[config objectForKey:@"keycode"] length] > 0) {
+                stop = [appDelegate.currentTour stopFromKeycode:[config objectForKey:@"keycode"]];
+            } else if ([[config objectForKey:@"stopId"] length] > 0) {
+                stop = [appDelegate.currentTour stopFromId:[config objectForKey:@"stopId"]];
+            }
+            
+            if (stop) {
+                self = [self initWithStopTitle:[config objectForKey:@"title"]
+                                          stop:stop
+                               trackedViewName:[config objectForKey:@"trackedViewName"]];
+                
+                self.displayCategories = [[config objectForKey:@"displayCategories"] boolValue];
+            }
+        } else {
+            NSLog(@"Tried to instantiate TAPVideoGroupViewController without all required config items, please check TAPConfig");
+            self = nil;
+        }
     }
     return self;
 }
 
-- (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName
+- (id)initWithStopTitle:(NSString *)stopTitle stop:(TAPStop *)stop trackedViewName:(NSString *)trackedViewName
 {
     self = [super self];
     if (self) {
         [self setTitle:stopTitle];
-        self.screenName = trackedViewName;
+        self.screenName = (NSString *)stop.title;
         
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        self.stop = [appDelegate.currentTour stopFromKeycode:keycode];
+        self.stop = stop;
         self.theme = appDelegate.theme;
+        
+        _totalStops = 0;
         
         // setup categories
         NSMutableArray *tempSections = [[NSMutableArray alloc] init];
         self.categoryStops = [[NSMutableDictionary alloc] init];
         // organize stops according to category
-        for (TAPConnection *connection in [self.stop.sourceConnection allObjects]) {
+        NSSortDescriptor *prioritySort = [[NSSortDescriptor alloc] initWithKey:@"priority" ascending:YES];
+        for (TAPConnection *connection in [self.stop.sourceConnection sortedArrayUsingDescriptors:@[prioritySort]]) {
             TAPStop *interviewStop = connection.destinationStop;
             NSString *category = [interviewStop getPropertyValueByName:@"category"];
+            if ([category length] == 0 || category == nil) {
+                category = @"All";
+            }
             if (category != nil && [tempSections containsObject:category] == false) {
                 [tempSections addObject:category];
             }
@@ -96,6 +128,7 @@
                     [self.categoryStops setValue:stops forKey:category];
                 }
             }
+            _totalStops++;
         }
         self.sections = tempSections;
     }
@@ -116,48 +149,85 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"InterviewQuestionCell" bundle:nil] forCellWithReuseIdentifier:@"InterviewQuestionCell"];
     
     // add header label
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 0, 140.0f, self.header.frame.size.height)];
-    [headerLabel setText:@"TOPICS:"];
-    [headerLabel setFont:[self.theme fontForKey:@"headingFont"]];
-    [headerLabel setBackgroundColor:[UIColor clearColor]];
-    [self.view addSubview:headerLabel];
-
-    // add header section buttons
-    NSUInteger index = 0;
-    float previousWidth = 0;
+    NSString *tempName = [[NSString alloc] initWithString:(NSString *)self.stop.title];
     
-    for (NSString *section in self.sections) {
-        NSMutableAttributedString *attributedSection = [[NSMutableAttributedString alloc] initWithString:section];
-        [attributedSection addAttribute:NSFontAttributeName value:[self.theme fontForKey:@"headingFont"] range:NSMakeRange(0, [attributedSection length])];
-        [attributedSection addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [attributedSection length])];
-
-        NSInteger count = [[self.categoryStops objectForKey:[self.sections objectAtIndex:index]] count];
-        NSMutableAttributedString *attributedSectionCount = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@" (%@)", [NSString stringWithFormat:@"%li", (long)count]]];
-        [attributedSectionCount addAttribute:NSFontAttributeName value:[self.theme fontForKey:@"headingFont"] range:NSMakeRange(0, [attributedSectionCount length])];
-        [attributedSection appendAttributedString:attributedSectionCount];
+    NSMutableAttributedString *headerName = [[NSMutableAttributedString alloc] initWithString:tempName];
+    NSMutableParagraphStyle *headerNameParagraphStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+    NSRange wholeStringRange = NSMakeRange(0, [headerName length]);
+    headerNameParagraphStyle.minimumLineHeight = 20.0f;
+    headerNameParagraphStyle.maximumLineHeight = 20.0f;
+    [headerName addAttributes:@{ NSParagraphStyleAttributeName: headerNameParagraphStyle,
+                                NSForegroundColorAttributeName: [UIColor blackColor],
+                                NSBackgroundColorAttributeName: [UIColor clearColor],
+                                NSFontAttributeName:[self.theme fontForKey:@"headingFont"]} range:wholeStringRange];
+    [self.headerLabel setAttributedText:headerName];
+    [self.headerLabel setHidden:YES];
     
-		UnderlineButton *button = [[UnderlineButton alloc] initWithTheme:self.theme];
-        [button setTag:SECTION_TAG_OFFSET + index];
-        [button setAttributedTitle:attributedSection forState:UIControlStateNormal];
-		[button setTitle:section forState:UIControlStateNormal];
-		[button addTarget:self action:@selector(sectionNavigationClicked:) forControlEvents:UIControlEventTouchDown];
-        [button.titleLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
+    // add category label
+    if (self.displayCategories) {
+        UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 0, 140.0f, self.header.frame.size.height)];
+        [headerLabel setText:@"TOPICS:"];
+        [headerLabel setFont:[self.theme fontForKey:@"headingFont"]];
+        [headerLabel setBackgroundColor:[UIColor clearColor]];
+        [self.view addSubview:headerLabel];
+    
+
+        // add header section buttons
+        NSUInteger index = 0;
+        float previousWidth = 0;
         
-        CGSize fontSize = [button.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: button.titleLabel.font}];
-        CGRect buttonFrame = CGRectMake(previousWidth, 0, fontSize.width + SECTION_MENU_SPACING, self.header.frame.size.height);
-        [button setFrame:buttonFrame];
+        for (NSString *section in self.sections) {
+            NSMutableAttributedString *attributedSection = [[NSMutableAttributedString alloc] initWithString:section];
+            [attributedSection addAttribute:NSFontAttributeName value:[self.theme fontForKey:@"headingFont"] range:NSMakeRange(0, [attributedSection length])];
+            [attributedSection addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [attributedSection length])];
+
+            NSInteger count = [[self.categoryStops objectForKey:[self.sections objectAtIndex:index]] count];
+            NSMutableAttributedString *attributedSectionCount = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@" (%@)", [NSString stringWithFormat:@"%li", (long)count]]];
+            [attributedSectionCount addAttribute:NSFontAttributeName value:[self.theme fontForKey:@"headingFont"] range:NSMakeRange(0, [attributedSectionCount length])];
+            [attributedSection appendAttributedString:attributedSectionCount];
         
-		[self.header addSubview:button];
-        
-        [button setSelected:YES];
-        
-        previousWidth += fontSize.width + SECTION_MENU_SPACING;
-        index++;
+            UnderlineButton *button = [[UnderlineButton alloc] initWithTheme:self.theme];
+            [button setTag:SECTION_TAG_OFFSET + index];
+            [button setAttributedTitle:attributedSection forState:UIControlStateNormal];
+            [button setTitle:section forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(sectionNavigationClicked:) forControlEvents:UIControlEventTouchDown];
+            [button.titleLabel setBaselineAdjustment:UIBaselineAdjustmentAlignCenters];
+            
+            CGSize fontSize = [button.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: button.titleLabel.font}];
+            CGRect buttonFrame = CGRectMake(previousWidth, 0, fontSize.width + SECTION_MENU_SPACING, self.header.frame.size.height);
+            [button setFrame:buttonFrame];
+            
+            [self.header addSubview:button];
+            
+            [button setSelected:YES];
+            
+            previousWidth += fontSize.width + SECTION_MENU_SPACING;
+            index++;
+        }
     }
     
     // add arrow indicator animation
-    self.arrowIndicator = [[ArrowView alloc] initWithFrame:CGRectMake(929.0f, 641.0f, 75.0f, 35.0f)];
-    [self.view addSubview:self.arrowIndicator];
+//    self.arrowIndicator = [[ArrowView alloc] initWithFrame:CGRectMake(929.0f, 641.0f, 75.0f, 35.0f)];
+//    [self.view addSubview:self.arrowIndicator];
+    
+    self.arrowIndicatorRight = [[UIImageView alloc] initWithFrame:CGRectMake(959.0f, 341.0f, 18.0f, 31.0f)];
+    [self.arrowIndicatorRight setImage:[UIImage imageNamed:@"right-arrow.png"]];
+    
+    UITapGestureRecognizer *singleTapRightArrow = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nextVideo)];
+    singleTapRightArrow.numberOfTapsRequired = 1;
+    [self.arrowIndicatorRight setUserInteractionEnabled:YES];
+    [self.arrowIndicatorRight addGestureRecognizer:singleTapRightArrow];
+    [self.view addSubview:self.arrowIndicatorRight];
+    [self toggleArrowIndicatorRight];
+    
+    self.arrowIndicatorLeft = [[UIImageView alloc] initWithFrame:CGRectMake(47.0f, 341.0f, 18.0f, 31.0f)];
+    [self.arrowIndicatorLeft setImage:[UIImage imageNamed:@"left-arrow.png"]];
+    UITapGestureRecognizer *singleTapLeftArrow = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(prevVideo)];
+    singleTapLeftArrow.numberOfTapsRequired = 1;
+    [self.arrowIndicatorLeft setUserInteractionEnabled:YES];
+    [self.arrowIndicatorLeft addGestureRecognizer:singleTapLeftArrow];
+    [self.view addSubview:self.arrowIndicatorLeft];
+    [self toggleArrowIndicatorLeft];
     
     [self updateSupplementalSections];
 }
@@ -188,7 +258,10 @@
     for (NSInteger index = 0; index < section; index++) {
         offset +=  [[self.categoryStops objectForKey:[self.sections objectAtIndex:index]] count];
     }
-    offset++;
+    
+    if (section != 0) {
+        offset++;
+    }
     
     return offset;
 }
@@ -206,8 +279,8 @@
     
     // set number of pages
     NSString *sectionName = [self.sections objectAtIndex:_currentSection];
-    NSInteger pages =[[self.categoryStops objectForKey:sectionName] count];
-    if (pages == 0) {
+    NSInteger pages = [[self.categoryStops objectForKey:sectionName] count];
+    if (pages <= 1) {
         [self.pager setHidden:YES];
     } else {
         [self.pager setHidden:NO];
@@ -236,8 +309,39 @@
     _currentSection = section;
     
     [self toggleArrowIndicator];
+    [self toggleArrowIndicatorRight];
+    [self toggleArrowIndicatorLeft];
     [self.pager setCurrentPage:0];
     [self.collectionView setContentOffset:CGPointMake(offsetWidth, 0) animated:NO];
+}
+
+- (void)nextVideo
+{
+    float offsetWidth = (_currentIndex * CELL_OFFSET) + CELL_OFFSET;
+    _currentIndex = _currentIndex + 1;
+    [self.pager setCurrentPage:_currentIndex];
+    [self.collectionView setContentOffset:CGPointMake(offsetWidth, 0) animated:NO];
+    [self toggleArrowIndicator];
+    [self toggleArrowIndicatorRight];
+    [self toggleArrowIndicatorLeft];
+}
+
+- (void)prevVideo
+{
+    float offsetWidth = (_currentIndex * CELL_OFFSET) - CELL_OFFSET;
+    _currentIndex = _currentIndex - 1;
+    [self.pager setCurrentPage:_currentIndex];
+    [self.collectionView setContentOffset:CGPointMake(offsetWidth, 0) animated:NO];
+    [self toggleArrowIndicator];
+    [self toggleArrowIndicatorRight];
+    [self toggleArrowIndicatorLeft];
+}
+
+- (void)playVideoWithUrl:(NSURL *)url {
+    self.moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+    
+    self.moviePlayer.moviePlayer.controlStyle = MPMovieControlStyleFullscreen;
+    [self presentMoviePlayerViewControllerAnimated:self.moviePlayer];
 }
 
 #pragma mark - UICollectionView Datasource
@@ -263,9 +367,11 @@
     NSString *sectionName = [self.sections objectAtIndex:indexPath.section];
     TAPStop *stop = [[self.categoryStops objectForKey:sectionName] objectAtIndex:indexPath.row];
     
+    [cell setParent:self];
+    
     // set question
     [cell.question setText:(NSString *)stop.title];
-    [cell.question setFont:[self.theme fontForKey:@"headingFont"]];
+    [cell.question setFont:[self.theme fontForKey:@"videoTitleFont"]];
     
     // set video url
     TAPAsset *videoAsset = [[stop getAssetsByUsage:@"video"] objectAtIndex:0];
@@ -280,7 +386,7 @@
     [cell.posterImage setImage:[UIImage imageWithContentsOfFile:posterImage]];
 
     // set button image
-    [cell.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+    // [cell.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     
     // register event
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
@@ -300,7 +406,31 @@
     }
 }
 
+- (void)toggleArrowIndicatorRight
+{
+    if (_currentIndex < _totalStops - 1) {
+        [self.arrowIndicatorRight setHidden:NO];
+    } else {
+        [self.arrowIndicatorRight setHidden:YES];
+    }
+}
+
+- (void)toggleArrowIndicatorLeft;
+{
+    if (_currentIndex > 0) {
+        [self.arrowIndicatorLeft setHidden:NO];
+    } else {
+        [self.arrowIndicatorLeft setHidden:YES];
+    }
+}
+
 #pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.arrowIndicatorRight setHidden:YES];
+    [self.arrowIndicatorLeft setHidden:YES];
+}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -316,6 +446,8 @@
         _currentIndex = index;
         
         [self toggleArrowIndicator];
+        [self toggleArrowIndicatorRight];
+        [self toggleArrowIndicatorLeft];
         [self updateSupplementalSections];
         
         NSInteger page = _currentIndex - [self getSectionOffset:_currentSection];

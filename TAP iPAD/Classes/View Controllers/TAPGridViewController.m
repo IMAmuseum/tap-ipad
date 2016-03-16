@@ -216,6 +216,11 @@
     // reset timer
     [(KioskApplication *)[[UIApplication sharedApplication] delegate] resetIdleTimer];
     
+    // ensure we are not out of bounds
+    if (indexPath.row >= [self.themeStops count]) {
+        return;
+    }
+    
     // get selected stop and initialize theme stop controller
     self.selectedStop = [self.themeStops objectAtIndex:indexPath.row];
     

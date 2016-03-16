@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
 #import "TAPBaseViewController.h"
+#import "TAPStop.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface TAPVideoGroupViewController : TAPBaseViewController<UICollectionViewDataSource>
-- (id)initWithStopTitle:(NSString *)stopTitle keycode:(NSString *)keycode trackedViewName:(NSString *)trackedViewName;
+
+@property (nonatomic, strong) MPMoviePlayerViewController *moviePlayer;
+
+- (id)initWithStopTitle:(NSString *)stopTitle stop:(TAPStop *)stop trackedViewName:(NSString *)trackedViewName;
+- (void)playVideoWithUrl:(NSURL *)url;
+
 @end
